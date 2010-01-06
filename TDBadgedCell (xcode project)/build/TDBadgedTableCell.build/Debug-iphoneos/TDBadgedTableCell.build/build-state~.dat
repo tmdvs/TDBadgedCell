@@ -1,357 +1,0 @@
-TTDBadgedTableCell
-v7
-r0
-t283966677.438937
-cCheck dependencies
-cCpResource build/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist
-cProcessInfoPlistFile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/Info.plist" TDBadgedTableCell-Info.plist
-cCompileXIB "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib"
-cCompileXIB "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib"
-cProcessPCH /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch.gch TDBadgedTableCell_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/main.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCellAppDelegate.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/RootViewController.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedCell.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-cLd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell" normal armv6
-cGenerateDSYMFile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app.dSYM" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell"
-cProcessProductPackaging "/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision"
-cTouch "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"
-cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent"
-cCodeSign "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk
-c000000004A8B68040000000000000110
-t1250650116
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist
-c000000004A767D3000000000000000DD
-t1249279280
-s221
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist
-c000000004A767D3000000000000001E5
-t1249279280
-s485
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004A82198D00000000005F4900
-t1250040205
-s6244608
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004A76566F0000000000501370
-t1249269359
-s5247856
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004A7656460000000000001355
-t1249269318
-s4949
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004A7C6E9C0000000000000788
-t1249668764
-s1928
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004A7C6FEF0000000001B3F450
-t1249669103
-s28570704
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/usr/include/Availability.h
-c000000004A7658B400000000000019F9
-t1249269940
-s6649
-
-N/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision
-c000000004AEE04040000000000001CF1
-t1257112580
-s7409
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.h
-c000000004B3BBF3A00000000000000EE
-t1262206778
-s238
-i"TDBadgedCell.h"
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m
-c000000004B3CBECA0000000000000CAF
-t1262272202
-s3247
-i"RootViewController.h"
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.h
-c000000004B3BBDD400000000000001D0
-t1262206420
-s464
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m
-c000000004B3BBDD40000000000000356
-t1262206420
-s854
-i"TDBadgedTableCellAppDelegate.h"
-i"RootViewController.h"
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib
-c000000004B3BBDD40000000000002C89
-t1262206420
-s11401
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib
-c000000004B3CBEC1000000000000432E
-t1262272193
-s17198
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.h
-c000000004B3BECB3000000000000031B
-t1262218419
-s795
-i<UIKit/UIKit.h>
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m
-c000000004B3CBA5A0000000000000D9D
-t1262271066
-s3485
-i"TDBadgedCell.h"
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedTableCell_Prefix.pch
-c000000004B3BBDD40000000000000154
-t1262206420
-s340
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app
-t1262273877
-s264
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app.dSYM
-t1262273873
-s264
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/Info.plist
-t1262273868
-s670
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/MainWindow.nib
-t1262273870
-s1500
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/PkgInfo
-t1262273869
-s8
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist
-t1262273868
-s485
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/RootViewController.nib
-t1262273869
-s984
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell
-t1262273872
-s30704
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision
-t1262273872
-s7409
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/RootViewController.o
-t1262273871
-s39564
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedCell.o
-t1262273872
-s34484
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCell.LinkFileList
-c000000004B3CC54C0000000000000292
-t1262273868
-s658
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCellAppDelegate.o
-t1262273871
-s42620
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/main.o
-t1262273871
-s6576
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent
-t1262273872
-s328
-
-N/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m
-c000000004B3BBDD4000000000000016B
-t1262206420
-s363
-i<UIKit/UIKit.h>
-
-N/var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch.gch
-t1262273871
-s7876792
-
-NTDBadgedTableCell-Info.plist
-c000000004B3CC4C4000000000000038B
-t1262273732
-s907
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies283966669#283966669#0(0"0(0#1#0"9007663118286948#0"0#
-
-CCodeSign "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"
-s283966673.962547
-e283966677.438812
-r1
-xCodeSign
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app
-lSLF07#2@51"CodeSign build/Debug-iphoneos/TDBadgedTableCell.app283966673#283966677#0(0"0(0#0#98"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app4300882208#770"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv CODESIGN_ALLOCATE /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign -f -s "iPhone Developer: Tim Davies (74LE52P6QS)" "--resource-rules=/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist" --entitlements "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"0#
-
-CCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/RootViewController.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-s283966672.354646
-e283966673.078849
-r1
-xCompileC
-xbuild/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/RootViewController.o
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@92"Compile /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m283966672#283966673#0(0"0(0#0#84"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m4300882208#2169"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1 -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/include" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources/armv6" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/RootViewController.m" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/RootViewController.o"0#
-
-CCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedCell.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-s283966672.793952
-e283966673.161999
-r1
-xCompileC
-xbuild/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedCell.o
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m283966672#283966673#0(0"0(0#0#70"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m4300882208#2149"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1 -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/include" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources/armv6" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedCell.m" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedCell.o"0#
-
-CCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCellAppDelegate.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-s283966672.050083
-e283966672.793828
-r1
-xCompileC
-xbuild/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCellAppDelegate.o
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@102"Compile /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m283966672#283966672#0(0"0(0#0#94"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m4300882208#2189"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1 -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/include" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources/armv6" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/Classes/TDBadgedTableCellAppDelegate.m" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCellAppDelegate.o"0#
-
-CCompileC build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/main.o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
-s283966672.045382
-e283966672.354535
-r1
-xCompileC
-xbuild/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/main.o
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m283966672#283966672#0(0"0(0#0#62"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m4300882208#2133"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1 -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/include" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources/armv6" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/main.m" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/main.o"0#
-
-CCompileXIB "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib"
-s283966670.104568
-e283966670.707734
-r1
-xCompileXIB
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib283966670#283966670#0(0"0(0#0#70"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib4300882208#533"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/MainWindow.nib" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/MainWindow.xib"0#
-
-CCompileXIB "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib"
-s283966670.105655
-e283966670.682700
-r1
-xCompileXIB
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib
-lSLF07#2@33"CompileXIB RootViewController.xib283966670#283966670#0(0"0(0#0#78"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib4300882208#549"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/RootViewController.nib" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/RootViewController.xib"0#
-
-CCpResource build/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist
-s283966669.837302
-e283966670.043242
-r1
-xCpResource
-xbuild/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist
-lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist283966669#283966670#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist8245922092775403520#528"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/ResourceRules.plist "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"0#
-
-CGenerateDSYMFile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app.dSYM" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell"
-s283966673.431193
-e283966673.795795
-r1
-xGenerateDSYMFile
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app.dSYM
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell
-lSLF07#2@125"GenerateDSYMFile build/Debug-iphoneos/TDBadgedTableCell.app.dSYM build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell283966673#283966673#0(0"0(0#0#116"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell4300882208#449"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app.dSYM"0#
-
-CLd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell" normal armv6
-s283966673.162103
-e283966673.431072
-r1
-xLd
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell
-xnormal
-xarmv6
-lSLF07#2@121"Link /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell283966673#283966673#0(0"0(0#0#0"4300882208#1034"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk "-L/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" -filelist "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/Objects-normal/armv6/TDBadgedTableCell.LinkFileList" -mmacosx-version-min=10.5 -dead_strip -miphoneos-version-min=3.1 -framework Foundation -framework UIKit -framework CoreGraphics -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/TDBadgedTableCell"0#
-
-CProcessInfoPlistFile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/Info.plist" TDBadgedTableCell-Info.plist
-s283966669.898254
-e283966670.104460
-r1
-xProcessInfoPlistFile
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/Info.plist
-xTDBadgedTableCell-Info.plist
-lSLF07#2@36"Process TDBadgedTableCell-Info.plist283966669#283966670#0(0"0(0#0#84"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedTableCell-Info.plist4300882208#678"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TDBadgedTableCell-Info.plist -genpkginfo "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/PkgInfo" -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/ResourceRules.plist" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/Info.plist"0#
-
-CProcessPCH /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch.gch TDBadgedTableCell_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-s283966670.707890
-e283966672.045094
-r1
-xProcessPCH
-x/var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch.gch
-xTDBadgedTableCell_Prefix.pch
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@39"Precompile TDBadgedTableCell_Prefix.pch283966670#283966672#0(0"0(0#0#84"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedTableCell_Prefix.pch4300882208#2002"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1 -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/include" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources/armv6" "-I/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/DerivedSources" -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/TDBadgedTableCell_Prefix.pch" -o /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-bqkvjdhvdzpnwrarkzgemgmxfjqu/TDBadgedTableCell_Prefix.pch.gch0#
-
-CProcessProductPackaging "/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision" "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision"
-s283966673.796038
-e283966673.874485
-r1
-xProcessProductPackaging
-x/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision
-lSLF07#2@211"ProcessProductPackaging "/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision" build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision283966673#283966673#0(0"0(0#0#123"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision4300882208#480"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/timgrantdavies/Library/MobileDevice/Provisioning Profiles/4B2815A5-16A8-42CA-B914-8C2C29C216A3.mobileprovision" -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app/embedded.mobileprovision"0#
-
-CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent"
-s283966673.877869
-e283966673.962448
-r1
-xProcessProductPackaging
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent
-lSLF07#2@205"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent283966673#283966673#0(0"0(0#0#148"/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent4300882208#500"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.sdk/Entitlements.plist -entitlements -format xml -o "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/TDBadgedTableCell.build/Debug-iphoneos/TDBadgedTableCell.build/TDBadgedTableCell.xcent"0#
-
-CTouch "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"
-s283966673.874626
-e283966673.877771
-r1
-xTouch
-x/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app
-lSLF07#2@104"Touch /Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app283966673#283966673#0(0"0(0#0#0"4300882208#312"    cd "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell"    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Volumes/Tim's iMac/Users/tim/Desktop/TDBadgedTableCell/build/Debug-iphoneos/TDBadgedTableCell.app"0#
-
