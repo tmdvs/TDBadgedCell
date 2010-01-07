@@ -78,7 +78,7 @@
 	
 	CGContextSaveGState(context);
 	//CGContextClearRect(context, bounds);
-	if(parent.selected)
+	if(parent.highlighted || parent.selected)
 	{
 		UIColor *col;
 		
@@ -116,7 +116,7 @@
 	CGContextFillPath(context);
 	CGContextRestoreGState(context);
 	
-	if(parent.selected)
+	if(parent.highlighted  || parent.selected)
 	{
 		[[UIColor blueColor] set];
 	}
@@ -197,10 +197,10 @@
 	}
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+	[super setHighlighted:highlighted animated:animated];
 	[badge setNeedsDisplay];
-    [super setSelected:selected animated:animated];
 }
 
 - (void) setEditing:(BOOL)editing animated:(BOOL)animated

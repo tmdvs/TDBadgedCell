@@ -1,0 +1,281 @@
+TTDBadgedTableCell
+v7
+r0
+t284515794.806653
+cCheck dependencies
+cProcessInfoPlistFile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/Info.plist" TDBadgedTableCell-Info.plist
+cCompileXIB "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib"
+cCompileXIB "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib"
+cProcessPCH /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch.gch TDBadgedTableCell_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/main.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCellAppDelegate.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/RootViewController.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedCell.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell" normal i386
+cGenerateDSYMFile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM" "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell"
+cTouch "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk
+c000000004AB8DA5100000000000000EE
+t1253628497
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A821911000000000026EE30
+t1250040081
+s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A765094000000000027E880
+t1249267860
+s2615424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A7650820000000000001355
+t1249267842
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A7C6E970000000000000788
+t1249668759
+s1928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A7C6F5900000000016721E0
+t1249668953
+s23536096
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/usr/include/Availability.h
+c000000004A7653D100000000000019F9
+t1249268689
+s6649
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.h
+c000000004B3BBF3A00000000000000EE
+t1262206778
+s238
+i"TDBadgedCell.h"
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m
+c000000004B4526510000000000000D25
+t1262822993
+s3365
+i"RootViewController.h"
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.h
+c000000004B3BBDD400000000000001D0
+t1262206420
+s464
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m
+c000000004B4522700000000000000356
+t1262822000
+s854
+i"TDBadgedTableCellAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib
+c000000004B3BBDD40000000000002C89
+t1262206420
+s11401
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib
+c000000004B3CBEC1000000000000432E
+t1262272193
+s17198
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.h
+c000000004B4523F700000000000004A2
+t1262822391
+s1186
+i<UIKit/UIKit.h>
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m
+c000000004B452444000000000000105F
+t1262822468
+s4191
+i"TDBadgedCell.h"
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedTableCell_Prefix.pch
+c000000004B3BBDD40000000000000154
+t1262206420
+s340
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app
+t1262822994
+s238
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM
+t1262822994
+s102
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/Info.plist
+t1262822994
+s606
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/MainWindow.nib
+t1262822994
+s1500
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/PkgInfo
+t1262822994
+s8
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/RootViewController.nib
+t1262822994
+s984
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell
+t1262822994
+s33940
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/RootViewController.o
+t1262822994
+s38612
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedCell.o
+t1262822994
+s33592
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCell.LinkFileList
+c000000004B452652000000000000030E
+t1262822994
+s782
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCellAppDelegate.o
+t1262822994
+s40132
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/main.o
+t1262822994
+s6028
+
+N/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m
+c000000004B3BBDD4000000000000016B
+t1262206420
+s363
+i<UIKit/UIKit.h>
+
+N/var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch.gch
+t1262821696
+s13034960
+
+NTDBadgedTableCell-Info.plist
+c000000004B3CC4C4000000000000038B
+t1262273732
+s907
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies284515794#284515794#0(0"0(0#1#0"9007663118286948#0"0#
+
+CCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/RootViewController.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284515794.521318
+e284515794.692785
+r1
+xCompileC
+xbuild/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/RootViewController.o
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@117"Compile /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m284515794#284515794#0(0"0(0#0#109"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m4300882208#2577"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/include" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources/i386" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch -c "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/RootViewController.m" -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/RootViewController.o"0#
+
+CCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedCell.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284515794.593628
+e284515794.702982
+r1
+xCompileC
+xbuild/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedCell.o
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@103"Compile /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m284515794#284515794#0(0"0(0#0#95"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m4300882208#2557"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/include" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources/i386" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch -c "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m" -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedCell.o"0#
+
+CCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCellAppDelegate.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284515794.466022
+e284515794.593528
+r1
+xCompileC
+xbuild/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCellAppDelegate.o
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@127"Compile /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m284515794#284515794#0(0"0(0#0#119"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m4300882208#2597"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/include" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources/i386" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch -c "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/Classes/TDBadgedTableCellAppDelegate.m" -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCellAppDelegate.o"0#
+
+CCompileC build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/main.o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s284515794.464878
+e284515794.521193
+r1
+xCompileC
+xbuild/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/main.o
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m284515794#284515794#0(0"0(0#0#87"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m4300882208#2541"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-generated-files.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-own-target-headers.hmap" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-all-target-headers.hmap" -iquote "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/TDBadgedTableCell-project-headers.hmap" "-F/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/include" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources/i386" "-I/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/DerivedSources" -include /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch -c "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/main.m" -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib"
+s284515794.081681
+e284515794.464549
+r1
+xCompileXIB
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib284515794#284515794#0(0"0(0#0#95"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib4300882208#622"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/MainWindow.nib" "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/MainWindow.xib"0#
+
+CCompileXIB "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib"
+s284515794.082873
+e284515794.456409
+r1
+xCompileXIB
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib284515794#284515794#0(0"0(0#0#103"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib4300882208#638"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/RootViewController.nib" "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/RootViewController.xib"0#
+
+CGenerateDSYMFile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM" "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell"
+s284515794.755257
+e284515794.803090
+r1
+xGenerateDSYMFile
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell
+lSLF07#2@139"GenerateDSYMFile build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell284515794#284515794#0(0"0(0#0#148"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell4300882208#545"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell" -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app.dSYM"0#
+
+CLd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell" normal i386
+s284515794.703087
+e284515794.755133
+r1
+xLd
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell
+xnormal
+xi386
+lSLF07#2@153"Link /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell284515794#284515794#0(0"0(0#0#0"4300882208#1132"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk "-L/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" "-F/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator" -filelist "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/TDBadgedTableCell.build/Debug-iphonesimulator/TDBadgedTableCell.build/Objects-normal/i386/TDBadgedTableCell.LinkFileList" -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/TDBadgedTableCell"0#
+
+CProcessInfoPlistFile "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/Info.plist" TDBadgedTableCell-Info.plist
+s284515794.064705
+e284515794.081567
+r1
+xProcessInfoPlistFile
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/Info.plist
+xTDBadgedTableCell-Info.plist
+lSLF07#2@36"Process TDBadgedTableCell-Info.plist284515794#284515794#0(0"0(0#0#109"/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedTableCell-Info.plist7020115031944815616#641"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TDBadgedTableCell-Info.plist -genpkginfo "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app/Info.plist"0#
+
+CProcessPCH /var/folders/d4/d4iCw9d7HxWDmLcUqA0e1E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TDBadgedTableCell_Prefix-beveoaivygmqsqehsxpykneycxgq/TDBadgedTableCell_Prefix.pch.gch TDBadgedTableCell_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CTouch "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app"
+s284515794.803199
+e284515794.806587
+r1
+xTouch
+x/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app
+lSLF07#2@136"Touch /Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app284515794#284515794#0(0"0(0#0#0"4300882208#376"    cd "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/timgrantdavies/Documents/GitHub/TDBadgedCell/TDBadgedCell (xcode project)/build/Debug-iphonesimulator/TDBadgedTableCell.app"0#
+

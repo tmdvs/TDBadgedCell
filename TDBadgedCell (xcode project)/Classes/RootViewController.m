@@ -81,7 +81,8 @@ NSArray *contents;
     
     
 	// Configure the cell.
-	//[cell setBadgeColor: [UIColor redColor]];
+	[cell setBadgeColor: [UIColor redColor]];
+	[cell setBadgeColorHighlighted: [UIColor greenColor]];
 	// CUSTOM COLOURS
 	cell.textLabel.text = [[contents objectAtIndex:indexPath.row] objectForKey:@"title"];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
@@ -96,9 +97,11 @@ NSArray *contents;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[[tableView cellForRowAtIndexPath:indexPath] setNeedsDisplay];
 	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	return indexPath;
 }
 
 
