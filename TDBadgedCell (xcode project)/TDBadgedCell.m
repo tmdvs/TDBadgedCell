@@ -203,6 +203,12 @@
 	[badge setNeedsDisplay];
 }
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+	[super setSelected:selected animated:animated];
+	[badge setNeedsDisplay];
+}
+
 - (void) setEditing:(BOOL)editing animated:(BOOL)animated
 {
 	[super setEditing:editing animated:animated];
