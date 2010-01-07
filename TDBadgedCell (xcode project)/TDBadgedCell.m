@@ -78,6 +78,7 @@
 	
 	CGContextSaveGState(context);
 	//CGContextClearRect(context, bounds);
+	
 	if(parent.highlighted || parent.selected)
 	{
 		UIColor *col;
@@ -178,6 +179,7 @@
 		}
 		
 		[badge setParent:self];
+		
 		if(self.accessoryType)
 		{
 			[self addSubview:badge];
@@ -193,7 +195,6 @@
 			badge.hidden = YES;
 			[badge setNeedsDisplay];
 		}
-		
 	}
 }
 
@@ -221,11 +222,13 @@
 		badge.hidden = NO;
 		[badge setNeedsDisplay];
 	}
-
 }
 
 
 - (void)dealloc {
+	[badge release];
+	[badgeColor release];
+	[badgeColorHighlighted release];
     [super dealloc];
 }
 
