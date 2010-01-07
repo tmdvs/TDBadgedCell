@@ -81,6 +81,8 @@ NSArray *contents;
     
     
 	// Configure the cell.
+	//[cell setBadgeColor: [UIColor redColor]];
+	// CUSTOM COLOURS
 	cell.textLabel.text = [[contents objectAtIndex:indexPath.row] objectForKey:@"title"];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
 	

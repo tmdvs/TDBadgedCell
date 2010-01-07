@@ -16,7 +16,7 @@
 
 @implementation TDBadgeView
 
-@synthesize width, badgeNumber, parent;
+@synthesize width, badgeNumber, parent, badgeColor, badgeColorHighlighted;
 
 - (id) initWithNumber:(int)n
 {
@@ -80,11 +80,33 @@
 	//CGContextClearRect(context, bounds);
 	if(parent.selected)
 	{
-		CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000] CGColor]);
+		UIColor *col;
+		
+		if(self.badgeColorHighlighted)
+		{
+			col = self.badgeColorHighlighted;
+		}
+		else 
+		{
+			col = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
+		}
+		
+		CGContextSetFillColorWithColor(context, [col CGColor]);
 	}
 	else
 	{
-		CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000] CGColor]);
+		UIColor *col;
+		
+		if(self.badgeColor)
+		{
+			col = self.badgeColor;
+		}
+		else 
+		{
+			col = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
+		}
+		
+		CGContextSetFillColorWithColor(context, [col CGColor]);
 	}
 		
 	CGContextBeginPath(context);
@@ -122,7 +144,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeNumber;
+@synthesize badgeNumber, badge, badgeColor, badgeColorHighlighted;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -136,6 +158,25 @@
 	if(self.badgeNumber > 0)
 	{
 		badge = [[TDBadgeView alloc] initWithNumber:self.badgeNumber];
+		
+		if(self.badgeColorHighlighted)
+		{
+			badge.badgeColorHighlighted = self.badgeColorHighlighted;
+		}
+		else 
+		{
+			badge.badgeColorHighlighted = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
+		}
+		
+		if(self.badgeColor)
+		{
+			badge.badgeColor = self.badgeColor;
+		}
+		else 
+		{
+			badge.badgeColor = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
+		}
+		
 		[badge setParent:self];
 		if(self.accessoryType)
 		{

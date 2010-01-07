@@ -23,11 +23,17 @@
 	UIFont *font;
 	NSString *countString;
 	UITableViewCell *parent;
+	
+	UIColor *badgeColor;
+	UIColor *badgeColorHighlighted;
+	
 }
 
 @property (readonly) int width;
 @property (readonly) int badgeNumber;
 @property (nonatomic,retain) UITableViewCell *parent;
+@property (nonatomic, retain) UIColor *badgeColor;
+@property (nonatomic, retain) UIColor *badgeColorHighlighted;
 
 - (id) initWithNumber:(int)n;
 
@@ -36,8 +42,14 @@
 @interface TDBadgedCell : UITableViewCell {
 	int badgeNumber;
 	TDBadgeView *badge;
+	
+	UIColor *badgeColor;
+	UIColor *badgeColorHighlighted;
 }
 
 @property int badgeNumber;
+@property (readonly, retain) TDBadgeView *badge;
+@property (nonatomic, retain) UIColor *badgeColor;
+@property (nonatomic, retain) UIColor *badgeColorHighlighted;
 
 @end
