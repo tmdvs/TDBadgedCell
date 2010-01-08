@@ -110,7 +110,14 @@
 		[badge setParent:self];
 		
 		//redraw cells in accordance to accessory
-		[self.contentView addSubview:self.badge];
+		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+		
+		if (version <= 3.0)
+			[self addSubview:self.badge];
+		else 
+			[self.contentView addSubview:self.badge];
+		
+
 		[self.badge setNeedsDisplay];
 			
 		[badge release];
@@ -126,7 +133,18 @@
 	{
 		CGSize badgeSize = [[NSString stringWithFormat: @"%d", self.badgeNumber] sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
-		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16) - 10, round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
+		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+		
+		CGRect badgeframe;
+		
+		if (version <= 3.0)
+		{
+			badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16), round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
+		}
+		else
+		{
+			badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16) - 10, round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
+		}
 		[self.badge setFrame:badgeframe];
 		[badge setBadgeNumber:self.badgeNumber];
 		[badge setParent:self];
