@@ -28,11 +28,11 @@ NSArray *contents;
 												@"Steven Troughton Smith", @"detail",  
 												@"2", @"badge", nil],
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Smoking Apples", @"title", 
-												@"Blog about Apple Software and Hardware", @"detail",  
-												@"0", @"badge", nil], 
+												@"Blog about Apple Software…", @"detail",  
+												@"145", @"badge", nil], 
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Daring Fireball", @"title", 
 												@"The musings of John Gruber", @"detail",  
-												@"145", @"badge", nil],nil];
+												@"0", @"badge", nil],nil];
 				
 }
 
@@ -79,11 +79,6 @@ NSArray *contents;
    
     TDBadgedCell *cell = [[[TDBadgedCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     
-    
-	// Configure the cell.
-	[cell setBadgeColor: [UIColor redColor]];
-	[cell setBadgeColorHighlighted: [UIColor greenColor]];
-	// CUSTOM COLOURS
 	cell.textLabel.text = [[contents objectAtIndex:indexPath.row] objectForKey:@"title"];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
 	
@@ -91,17 +86,20 @@ NSArray *contents;
 	cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
 	
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	cell.badgeNumber = [[[contents objectAtIndex:indexPath.row] objectForKey:@"badge"] intValue];
+	cell.badgeNumber = [[[contents objectAtIndex:indexPath.row] objectForKey:@"badge"] intValue]; 
 	
+	if(indexPath.row == 1)
+		cell.badgeColor = [UIColor colorWithRed:1.000 green:0.397 blue:0.419 alpha:1.000];
+	
+	if(indexPath.row == 2)
+		cell.badgeColor = [UIColor colorWithWhite:0.783 alpha:1.000];
 
     return cell;
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[[tableView cellForRowAtIndexPath:indexPath] setNeedsDisplay];
 	//[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	return indexPath;
 }
 
 
