@@ -25,11 +25,7 @@
 	{
 		font = [UIFont boldSystemFontOfSize: 14];
 		[font retain];
-		
-		if (self = [super initWithFrame:self.frame]) {
-			
-			self.backgroundColor = [UIColor clearColor];
-		}
+		self.backgroundColor = [UIColor clearColor];
 	}
 	
 	return self;
