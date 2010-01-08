@@ -18,56 +18,32 @@
 
 @synthesize width, badgeNumber, parent, badgeColor, badgeColorHighlighted;
 
-- (id) initWithNumber:(int)n
+- (id) initWithFrame:(CGRect)frame
 {
-	badgeNumber = n;
 	
-	[self initWithFrame:CGRectZero];
+	if (self = [super initWithFrame:frame])
+	{
+		font = [UIFont boldSystemFontOfSize: 14];
+		[font retain];
+		
+		if (self = [super initWithFrame:self.frame]) {
+			
+			self.backgroundColor = [UIColor clearColor];
+		}
+	}
 	
 	return self;
+	
 }
 
-- (id)initWithFrame:(CGRect)frame {
-	
-	countString = [NSString stringWithFormat: @"%d", badgeNumber];
-	[countString retain];
-	font = [UIFont boldSystemFontOfSize: 14];
-	[font retain];
-	numberSize = [countString sizeWithFont: font];
-	
-	width = numberSize.width + 16;
-	
-	if(self.parent.accessoryType)
-	{
-		frame = CGRectMake(320 - width - 8, 12,  width, 18);
-	}
-	else
-	{
-		frame = CGRectMake(320 - width - 28, 13,  width, 18);
-	}
-
-	
-    if (self = [super initWithFrame:frame]) {
-		
-		self.backgroundColor = [UIColor clearColor];
-    }
-	if(self.badgeNumber > 0)
-	{
-		if (self.hidden) 
-		{
-			return nil;
-		}
-		
-		return self;
-	}
-	else
-	{
-		return nil;
-	}
-}
 
 - (void) drawRect:(CGRect)rect
 {
+	
+	countString = [NSString stringWithFormat: @"%d", self.badgeNumber];
+	[countString retain];
+	
+	numberSize = [countString sizeWithFont: font];
 	
 	width = numberSize.width + 16;
 	
@@ -77,20 +53,15 @@
 	float radius = bounds.size.height / 2.0;
 	
 	CGContextSaveGState(context);
-	//CGContextClearRect(context, bounds);
 	
 	if(parent.highlighted || parent.selected)
 	{
 		UIColor *col;
 		
 		if(self.badgeColorHighlighted)
-		{
 			col = self.badgeColorHighlighted;
-		}
-		else 
-		{
+		else
 			col = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
-		}
 		
 		CGContextSetFillColorWithColor(context, [col CGColor]);
 	}
@@ -99,13 +70,9 @@
 		UIColor *col;
 		
 		if(self.badgeColor)
-		{
 			col = self.badgeColor;
-		}
-		else 
-		{
+		else
 			col = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
-		}
 		
 		CGContextSetFillColorWithColor(context, [col CGColor]);
 	}
@@ -143,52 +110,44 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
+		badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
+		[badge setParent:self];
+		
+		//redraw cells in accordance to accessory
+		[self.contentView addSubview:self.badge];
+		[self.badge setNeedsDisplay];
+			
+		[badge release];
     }
     return self;
 }
 
-- (void) drawRect:(CGRect)rect
+- (void) layoutSubviews
 {
+	[super layoutSubviews];
+
 	if(self.badgeNumber > 0)
 	{
-		badge = [[TDBadgeView alloc] initWithNumber:self.badgeNumber];
+		CGSize badgeSize = [[NSString stringWithFormat: @"%d", self.badgeNumber] sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
-		if(self.badgeColorHighlighted)
-		{
-			badge.badgeColorHighlighted = self.badgeColorHighlighted;
-		}
-		else 
-		{
-			badge.badgeColorHighlighted = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
-		}
-		
-		if(self.badgeColor)
-		{
-			badge.badgeColor = self.badgeColor;
-		}
-		else 
-		{
-			badge.badgeColor = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
-		}
-		
+		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16) - 10, 12, badgeSize.width+16, 18);
+		[self.badge setFrame:badgeframe];
+		[badge setBadgeNumber:self.badgeNumber];
 		[badge setParent:self];
 		
-		if(self.accessoryType)
-		{
-			[self addSubview:badge];
-			[badge setNeedsDisplay];
-		}
-		else
-		{
-			[self setAccessoryView:badge];
-		}
+		//set badge highlighted colours or use defaults
+		if(self.badgeColorHighlighted)
+			badge.badgeColorHighlighted = self.badgeColorHighlighted;
+		else 
+			badge.badgeColorHighlighted = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
 		
-		if(self.editing)
-		{
-			badge.hidden = YES;
-			[badge setNeedsDisplay];
-		}
+		//set badge colours or impose defaults
+		if(self.badgeColor)
+			badge.badgeColor = self.badgeColor;
+		else
+			badge.badgeColor = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
 	}
+	
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated

@@ -30,12 +30,10 @@
 }
 
 @property (readonly) NSInteger width;
-@property (readonly) NSInteger badgeNumber;
+@property  NSInteger badgeNumber;
 @property (nonatomic,retain) UITableViewCell *parent;
 @property (nonatomic, retain) UIColor *badgeColor;
 @property (nonatomic, retain) UIColor *badgeColorHighlighted;
-
-- (id) initWithNumber:(int)n;
 
 @end
 
