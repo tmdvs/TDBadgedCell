@@ -117,16 +117,9 @@
 	CGContextFillPath(context);
 	CGContextRestoreGState(context);
 	
-	if(parent.highlighted  || parent.selected)
-	{
-		[[UIColor blueColor] set];
-	}
-	else
-	{
-		[[UIColor whiteColor] set];
-	}
-	
 	bounds.origin.x = (bounds.size.width - numberSize.width) / 2 +0.5;
+	
+	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
 	[countString drawInRect: bounds withFont: font];
 	
