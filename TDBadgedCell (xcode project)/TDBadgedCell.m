@@ -131,6 +131,8 @@
 
 	if(self.badgeNumber > 0)
 	{
+		[self.badge setHidden:NO];
+		
 		CGSize badgeSize = [[NSString stringWithFormat: @"%d", self.badgeNumber] sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
@@ -145,6 +147,7 @@
 		{
 			badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16) - 10, round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
 		}
+		
 		[self.badge setFrame:badgeframe];
 		[badge setBadgeNumber:self.badgeNumber];
 		[badge setParent:self];
@@ -160,6 +163,10 @@
 			badge.badgeColor = self.badgeColor;
 		else
 			badge.badgeColor = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
+	}
+	else
+	{
+		[self.badge setHidden:YES];
 	}
 	
 }
