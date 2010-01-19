@@ -72,7 +72,7 @@
 		
 		CGContextSetFillColorWithColor(context, [col CGColor]);
 	}
-		
+	
 	CGContextBeginPath(context);
 	CGContextAddArc(context, radius, radius, radius, M_PI / 2 , 3 * M_PI / 2, NO);
 	CGContextAddArc(context, bounds.size.width - radius, radius, radius, 3 * M_PI / 2, M_PI / 2, NO);
@@ -94,7 +94,7 @@
 	[font release];
 	[countString release];
 }
-	 
+
 
 @end
 
@@ -117,9 +117,9 @@
 		else 
 			[self.contentView addSubview:self.badge];
 		
-
+		
 		[self.badge setNeedsDisplay];
-			
+		
 		[badge release];
     }
     return self;
@@ -128,10 +128,15 @@
 - (void) layoutSubviews
 {
 	[super layoutSubviews];
-
+	
 	if(self.badgeNumber > 0)
 	{
-		[self.badge setHidden:NO];
+		//force badges to hide on edit.
+		if(self.editing)
+			[self.badge setHidden:YES];
+		else
+			[self.badge setHidden:NO];
+		
 		
 		CGSize badgeSize = [[NSString stringWithFormat: @"%d", self.badgeNumber] sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
@@ -151,6 +156,13 @@
 		[self.badge setFrame:badgeframe];
 		[badge setBadgeNumber:self.badgeNumber];
 		[badge setParent:self];
+		
+		if ((self.textLabel.frame.origin.x + self.textLabel.frame.size.width) >= badgeframe.origin.x)
+		{
+			CGFloat badgeWidth = self.textLabel.frame.size.width - badgeframe.size.width - 10.0;
+			
+			self.textLabel.frame = CGRectMake(self.textLabel.frame.origin.x, self.textLabel.frame.origin.y, badgeWidth, self.textLabel.frame.size.height);
+		}
 		
 		//set badge highlighted colours or use defaults
 		if(self.badgeColorHighlighted)
@@ -186,14 +198,17 @@
 - (void) setEditing:(BOOL)editing animated:(BOOL)animated
 {
 	[super setEditing:editing animated:animated];
+	
 	if (editing) {
 		badge.hidden = YES;
 		[badge setNeedsDisplay];
+		[self setNeedsDisplay];
 	}
 	else 
 	{
 		badge.hidden = NO;
 		[badge setNeedsDisplay];
+		[self setNeedsDisplay];
 	}
 }
 
