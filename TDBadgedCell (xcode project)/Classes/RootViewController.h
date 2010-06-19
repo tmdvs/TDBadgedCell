@@ -9,6 +9,7 @@
 #import "TDBadgedCell.h"
 
 @interface RootViewController : UITableViewController {
+	NSArray *contents;
 }
 
 @end

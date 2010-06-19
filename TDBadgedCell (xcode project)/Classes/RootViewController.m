@@ -11,8 +11,6 @@
 
 @implementation RootViewController
 
-NSArray *contents;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -88,10 +86,10 @@ NSArray *contents;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	cell.badgeNumber = [[[contents objectAtIndex:indexPath.row] objectForKey:@"badge"] intValue]; 
 	
-	if(indexPath.row == 1)
+	if (indexPath.row == 1)
 		cell.badgeColor = [UIColor colorWithRed:1.000 green:0.397 blue:0.419 alpha:1.000];
 	
-	if(indexPath.row == 2)
+	if (indexPath.row == 2)
 		cell.badgeColor = [UIColor colorWithWhite:0.783 alpha:1.000];
 
     return cell;
@@ -104,6 +102,8 @@ NSArray *contents;
 
 
 - (void)dealloc {
+	[contents release];
+	
     [super dealloc];
 }
 
