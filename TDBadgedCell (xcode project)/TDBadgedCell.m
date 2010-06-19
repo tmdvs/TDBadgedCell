@@ -14,34 +14,38 @@
 
 #import "TDBadgedCell.h"
 
+@interface TDBadgeView ()
+
+@property (nonatomic, retain) UIFont *font;
+@property (nonatomic, assign) NSUInteger width;
+
+@end
+
 @implementation TDBadgeView
 
 @synthesize width, badgeNumber, parent, badgeColor, badgeColorHighlighted;
+// from private
+@synthesize font;
 
 - (id) initWithFrame:(CGRect)frame
 {
-	
 	if (self = [super initWithFrame:frame])
 	{
-		font = [UIFont boldSystemFontOfSize: 14];
-		[font retain];
+		font = [[UIFont boldSystemFontOfSize: 14] retain];
+		
 		self.backgroundColor = [UIColor clearColor];
 	}
 	
-	return self;
-	
+	return self;	
 }
 
-
 - (void) drawRect:(CGRect)rect
-{
+{	
+	NSString *countString = [[NSString alloc] initWithFormat:@"%d", self.badgeNumber];
 	
-	countString = [NSString stringWithFormat: @"%d", self.badgeNumber];
-	[countString retain];
+	CGSize numberSize = [countString sizeWithFont: font];
 	
-	numberSize = [countString sizeWithFont: font];
-	
-	width = numberSize.width + 16;
+	self.width = numberSize.width + 16;
 	
 	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 16 , 18);
 	
@@ -50,28 +54,22 @@
 	
 	CGContextSaveGState(context);
 	
-	if(parent.highlighted || parent.selected)
-	{
-		UIColor *col;
-		
-		if(self.badgeColorHighlighted)
+	UIColor *col;
+	if (parent.highlighted || parent.selected) {
+		if (self.badgeColorHighlighted) {
 			col = self.badgeColorHighlighted;
-		else
+		} else {
 			col = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.000];
-		
-		CGContextSetFillColorWithColor(context, [col CGColor]);
-	}
-	else
-	{
-		UIColor *col;
-		
-		if(self.badgeColor)
+		}
+	} else {
+		if (self.badgeColor) {
 			col = self.badgeColor;
-		else
+		} else {
 			col = [UIColor colorWithRed:0.530 green:0.600 blue:0.738 alpha:1.000];
-		
-		CGContextSetFillColorWithColor(context, [col CGColor]);
+		}
 	}
+
+	CGContextSetFillColorWithColor(context, [col CGColor]);
 	
 	CGContextBeginPath(context);
 	CGContextAddArc(context, radius, radius, radius, M_PI / 2 , 3 * M_PI / 2, NO);
@@ -84,17 +82,20 @@
 	
 	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
-	[countString drawInRect: bounds withFont: font];
-	
+	[countString drawInRect:bounds withFont:self.font];
+	[countString release];
 }
 
 - (void) dealloc
 {
-	[super dealloc];
+	parent = nil;
+	
 	[font release];
-	[countString release];
+	[badgeColor release];
+	[badgeColorHighlighted release];
+	
+	[super dealloc];
 }
-
 
 @end
 
@@ -107,7 +108,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
 		badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
-		[badge setParent:self];
+		badge.parent = self;
 		
 		//redraw cells in accordance to accessory
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
@@ -117,10 +118,7 @@
 		else 
 			[self.contentView addSubview:self.badge];
 		
-		
 		[self.badge setNeedsDisplay];
-		
-		[badge release];
     }
     return self;
 }
@@ -201,7 +199,7 @@
 	[badge setNeedsDisplay];
 }
 
-- (void) setEditing:(BOOL)editing animated:(BOOL)animated
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
 	[super setEditing:editing animated:animated];
 	
@@ -218,11 +216,11 @@
 	}
 }
 
-
 - (void)dealloc {
 	[badge release];
 	[badgeColor release];
 	[badgeColorHighlighted release];
+	
     [super dealloc];
 }
 

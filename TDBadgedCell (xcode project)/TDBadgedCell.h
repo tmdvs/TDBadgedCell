@@ -16,22 +16,19 @@
 
 @interface TDBadgeView : UIView
 {
-	NSInteger width;
-	NSInteger badgeNumber;
-	
-	CGSize numberSize;
+	NSUInteger width;
+	NSUInteger badgeNumber;
+
 	UIFont *font;
-	NSString *countString;
 	UITableViewCell *parent;
 	
 	UIColor *badgeColor;
-	UIColor *badgeColorHighlighted;
-	
+	UIColor *badgeColorHighlighted;	
 }
 
-@property (readonly) NSInteger width;
-@property  NSInteger badgeNumber;
-@property (nonatomic,retain) UITableViewCell *parent;
+@property (nonatomic, readonly) NSUInteger width;
+@property (nonatomic, assign) NSUInteger badgeNumber;
+@property (nonatomic, assign) UITableViewCell *parent;
 @property (nonatomic, retain) UIColor *badgeColor;
 @property (nonatomic, retain) UIColor *badgeColorHighlighted;
 
