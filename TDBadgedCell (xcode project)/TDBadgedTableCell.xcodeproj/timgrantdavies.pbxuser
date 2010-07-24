@@ -2,8 +2,8 @@
 {
 	1D3623250D0F684500981E51 /* TDBadgedTableCellAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {473, 637}}";
-			sepNavSelRange = "{754, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1095, 624}}";
+			sepNavSelRange = "{708, 0}";
 			sepNavVisRange = "{0, 853}";
 		};
 	};
@@ -15,16 +15,16 @@
 	};
 	2218953010EBF571003D421A /* TDBadgedCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {471, 741}}";
-			sepNavSelRange = "{651, 0}";
-			sepNavVisRange = "{247, 939}";
+			sepNavIntBoundsRect = "{{0, 0}, {12, 741}}";
+			sepNavSelRange = "{823, 0}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	2218953110EBF571003D421A /* TDBadgedCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {467, 3146}}";
-			sepNavSelRange = "{2408, 0}";
-			sepNavVisRange = "{1875, 830}";
+			sepNavIntBoundsRect = "{{0, 0}, {1095, 2730}}";
+			sepNavSelRange = "{3069, 0}";
+			sepNavVisRange = "{2838, 1379}";
 		};
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
@@ -36,14 +36,15 @@
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {999, 1495}}";
-			sepNavSelRange = "{3404, 0}";
-			sepNavVisRange = "{2133, 1325}";
+			sepNavIntBoundsRect = "{{0, 0}, {12, 29887}}";
+			sepNavSelRange = "{3178, 45}";
+			sepNavVisRange = "{0, 0}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = DCFD386910ECFCC900822178 /* TDBadgedTableCell */;
+		activeSDKPreference = iphonesimulator3.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TDBadgedTableCell */;
 		breakpoints = (
 		);
@@ -81,7 +82,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					826,
+					922,
 					20,
 					48,
 					43,
@@ -98,160 +99,87 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 284563526;
-			PBXWorkspaceStateSaveDate = 284563526;
+			PBXPerProjectTemplateStateSaveDate = 285610199;
+			PBXWorkspaceStateSaveDate = 285610199;
 		};
 		perUserProjectItems = {
-			DC64FB1A10F557AB00041C30 /* PBXTextBookmark */ = DC64FB1A10F557AB00041C30 /* PBXTextBookmark */;
-			DC64FB7A10F55ABE00041C30 /* PBXTextBookmark */ = DC64FB7A10F55ABE00041C30 /* PBXTextBookmark */;
-			DC64FB9010F55B2F00041C30 /* PBXTextBookmark */ = DC64FB9010F55B2F00041C30 /* PBXTextBookmark */;
-			DC804BB010F616020092100F /* PBXTextBookmark */ = DC804BB010F616020092100F /* PBXTextBookmark */;
+			DC799C7C10F779AD008E4C43 /* PBXTextBookmark */ = DC799C7C10F779AD008E4C43 /* PBXTextBookmark */;
 			DC804BB110F616020092100F /* PBXTextBookmark */ = DC804BB110F616020092100F /* PBXTextBookmark */;
-			DC804BB510F616020092100F /* PBXTextBookmark */ = DC804BB510F616020092100F /* PBXTextBookmark */;
-			DC804BD710F616F80092100F /* PBXTextBookmark */ = DC804BD710F616F80092100F /* PBXTextBookmark */;
-			DC804BD810F616F80092100F /* PBXTextBookmark */ = DC804BD810F616F80092100F /* PBXTextBookmark */;
-			DC804BE610F617670092100F /* PBXTextBookmark */ = DC804BE610F617670092100F /* PBXTextBookmark */;
-			DC804BE710F617670092100F /* PBXTextBookmark */ = DC804BE710F617670092100F /* PBXTextBookmark */;
-			DC9E712910F618E60007603A /* PBXTextBookmark */ = DC9E712910F618E60007603A /* PBXTextBookmark */;
-			DC9E712A10F618E60007603A /* PBXTextBookmark */ = DC9E712A10F618E60007603A /* PBXTextBookmark */;
+			DCB5834511061176007757B8 /* PBXTextBookmark */ = DCB5834511061176007757B8 /* PBXTextBookmark */;
+			DCB5834611061176007757B8 /* XCBuildMessageTextBookmark */ = DCB5834611061176007757B8 /* XCBuildMessageTextBookmark */;
+			DCB58377110612B8007757B8 /* PBXTextBookmark */ = DCB58377110612B8007757B8 /* PBXTextBookmark */;
+			DCB58378110612B8007757B8 /* PBXTextBookmark */ = DCB58378110612B8007757B8 /* PBXTextBookmark */;
+			DCFFA74E10F7BA7700743EE2 /* PBXTextBookmark */ = DCFFA74E10F7BA7700743EE2 /* PBXTextBookmark */;
 		};
 		sourceControlManager = DCFD388410ECFCF900822178 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	DC64FB1A10F557AB00041C30 /* PBXTextBookmark */ = {
+	DC799C7C10F779AD008E4C43 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = DC64FB1B10F557AB00041C30 /* TinyGrabAppDelegate.m */;
-		name = "TinyGrabAppDelegate.m: 10";
-		rLen = 37;
-		rLoc = 174;
-		rType = 0;
-		vrLen = 1130;
-		vrLoc = 0;
-	};
-	DC64FB1B10F557AB00041C30 /* TinyGrabAppDelegate.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = TinyGrabAppDelegate.m;
-		path = /Users/timgrantdavies/Desktop/TinyGrab/Classes/TinyGrabAppDelegate.m;
-		sourceTree = "<absolute>";
-	};
-	DC64FB7A10F55ABE00041C30 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
-		name = "RootViewController.h: 1";
+		fRef = DC799C7D10F779AD008E4C43 /* CSBadgeCell.h */;
+		name = "CSBadgeCell.h: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 238;
+		vrLen = 921;
 		vrLoc = 0;
 	};
-	DC64FB9010F55B2F00041C30 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* TDBadgedTableCellAppDelegate.m */;
-		name = "TDBadgedTableCellAppDelegate.m: 37";
-		rLen = 0;
-		rLoc = 754;
-		rType = 0;
-		vrLen = 853;
-		vrLoc = 0;
-	};
-	DC804BB010F616020092100F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2218953010EBF571003D421A /* TDBadgedCell.h */;
-		name = "TDBadgedCell.h: 27";
-		rLen = 0;
-		rLoc = 534;
-		rType = 0;
-		vrLen = 939;
-		vrLoc = 247;
+	DC799C7D10F779AD008E4C43 /* CSBadgeCell.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CSBadgeCell.h;
+		path = /Users/timgrantdavies/Downloads/CSBadgeCell.h;
+		sourceTree = "<absolute>";
 	};
 	DC804BB110F616020092100F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
 		name = "RootViewController.m: 100";
 		rLen = 45;
-		rLoc = 3212;
+		rLoc = 3178;
 		rType = 0;
-		vrLen = 1094;
+		vrLen = 948;
 		vrLoc = 2271;
 	};
-	DC804BB510F616020092100F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = DC804BB610F616020092100F /* CustomCell.m */;
-		name = "CustomCell.m: 148";
-		rLen = 0;
-		rLoc = 4256;
-		rType = 0;
-		vrLen = 914;
-		vrLoc = 4253;
-	};
-	DC804BB610F616020092100F /* CustomCell.m */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.objc;
-		name = CustomCell.m;
-		path = /Users/timgrantdavies/Dropbox/Twiba/Classes/CustomCell.m;
-		sourceTree = "<absolute>";
-	};
-	DC804BD710F616F80092100F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2218953010EBF571003D421A /* TDBadgedCell.h */;
-		name = "TDBadgedCell.h: 34";
-		rLen = 0;
-		rLoc = 651;
-		rType = 0;
-		vrLen = 939;
-		vrLoc = 247;
-	};
-	DC804BD810F616F80092100F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2218953110EBF571003D421A /* TDBadgedCell.m */;
-		name = "TDBadgedCell.m: 203";
-		rLen = 0;
-		rLoc = 3953;
-		rType = 0;
-		vrLen = 631;
-		vrLoc = 3556;
-	};
-	DC804BE610F617670092100F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 2218953110EBF571003D421A /* TDBadgedCell.m */;
-		name = "TDBadgedCell.m: 167";
-		rLen = 0;
-		rLoc = 3275;
-		rType = 0;
-		vrLen = 878;
-		vrLoc = 2653;
-	};
-	DC804BE710F617670092100F /* PBXTextBookmark */ = {
+	DCB5834511061176007757B8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 104";
+		name = "RootViewController.m: 64";
 		rLen = 0;
-		rLoc = 3404;
+		rLoc = 1909;
 		rType = 0;
-		vrLen = 1181;
-		vrLoc = 2271;
+		vrLen = 1426;
+		vrLoc = 1912;
 	};
-	DC9E712910F618E60007603A /* PBXTextBookmark */ = {
+	DCB5834611061176007757B8 /* XCBuildMessageTextBookmark */ = {
 		isa = PBXTextBookmark;
+		comments = "Expected identifier or '(' before '/' token";
 		fRef = 2218953110EBF571003D421A /* TDBadgedCell.m */;
-		name = "TDBadgedCell.m: 119";
-		rLen = 0;
-		rLoc = 2408;
-		rType = 0;
-		vrLen = 830;
-		vrLoc = 1875;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 0;
+		rType = 1;
 	};
-	DC9E712A10F618E60007603A /* PBXTextBookmark */ = {
+	DCB58377110612B8007757B8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 104";
-		rLen = 0;
-		rLoc = 3404;
+		name = "RootViewController.m: 100";
+		rLen = 45;
+		rLoc = 3178;
 		rType = 0;
-		vrLen = 1237;
-		vrLoc = 2215;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	DCB58378110612B8007757B8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2218953110EBF571003D421A /* TDBadgedCell.m */;
+		name = "TDBadgedCell.m: 139";
+		rLen = 0;
+		rLoc = 3069;
+		rType = 0;
+		vrLen = 1379;
+		vrLoc = 2838;
 	};
 	DCFD386910ECFCC900822178 /* TDBadgedTableCell */ = {
 		isa = PBXExecutable;
@@ -282,6 +210,8 @@
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
+		variableFormatDictionary = {
+		};
 	};
 	DCFD388410ECFCF900822178 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -296,5 +226,15 @@
 	DCFD388510ECFCF900822178 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	DCFFA74E10F7BA7700743EE2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TDBadgedTableCellAppDelegate.m */;
+		name = "TDBadgedTableCellAppDelegate.m: 35";
+		rLen = 0;
+		rLoc = 708;
+		rType = 0;
+		vrLen = 853;
+		vrLoc = 0;
 	};
 }
