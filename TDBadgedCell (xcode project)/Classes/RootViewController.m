@@ -84,7 +84,7 @@
 	cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
 	
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	cell.badgeNumber = [[[contents objectAtIndex:indexPath.row] objectForKey:@"badge"] intValue]; 
+	cell.badgeNumber = [[contents objectAtIndex:indexPath.row] objectForKey:@"badge"];
 	
 	if (indexPath.row == 1)
 		cell.badgeColor = [UIColor colorWithRed:1.000 green:0.397 blue:0.419 alpha:1.000];

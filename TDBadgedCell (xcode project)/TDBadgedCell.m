@@ -41,7 +41,7 @@
 
 - (void) drawRect:(CGRect)rect
 {	
-	NSString *countString = [[NSString alloc] initWithFormat:@"%d", self.badgeNumber];
+	NSString *countString = self.badgeNumber;
 	
 	CGSize numberSize = [countString sizeWithFont: font];
 	
@@ -127,7 +127,7 @@
 {
 	[super layoutSubviews];
 	
-	if(self.badgeNumber > 0)
+	if(self.badgeNumber)
 	{
 		//force badges to hide on edit.
 		if(self.editing)
@@ -136,7 +136,7 @@
 			[self.badge setHidden:NO];
 		
 		
-		CGSize badgeSize = [[NSString stringWithFormat: @"%d", self.badgeNumber] sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
+		CGSize badgeSize = [self.badgeNumber sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
 		
