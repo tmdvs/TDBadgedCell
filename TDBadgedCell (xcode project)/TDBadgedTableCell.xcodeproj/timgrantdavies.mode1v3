@@ -255,7 +255,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>97</real>
+								<real>297</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -274,12 +274,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
+									<integer>3</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {97, 598}}</string>
+							<string>{{0, 0}, {297, 853}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -291,19 +292,19 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {114, 616}}</string>
+						<string>{{0, 0}, {314, 871}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>97</real>
+							<real>297</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>400 371 1280 657 0 0 1680 1028 </string>
+						<string>0 116 1680 912 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>114pt</string>
+					<string>314pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -329,7 +330,7 @@
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>DC4E69EE12775B8F00560D0B</string>
+												<string>DC4E6A0D12775C7C00560D0B</string>
 												<key>history</key>
 												<array>
 													<string>DCB58377110612B8007757B8</string>
@@ -344,9 +345,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {0, 611}}</string>
+										<string>{{0, 0}, {0, 739}}</string>
 										<key>RubberWindowFrame</key>
-										<string>400 371 1280 657 0 0 1680 1028 </string>
+										<string>0 116 1680 912 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
@@ -361,7 +362,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20306471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TDBadgedCell.m</string>
+										<string>RootViewController.m</string>
 										<key>PBXSplitModuleInNavigatorKey</key>
 										<dict>
 											<key>Split0</key>
@@ -369,16 +370,16 @@
 												<key>PBXProjectModuleGUID</key>
 												<string>1CE0B20406471E060097A5F4</string>
 												<key>PBXProjectModuleLabel</key>
-												<string>TDBadgedCell.m</string>
+												<string>RootViewController.m</string>
 												<key>_historyCapacity</key>
 												<integer>0</integer>
 												<key>bookmark</key>
-												<string>DC4E69EF12775B8F00560D0B</string>
+												<string>DC4E6A0E12775C7C00560D0B</string>
 												<key>history</key>
 												<array>
 													<string>DCFFA74E10F7BA7700743EE2</string>
-													<string>DCB5834511061176007757B8</string>
-													<string>DCB58378110612B8007757B8</string>
+													<string>DC4E6A0A12775C6B00560D0B</string>
+													<string>DC4E6A0B12775C6B00560D0B</string>
 												</array>
 											</dict>
 											<key>SplitCount</key>
@@ -390,18 +391,18 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{5, 0}, {1156, 611}}</string>
+										<string>{{5, 0}, {1356, 739}}</string>
 										<key>RubberWindowFrame</key>
-										<string>400 371 1280 657 0 0 1680 1028 </string>
+										<string>0 116 1680 912 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXNavigatorGroup</string>
 									<key>Proportion</key>
-									<string>1156pt</string>
+									<string>1356pt</string>
 								</dict>
 							</array>
 							<key>Proportion</key>
-							<string>611pt</string>
+							<string>739pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -414,18 +415,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 616}, {1161, 0}}</string>
+								<string>{{0, 744}, {1361, 127}}</string>
 								<key>RubberWindowFrame</key>
-								<string>400 371 1280 657 0 0 1680 1028 </string>
+								<string>0 116 1680 912 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>127pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1161pt</string>
+					<string>1361pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -590,7 +591,7 @@
 		<string>/Users/timgrantdavies/Desktop/working/TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedTableCell.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>400 371 1280 657 0 0 1680 1028 </string>
+	<string>0 116 1680 912 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

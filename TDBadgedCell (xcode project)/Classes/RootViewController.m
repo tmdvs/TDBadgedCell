@@ -30,7 +30,7 @@
 												@"145", @"badge", nil], 
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Daring Fireball", @"title", 
 												@"The musings of John Gruber", @"detail",  
-												@"0", @"badge", nil],nil];
+												nil, @"badge", nil],nil];
 				
 }
 
