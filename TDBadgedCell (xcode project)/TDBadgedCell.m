@@ -83,7 +83,6 @@
 	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
 	[countString drawInRect:bounds withFont:self.font];
-	[countString release];
 }
 
 - (void) dealloc
@@ -219,6 +218,7 @@
 - (void)dealloc {
 	[badge release];
 	[badgeColor release];
+	[badgeNumber release];
 	[badgeColorHighlighted release];
 	
     [super dealloc];
