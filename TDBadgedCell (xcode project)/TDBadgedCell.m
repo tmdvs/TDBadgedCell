@@ -23,7 +23,7 @@
 
 @implementation TDBadgeView
 
-@synthesize width, badgeNumber, parent, badgeColor, badgeColorHighlighted;
+@synthesize width, badgeString, parent, badgeColor, badgeColorHighlighted;
 // from private
 @synthesize font;
 
@@ -41,7 +41,7 @@
 
 - (void) drawRect:(CGRect)rect
 {	
-	NSString *countString = self.badgeNumber;
+	NSString *countString = self.badgeString;
 	
 	CGSize numberSize = [countString sizeWithFont: font];
 	
@@ -102,7 +102,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeNumber, badge, badgeColor, badgeColorHighlighted;
+@synthesize badgeString, badge, badgeColor, badgeColorHighlighted;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -127,7 +127,7 @@
 {
 	[super layoutSubviews];
 	
-	if(self.badgeNumber)
+	if(self.badgeString)
 	{
 		//force badges to hide on edit.
 		if(self.editing)
@@ -136,7 +136,7 @@
 			[self.badge setHidden:NO];
 		
 		
-		CGSize badgeSize = [self.badgeNumber sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
+		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 		
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
 		
@@ -152,7 +152,7 @@
 		}
 		
 		[self.badge setFrame:badgeframe];
-		[badge setBadgeNumber:self.badgeNumber];
+		[badge setBadgeString:self.badgeString];
 		[badge setParent:self];
 		
 		if ((self.textLabel.frame.origin.x + self.textLabel.frame.size.width) >= badgeframe.origin.x)
