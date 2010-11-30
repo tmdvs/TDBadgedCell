@@ -1,9 +1,10 @@
-# xcode noise
-build/*
+# xcode & objective-c noise
+build
 *.pbxuser
-*.mode1v3
-*.perspective
-*.perspectivev3
+*.mode*
+*.perspective*
+*~.nib
+*.so
 
 # Vim
 *.swp
@@ -15,3 +16,6 @@ build/*
 .DS_Store
 profile
 
+# editor specific (emacs-alike)
+\#*\#
+*~
