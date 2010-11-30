@@ -17,7 +17,7 @@
 @interface TDBadgeView : UIView
 {
 	NSUInteger width;
-	NSString *badgeNumber;
+	NSString *badgeString;
 
 	UIFont *font;
 	UITableViewCell *parent;
@@ -27,7 +27,7 @@
 }
 
 @property (nonatomic, readonly) NSUInteger width;
-@property (nonatomic, assign) NSString *badgeNumber;
+@property (nonatomic, assign) NSString *badgeString;
 @property (nonatomic, assign) UITableViewCell *parent;
 @property (nonatomic, retain) UIColor *badgeColor;
 @property (nonatomic, retain) UIColor *badgeColorHighlighted;
@@ -35,14 +35,14 @@
 @end
 
 @interface TDBadgedCell : UITableViewCell {
-	NSString *badgeNumber;
+	NSString *badgeString;
 	TDBadgeView *badge;
 	
 	UIColor *badgeColor;
 	UIColor *badgeColorHighlighted;
 }
 
-@property (nonatomic, retain) NSString *badgeNumber;
+@property (nonatomic, retain) NSString *badgeString;
 @property (readonly, retain) TDBadgeView *badge;
 @property (nonatomic, retain) UIColor *badgeColor;
 @property (nonatomic, retain) UIColor *badgeColorHighlighted;
