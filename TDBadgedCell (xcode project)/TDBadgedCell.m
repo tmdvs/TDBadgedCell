@@ -218,7 +218,7 @@
 - (void)dealloc {
 	[badge release];
 	[badgeColor release];
-	[badgeNumber release];
+	[badgeString release];
 	[badgeColorHighlighted release];
 	
     [super dealloc];

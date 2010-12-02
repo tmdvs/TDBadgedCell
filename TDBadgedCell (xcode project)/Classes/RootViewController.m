@@ -24,7 +24,7 @@
 												 @"17", @"badge", nil], 
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"High Caffine Content", @"title", 
 												@"Steven Troughton Smith", @"detail",  
-												@"2", @"badge", nil],
+												@"none", @"badge", nil],
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Smoking Apples", @"title", 
 												@"Blog about Apple Software…", @"detail",  
 												@"145", @"badge", nil], 
