@@ -19,7 +19,6 @@
 	NSUInteger width;
 	NSString *badgeString;
 
-	UIFont *font;
 	UITableViewCell *parent;
 	
 	UIColor *badgeColor;

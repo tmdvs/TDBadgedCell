@@ -16,7 +16,6 @@
 
 @interface TDBadgeView ()
 
-@property (nonatomic, retain) UIFont *font;
 @property (nonatomic, assign) NSUInteger width;
 
 @end
@@ -24,15 +23,12 @@
 @implementation TDBadgeView
 
 @synthesize width, badgeString, parent, badgeColor, badgeColorHighlighted;
-// from private
-@synthesize font;
+
 
 - (id) initWithFrame:(CGRect)frame
 {
 	if (self = [super initWithFrame:frame])
-	{
-		font = [[UIFont boldSystemFontOfSize: 14] retain];
-		
+	{		
 		self.backgroundColor = [UIColor clearColor];
 	}
 	
@@ -43,11 +39,11 @@
 {	
 	NSString *countString = self.badgeString;
 	
-	CGSize numberSize = [countString sizeWithFont: font];
+	CGSize numberSize = [countString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
 	
 	self.width = numberSize.width + 16;
 	
-	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 16 , 18);
+	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 14 , 18);
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	float radius = bounds.size.height / 2.0;
@@ -82,14 +78,12 @@
 	
 	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
-	[countString drawInRect:bounds withFont:self.font];
+	[countString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize: 14]];
 }
 
 - (void) dealloc
 {
 	parent = nil;
-	
-	[font release];
 	[badgeColor release];
 	[badgeColorHighlighted release];
 	
