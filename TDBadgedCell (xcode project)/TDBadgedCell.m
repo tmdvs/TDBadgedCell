@@ -84,6 +84,7 @@
 - (void) dealloc
 {
 	parent = nil;
+	[badgeString release];
 	[badgeColor release];
 	[badgeColorHighlighted release];
 	
