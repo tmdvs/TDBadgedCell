@@ -98,8 +98,7 @@
 
 @synthesize badgeString, badge, badgeColor, badgeColorHighlighted;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+- (void)configureSelf {
         // Initialization code
 		badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
 		badge.parent = self;
@@ -113,6 +112,18 @@
 			[self.contentView addSubview:self.badge];
 		
 		[self.badge setNeedsDisplay];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if ((self = [super initWithCoder:decoder])) {
+        [self configureSelf];
+    }
+    return self;
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+        [self configureSelf];
     }
     return self;
 }
