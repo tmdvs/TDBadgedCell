@@ -51,7 +51,7 @@
 	CGContextSaveGState(context);
 	
 	UIColor *col;
-	if (parent.highlighted || parent.selected) {
+	if((parent.selectionStyle != UITableViewCellSelectionStyleNone) && (parent.highlighted || parent.selected)){
 		if (self.badgeColorHighlighted) {
 			col = self.badgeColorHighlighted;
 		} else {
