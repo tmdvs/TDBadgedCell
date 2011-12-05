@@ -74,7 +74,7 @@
                                      __badge.frame.size.width*2, 
                                      __badge.frame.size.height*2)];
         fontsize = (fontsize * 2);
-        bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f;
+        bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f + 1;
         bounds.origin.y += 3;
         bounds.size.width = bounds.size.width * 2;
         radius = radius * 2;
