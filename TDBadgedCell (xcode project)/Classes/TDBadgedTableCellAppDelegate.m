@@ -13,18 +13,21 @@
 @implementation TDBadgedTableCellAppDelegate
 
 @synthesize window;
-@synthesize navigationController;
-
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{    
     
-    // Override point for customization after app launch    
-	
-	[window addSubview:[navigationController view]];
+    // Override point for customization after app launch
+    window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	RootViewController *viewController = [[RootViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	[window setRootViewController:viewController];
+    [viewController release];
     [window makeKeyAndVisible];
+    
+    return YES;
 }
 
 
@@ -37,7 +40,6 @@
 #pragma mark Memory management
 
 - (void)dealloc {
-	[navigationController release];
 	[window release];
 	[super dealloc];
 }

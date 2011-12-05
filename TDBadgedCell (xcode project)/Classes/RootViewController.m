@@ -27,7 +27,10 @@
 												@"Text Value", @"badge", nil],
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Smoking Apples", @"title", 
 												@"Blog about Apple Software…", @"detail",  
-												@"145", @"badge", nil], 
+                                         @"145", @"badge", nil], 
+                                        [NSDictionary  dictionaryWithObjectsAndKeys:@"tmdvs.me", @"title", 
+                                         @"Tim's blog", @"detail",  
+                                         @"Highlight + shadow", @"badge", nil],
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Daring Fireball", @"title", 
 												@"The musings of John Gruber", @"detail",  
 												nil, @"badge", nil],nil];
@@ -53,6 +56,12 @@
 - (void)viewDidUnload {
 	// Release anything that can be recreated in viewDidLoad or on demand.
 	// e.g. self.myOutlet = nil;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 
@@ -87,11 +96,19 @@
 	cell.badgeString = [[contents objectAtIndex:indexPath.row] objectForKey:@"badge"];
 	
 	if (indexPath.row == 1)
-		cell.badgeColor = [UIColor colorWithRed:1.000 green:0.397 blue:0.419 alpha:1.000];
+		cell.badgeColor = [UIColor colorWithRed:0.792 green:0.197 blue:0.219 alpha:1.000];
 	
 	if (indexPath.row == 2)
-		cell.badgeColor = [UIColor colorWithWhite:0.783 alpha:1.000];
-
+    {
+		cell.badgeColor = [UIColor colorWithRed:0.197 green:0.592 blue:0.219 alpha:1.000];
+        cell.badge.radius = 9;
+    }
+    
+    if(indexPath.row == 3)
+    {
+        cell.showShadow = YES;
+    }
+    
     return cell;
 }
 

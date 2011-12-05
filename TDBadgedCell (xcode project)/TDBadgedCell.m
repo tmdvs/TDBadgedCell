@@ -14,16 +14,9 @@
 
 #import "TDBadgedCell.h"
 
-@interface TDBadgeView ()
-
-@property (nonatomic, assign) NSUInteger width;
-
-@end
-
 @implementation TDBadgeView
 
-@synthesize width, badgeString, parent, badgeColor, badgeColorHighlighted;
-
+@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -36,58 +29,101 @@
 }
 
 - (void) drawRect:(CGRect)rect
-{	
-	NSString *countString = self.badgeString;
-	
-	CGSize numberSize = [countString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
-	
-	self.width = numberSize.width + 16;
-	
-	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 14 , 18);
-	
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	float radius = bounds.size.height / 2.0f;
-	
-	CGContextSaveGState(context);
-	
-	UIColor *col;
-	if((parent.selectionStyle != UITableViewCellSelectionStyleNone) && (parent.highlighted || parent.selected)){
-		if (self.badgeColorHighlighted) {
-			col = self.badgeColorHighlighted;
+{		
+    CGFloat fontsize = 11;
+    
+	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: fontsize]];
+		
+	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 12 , 18);
+	CGFloat radius = (__radius)?__radius:4.0;
+    
+	UIColor *colour;
+    
+	if((__parent.selectionStyle != UITableViewCellSelectionStyleNone) && (__parent.highlighted || __parent.selected))
+    {
+		if (__badgeColorHighlighted) 
+        {
+			colour = __badgeColorHighlighted;
 		} else {
-			col = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
+			colour = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
 		}
 	} else {
-		if (self.badgeColor) {
-			col = self.badgeColor;
+		if (__badgeColor) 
+        {
+			colour = __badgeColor;
 		} else {
-			col = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
+			colour = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
 		}
 	}
-
-	CGContextSetFillColorWithColor(context, [col CGColor]);
-	
-	CGContextBeginPath(context);
-	CGContextAddArc(context, radius, radius, radius, (CGFloat)M_PI_2 , 3.0f * (CGFloat)M_PI_2, NO);
-	CGContextAddArc(context, bounds.size.width - radius, radius, radius, 3.0f * (CGFloat)M_PI_2, (CGFloat)M_PI_2, NO);
-	CGContextClosePath(context);
-	CGContextFillPath(context);
-	CGContextRestoreGState(context);
-	
+    
+    // Bounds for thet text label
 	bounds.origin.x = (bounds.size.width - numberSize.width) / 2.0f + 0.5f;
+	bounds.origin.y += 2;
+	
+    CALayer *__badge = [CALayer layer];
+	[__badge setFrame:rect];
+    
+    CGSize imageSize = __badge.frame.size;
+    
+    // Render the image @x2 for retina people
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00)
+    {
+        imageSize = CGSizeMake(__badge.frame.size.width * 2, __badge.frame.size.height * 2);
+        [__badge setFrame:CGRectMake(__badge.frame.origin.x, 
+                                     __badge.frame.origin.y,
+                                     __badge.frame.size.width*2, 
+                                     __badge.frame.size.height*2)];
+        fontsize = (fontsize * 2);
+        bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f;
+        bounds.origin.y += 3;
+        bounds.size.width = bounds.size.width * 2;
+        radius = radius * 2;
+    }
+    
+    [__badge setBackgroundColor:[colour CGColor]];
+	[__badge setCornerRadius:radius];
+    
+	UIGraphicsBeginImageContext(imageSize);
+	
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	
+	CGContextSaveGState(context);
+	[__badge renderInContext:context];
+	CGContextRestoreGState(context);
 	
 	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
-	[countString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize: 14]];
+	[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:UILineBreakModeClip];
+	
+	CGContextSetBlendMode(context, kCGBlendModeNormal);
+	
+	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
+	
+	UIGraphicsEndImageContext();
+	
+	[outputImage drawInRect:rect];
+	
+	if((__parent.selectionStyle != UITableViewCellSelectionStyleNone) && (__parent.highlighted || __parent.selected) && __showShadow)
+	{
+		[[self layer] setCornerRadius:radius];
+		[[self layer] setShadowOffset:CGSizeMake(0, 1)];
+		[[self layer] setShadowRadius:1.0];
+		[[self layer] setShadowOpacity:0.8];
+	} else {
+		[[self layer] setCornerRadius:radius];
+		[[self layer] setShadowOffset:CGSizeMake(0, 0)];
+		[[self layer] setShadowRadius:0];
+		[[self layer] setShadowOpacity:0];
+	}
+	
 }
 
 - (void) dealloc
 {
-	parent = nil;
-	[badgeString release];
-	[badgeColor release];
-	[badgeColorHighlighted release];
-	
+	__parent = nil;
+	[__badgeString release];
+	[__badgeColor release];
+	[__badgeColorHighlighted release];
 	[super dealloc];
 }
 
@@ -96,37 +132,39 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge, badgeColor, badgeColorHighlighted;
+@synthesize badgeString, badge=__badge, badgeColor, badgeColorHighlighted, showShadow;
 
-- (void)configureSelf {
+#pragma mark - Init methods
+
+- (void)configureSelf 
+{
         // Initialization code
-		badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
-		badge.parent = self;
+		__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
+		self.badge.parent = self;
 		
-		//redraw cells in accordance to accessory
-		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
-		
-		if (version <= 3.0)
-			[self addSubview:self.badge];
-		else 
-			[self.contentView addSubview:self.badge];
-		
+        [self.contentView addSubview:self.badge];
 		[self.badge setNeedsDisplay];
 }
 
-- (id)initWithCoder:(NSCoder *)decoder {
-    if ((self = [super initWithCoder:decoder])) {
+- (id)initWithCoder:(NSCoder *)decoder 
+{
+    if ((self = [super initWithCoder:decoder])) 
+    {
         [self configureSelf];
     }
     return self;
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier 
+{
+    if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) 
+    {
         [self configureSelf];
     }
     return self;
 }
+
+#pragma mark - Drawing Methods
 
 - (void) layoutSubviews
 {
@@ -141,24 +179,19 @@
 			[self.badge setHidden:NO];
 		
 		
-		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
+		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 11]];
+		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
+                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2),
+                                badgeSize.width + 13,
+                                18);
 		
-		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
-		
-		CGRect badgeframe;
-		
-		if (version <= 3.0)
-		{
-			badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16), (CGFloat)round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
-		}
-		else
-		{
-			badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width+16) - 10, (CGFloat)round((self.contentView.frame.size.height - 18) / 2), badgeSize.width+16, 18);
-		}
-		
+        if(self.showShadow)
+            [self.badge setShowShadow:YES];
+        else
+            [self.badge setShowShadow:NO];
+            
 		[self.badge setFrame:badgeframe];
-		[badge setBadgeString:self.badgeString];
-		[badge setParent:self];
+		[self.badge setBadgeString:self.badgeString];
 		
 		if ((self.textLabel.frame.origin.x + self.textLabel.frame.size.width) >= badgeframe.origin.x)
 		{
@@ -173,17 +206,18 @@
 			
 			self.detailTextLabel.frame = CGRectMake(self.detailTextLabel.frame.origin.x, self.detailTextLabel.frame.origin.y, badgeWidth, self.detailTextLabel.frame.size.height);
 		}
+        
 		//set badge highlighted colours or use defaults
 		if(self.badgeColorHighlighted)
-			badge.badgeColorHighlighted = self.badgeColorHighlighted;
+			self.badge.badgeColorHighlighted = self.badgeColorHighlighted;
 		else 
-			badge.badgeColorHighlighted = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
+			self.badge.badgeColorHighlighted = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
 		
 		//set badge colours or impose defaults
 		if(self.badgeColor)
-			badge.badgeColor = self.badgeColor;
+			self.badge.badgeColor = self.badgeColor;
 		else
-			badge.badgeColor = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
+			self.badge.badgeColor = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
 	}
 	else
 	{
@@ -195,34 +229,47 @@
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
 {
 	[super setHighlighted:highlighted animated:animated];
-	[badge setNeedsDisplay];
+	[self.badge setNeedsDisplay];
+    
+    if(self.showShadow)
+    {
+        [[[self textLabel] layer] setShadowOffset:CGSizeMake(0, 1)];
+        [[[self textLabel] layer] setShadowRadius:1];
+        [[[self textLabel] layer] setShadowOpacity:0.8];
+        
+        [[[self detailTextLabel] layer] setShadowOffset:CGSizeMake(0, 1)];
+        [[[self detailTextLabel] layer] setShadowRadius:1];
+        [[[self detailTextLabel] layer] setShadowOpacity:0.8];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
 	[super setSelected:selected animated:animated];
-	[badge setNeedsDisplay];
+	[self.badge setNeedsDisplay];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
 	[super setEditing:editing animated:animated];
 	
-	if (editing) {
-		badge.hidden = YES;
-		[badge setNeedsDisplay];
+	if (editing) 
+    {
+		self.badge.hidden = YES;
+		[self.badge setNeedsDisplay];
 		[self setNeedsDisplay];
 	}
 	else 
 	{
-		badge.hidden = NO;
-		[badge setNeedsDisplay];
+		self.badge.hidden = NO;
+		[self.badge setNeedsDisplay];
 		[self setNeedsDisplay];
 	}
 }
 
-- (void)dealloc {
-	[badge release];
+- (void)dealloc 
+{
+	[__badge release];
 	[badgeColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];

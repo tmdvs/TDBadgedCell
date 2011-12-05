@@ -8,42 +8,35 @@
 //
 //	Any Queries should be directed to hi@tmdvs.me | http://www.tmdvs.me
 //	
-//  Created by Tim on [Dec 30].
-//  Copyright 2009 Tim Davies. All rights reserved.
+//  Created by Tim
+//  Copyright 2011 Tim Davies. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface TDBadgeView : UIView
 {
-	NSUInteger width;
-	NSString *badgeString;
-
-	UITableViewCell *parent;
-	
-	UIColor *badgeColor;
-	UIColor *badgeColorHighlighted;	
 }
 
 @property (nonatomic, readonly) NSUInteger width;
-@property (nonatomic, retain) NSString *badgeString;
-@property (nonatomic, assign) UITableViewCell *parent;
-@property (nonatomic, retain) UIColor *badgeColor;
-@property (nonatomic, retain) UIColor *badgeColorHighlighted;
+@property (nonatomic, retain)   NSString *badgeString;
+@property (nonatomic, assign)   UITableViewCell *parent;
+@property (nonatomic, retain)   UIColor *badgeColor;
+@property (nonatomic, retain)   UIColor *badgeColorHighlighted;
+@property (nonatomic, assign)   BOOL showShadow;
+@property (nonatomic, assign)   CGFloat radius;
 
 @end
 
 @interface TDBadgedCell : UITableViewCell {
-	NSString *badgeString;
-	TDBadgeView *badge;
-	
-	UIColor *badgeColor;
-	UIColor *badgeColorHighlighted;
+
 }
 
-@property (nonatomic, retain) NSString *badgeString;
-@property (readonly, retain) TDBadgeView *badge;
-@property (nonatomic, retain) UIColor *badgeColor;
-@property (nonatomic, retain) UIColor *badgeColorHighlighted;
+@property (nonatomic, retain)   NSString *badgeString;
+@property (readonly, retain)    TDBadgeView *badge;
+@property (nonatomic, retain)   UIColor *badgeColor;
+@property (nonatomic, retain)   UIColor *badgeColorHighlighted;
+@property (nonatomic, assign)   BOOL showShadow;
 
 @end
