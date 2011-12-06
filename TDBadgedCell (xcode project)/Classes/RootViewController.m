@@ -84,7 +84,7 @@
     static NSString *CellIdentifier = @"Cell";
     
    
-    TDBadgedCell *cell = [[[TDBadgedCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    TDBadgedCell *cell = [[TDBadgedCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     
 	cell.textLabel.text = [[contents objectAtIndex:indexPath.row] objectForKey:@"title"];
 	cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
@@ -118,11 +118,6 @@
 }
 
 
-- (void)dealloc {
-	[contents release];
-	
-    [super dealloc];
-}
 
 
 @end
