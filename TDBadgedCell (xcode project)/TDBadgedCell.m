@@ -284,7 +284,7 @@
 {
 	[__badge release];
 	[badgeColor release];
-	[badgeTextColor release];
+        [badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
 	
