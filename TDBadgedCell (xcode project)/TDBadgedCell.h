@@ -23,6 +23,7 @@
 @property (nonatomic, retain)   NSString *badgeString;
 @property (nonatomic, assign)   UITableViewCell *parent;
 @property (nonatomic, retain)   UIColor *badgeColor;
+@property (nonatomic, retain)   UIColor *badgeTextColor;
 @property (nonatomic, retain)   UIColor *badgeColorHighlighted;
 @property (nonatomic, assign)   BOOL showShadow;
 @property (nonatomic, assign)   CGFloat radius;
@@ -36,6 +37,7 @@
 @property (nonatomic, retain)   NSString *badgeString;
 @property (readonly, retain)    TDBadgeView *badge;
 @property (nonatomic, retain)   UIColor *badgeColor;
+@property (nonatomic, retain)   UIColor *badgeTextColor;
 @property (nonatomic, retain)   UIColor *badgeColorHighlighted;
 @property (nonatomic, assign)   BOOL showShadow;
 
