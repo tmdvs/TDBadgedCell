@@ -132,7 +132,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeColorHighlighted, showShadow;
+@synthesize badgeString, badge=__badge, badgeColor, badgeColorHighlighted, showShadow, badgeOffsetX, badgeOffsetY;
 
 #pragma mark - Init methods
 
@@ -180,8 +180,8 @@
 		
 		
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 11]];
-		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
-                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2),
+		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25) + badgeOffsetX,
+                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2) + badgeOffsetY,
                                 badgeSize.width + 13,
                                 18);
 		

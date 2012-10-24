@@ -38,5 +38,6 @@
 @property (nonatomic, retain)   UIColor *badgeColor;
 @property (nonatomic, retain)   UIColor *badgeColorHighlighted;
 @property (nonatomic, assign)   BOOL showShadow;
-
+@property (nonatomic, assign)   CGFloat badgeOffsetX;
+@property (nonatomic, assign)   CGFloat badgeOffsetY;
 @end
