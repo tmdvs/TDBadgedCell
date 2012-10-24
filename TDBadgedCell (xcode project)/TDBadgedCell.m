@@ -131,7 +131,7 @@
 	__parent = nil;
 	[__badgeString release];
 	[__badgeColor release];
-        [__badgeTextColor release];
+  [__badgeTextColor release];
 	[__badgeColorHighlighted release];
 	[super dealloc];
 }
@@ -141,7 +141,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeOffsetX, badgeOffsetY;
+@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow;
 
 #pragma mark - Init methods
 
@@ -189,8 +189,8 @@
 		
 		
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 11]];
-		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25) + badgeOffsetX,
-                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2) + badgeOffsetY,
+		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
+                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2),
                                 badgeSize.width + 13,
                                 18);
 		
@@ -284,7 +284,7 @@
 {
 	[__badge release];
 	[badgeColor release];
-        [badgeTextColor release];
+  [badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
 	
