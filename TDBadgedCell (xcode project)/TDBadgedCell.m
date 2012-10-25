@@ -16,7 +16,7 @@
 
 @implementation TDBadgeView
 
-@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
+@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -90,12 +90,20 @@
 	CGContextSaveGState(context);
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
-	
-	CGContextSetBlendMode(context, kCGBlendModeClear);
+
+        if (__badgeTextColor)
+        {
+            CGContextSetFillColorWithColor(context, __badgeTextColor.CGColor);
+        } else {
+            CGContextSetBlendMode(context, kCGBlendModeClear);
+        }
 	
 	[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:UILineBreakModeClip];
-	
-	CGContextSetBlendMode(context, kCGBlendModeNormal);
+
+        if (!__badgeTextColor)
+        {
+            CGContextSetBlendMode(context, kCGBlendModeNormal);
+        }
 	
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
 	
@@ -123,6 +131,7 @@
 	__parent = nil;
 	[__badgeString release];
 	[__badgeColor release];
+  [__badgeTextColor release];
 	[__badgeColorHighlighted release];
 	[super dealloc];
 }
@@ -132,7 +141,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeColorHighlighted, showShadow;
+@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow;
 
 #pragma mark - Init methods
 
@@ -218,6 +227,10 @@
 			self.badge.badgeColor = self.badgeColor;
 		else
 			self.badge.badgeColor = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
+
+		if(self.badgeTextColor)
+			self.badge.badgeTextColor = self.badgeTextColor;
+
 	}
 	else
 	{
@@ -271,6 +284,7 @@
 {
 	[__badge release];
 	[badgeColor release];
+  [badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
 	
