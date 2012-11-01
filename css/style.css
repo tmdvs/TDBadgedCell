@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(font-awesome.css);
+
+body {
+	margin: 0 auto;
+	font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+header {
+	background: #0063b5 url('../images/header.png') bottom left no-repeat;
+	background-size: 100% 20px;
+	height: 280px;
+	margin: 0 auto;
+	color: #FFF;
+	position: relative;
+	z-index: 1;
+}
+
+.icon-download {
+	position: absolute;
+	opacity: 0.5;
+	top: 20px;
+	right: 0px;
+	line-height: 200px;
+	font-size: 170px;
+	width: 200px;
+	height: 200px;
+	text-decoration: none !important;
+	color: #FFF !important;
+	-webkit-transition-duration: 0.8s;
+}
+
+.icon-download:hover {
+	opacity: 1;
+}
+
+header h1 {
+	width: 800px;
+	margin: 0 auto;
+	padding: 30px 0 10px 0;
+	font-size: 46px;
+	font-weight: 700;
+}
+
+header h2 {
+	width: 550px;
+	margin: 0 auto;
+	font-size: 16pt;
+	font-weight: 300;
+	line-height: 36px;
+	color: #d5f5ff;
+	padding: 0 250px 0 0;
+}
+
+header span.buttons {
+	width: 800px;
+	margin: 30px auto;
+	display: block;
+}
+
+section.readme, section.welcome {
+	margin: 40px auto;
+	width: 800px;
+}
+
+section.readme:first-child {
+	margin: 10px auto !important;
+}
+
+section.welcome {
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+
+section.welcome p {
+	width: 800px;
+	margin: auto auto;
+}
+
+section.welcome h3 {
+	width: 800px;
+	margin: 30px auto 5px auto;
+}
+
+.examples {
+	position: absolute;
+	top: 65px;
+	right: 0px;
+	width: 215px;
+}
+
+.grey {
+	background: #FBFBFB;
+	padding: 1px 0;
+	box-shadow: inset 0 0 5px #CCC;
+}
+
+h3 {
+	margin: 30px 0 5px 0;
+}
+
+p {
+	font-size: 14px;
+	line-height: 28px;
+}
+
+a {
+	color: #0063b5;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+/**
+ * GitHub theme
+ *
+ * @author Craig Campbell
+ * @version 1.0.4
+ */
+
+.readme img {
+	box-shadow:  0 0px 3px #AAA;
+	border-radius: 5px;
+}
+ 
+pre {
+	
+	word-wrap: break-word;
+	padding: 6px 10px;
+	line-height: 19px;
+	margin: 30px 0 30px 0;
+	box-shadow:  0 0px 3px #BBB;
+	border-radius: 5px;
+}
+
+code {
+	margin: 0px 2px;
+	padding: 0px 5px;
+	font-size: 12px !important;
+}
+
+pre code {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+pre, code {
+	font-family: Consolas, 'Liberation Mono', Courier, monospace;
+	color: #333;
+	background: #FFF;
+}
+
+pre, pre code {
+	font-size: 13px;
+}
+
+pre .comment {
+	color: #998;
+}
+
+pre .support {
+	color: #0086B3;
+}
+
+pre .tag, pre .tag-name {
+	color: navy;
+}
+
+pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
+	font-weight: bold;
+}
+
+pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
+	color: #333;
+}
+
+pre .constant.numeric, pre .keyword.unit, pre .hex-color {
+	font-weight: normal;
+	color: #099;
+}
+
+pre .entity.class {
+	color: #458;
+}
+
+pre .entity.label {
+	color: teal;
+}
+
+pre .storage.modifier
+{
+	color: #458;
+}
+
+pre .entity.id, pre .entity.function {
+	color: #900;
+}
+
+pre .attribute, pre .variable {
+	color: teal;
+}
+
+pre .string, pre .support.value  {
+	font-weight: normal;
+	color: #d14;
+}
+
+pre .regexp {
+	color: #009926;
+}
+
+hr {
+	border: none;
+	height: 15px;
+	box-shadow: 0 3px 3.5px #EEE;
+	background: #FFF;
+}

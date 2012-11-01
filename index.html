@@ -1,100 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>TDBadgedCell by tmdvs</title>
-  </head>
+<head>
+	<meta charset="utf-8">
+	<title>TDBagedCell</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="scripts/rainbow.js"></script>
+	<script src="scripts/language/c.js"></script>
+</head>
+<body>
+	
+	<header>
+		<section class="welcome">
+			<h1>TDBadgedCell</h1>
+			<h2>UITableViewCell subclass that adds a badge accessory view to table view cells.</h2>	
+			<a href="https://github.com/tmdvs/TDBadgedCell"><i class="icon-download"></i></a>
+			<span class="buttons">
+				<iframe src="http://ghbtns.com/github-btn.html?user=tmdvs&repo=tdbadgedcell&type=watch&count=true&size=large"
+			allowtransparency="true" frameborder="0" scrolling="0" width="142px" height="55px"></iframe>
+				<iframe src="http://ghbtns.com/github-btn.html?user=tmdvs&repo=tdbadgedcell&type=fork&count=true&size=large"
+			allowtransparency="true" frameborder="0" scrolling="0" width="132px" height="55px"></iframe>
+			</span>
+		</section>
+	</header>
+	
+	<section class="readme">
+		
+		<h3><i class="icon-info-sign"></i> Meet TDBadgedCell version 2</h3>
+		<p>
+			TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the article explaining 
+			this on <a href="http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/">TUAW</a>). TDBadgedCell was 
+			written originally using CGPaths but as more people began to use TDBadgeCell the more customisation people wanted 
+			and the class now uses CALayers.
+		</p>
+		
+	</section>
+	
+	<div class="grey">
+		
+		<section class="readme">
+			
+				<h3><i class="icon-wrench"></i> Adding badges to your UITableViewCell's</h3>
+				<p>TDBadgedCell behaves like anyother UITableViewCell subclass and can be called and dequed in 
+					<em>cellForRowAtIndexPath:</em> like Apple's standard table view cell class. (See below for an example)</p>
+			
+<pre><code data-language="c">- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+	static NSString *CellIdentifier = @"Cell";
+	TDBadgedCell *cell = (TDBadgedCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	
+	if(cell == nil)
+		cell = [[[TDBadgedCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
+					reuseIdentifier:CellIdentifier] autorelease];
+	cell.badgeString = @"100";
+	return cell;
+}</code></pre>
+		
+			<p style="margin-bottom:20px">There you have it. Table view cells with badges just like apples own apps. Badges should be 
+				used to notify a user of a variable number of items waiting for their attention on the next view controller. For 
+				example the number of emails in an inbox, the number of unread direct messages for their twitter account, or game 
+				invites pending.</p>
+			
+		</section>
+	</div>
+	<section class="readme">
+		
+		<h3><i class="icon-eye-open"></i> Customising, changing the look and feel&hellip;</h3>
+		<img src="images/badges.png" height="218px" width="320px" style="float: right; margin: 0px 0px 0 20px" alt="s" />
+		<p>You're able to change the badge's colour for both normal and highlighted states, the colour of the badged text (by default the 
+			text is cut out of the badge), the radius of the badges corners, and whether or not to display shadows on highlighted states.</p>
+		
+		<p>Below are some example snippets showing what properties TDBadgedCell has to offer and how to modify the look and feel of your 
+			TDBadgedCell badges.</p>
+	</section>
+	<div class="grey">
+		<section class="readme">
+			<p style="margin-top:30px"><strong>Changing the badge's colour</strong><br/>
+				You can set both the normal colour of the badge and its highlighted colour. The defaults are very similar to the iPhone and 
+				Mac Mail application.
+			</p>
+			
+			<pre><code data-language="c">/* Set the badge colour for the normal state */
+cell.badgeColor = [UIColor blueColor];
 
-  <body>
-    <div id="container">
-      <div class="inner">
+/* Set the badge colour for the highlighted state */
+cell.badgeColorHighlighted = [UIColor pinkColor];</code></pre>
 
-        <header>
-          <h1>TDBadgedCell</h1>
-          <h2>Add badges to your table cells</h2>
-        </header>
+			<p style="margin-top:30px"><strong>Setting the badge's text color</strong><br/>
+				You can set both the normal colour of the badge and its highlighted colour. The defaults are very similar to the iPhone and Mac 
+				Mail application.
+			</p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/tmdvs/TDBadgedCell/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/tmdvs/TDBadgedCell/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/tmdvs/TDBadgedCell" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+			<pre><code data-language="c">/* Set the text colour for all states */
+cell.badgeTextColor = [UIColor grayColor];</code></pre>
 
-        <hr>
+			<p style="margin-top:30px"><strong>Setting the badge's shadows</strong><br/>
+				TDBadgedCell provides you with the option to enable drop shadows on title labels, detail text labels, and badges when the 
+				cell is selected. This is off by default but can add a lil-something to your cells.
+			</p>
 
-        <section id="main_content">
-          <h3>Meet TDBadgedCell version 2</h3>
+			<pre><code data-language="c">/* Set the text colour for all states */
+cell.showShadow = YES;</code></pre>
+			
+		</section>
+	</div>
+	
+	<section class="readme">
+		
+		<h3><i class="icon-bullhorn"></i> Licensing and legal stuff</h3>
+		<p>TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you 
+			modify the source please share alike and if you think you've improved upon what I have written I recomend sending me a pull request.</p>
 
-<p>TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the <a href="http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/">article explaining this on TUAW</a>. TDBadgedCell was written originally using CGPaths but as more people began to use TDBadgeCell the more customisation people wanted.</p>
-
-<p>To set the content of your badge (NSString) simply do:</p>
-
-<div class="highlight">
-<pre><span class="n">cell</span><span class="p">.</span><span class="n">badgeString</span> <span class="o">=</span> <span class="s">@"130990"</span><span class="p">;</span>
-</pre>
-</div>
-
-
-<p>You can set <em>badgeColor</em> and <em>badgeColorHighlighted</em> to modify the colour of the badges:</p>
-
-<div class="highlight">
-<pre><span class="n">cell</span><span class="p">.</span><span class="n">badgeColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="nl">colorWithRed:</span><span class="mf">0.792</span> <span class="nl">green:</span><span class="mf">0.197</span> <span class="nl">blue:</span><span class="mf">0.219</span> <span class="nl">alpha:</span><span class="mf">1.000</span><span class="p">];</span>
-</pre>
-</div>
-
-
-<p>You can also specify a border radius for your badges:</p>
-
-<div class="highlight">
-<pre><span class="n">cell</span><span class="p">.</span><span class="n">badge</span><span class="p">.</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
-</pre>
-</div>
-
-
-<p>and you can also turn on shadows for the cells selected state:</p>
-
-<div class="highlight">
-<pre><span class="n">cell</span><span class="p">.</span><span class="n">showShadow</span> <span class="o">=</span> <span class="n">YES</span><span class="p">;</span>
-</pre>
-</div>
-
-
-<p>Below is an example of those different options enabled in the demo app.</p>
-
-<p><img src="http://f.cl.ly/items/1e1n133e180c2L292s47/Untitled.png" alt="Example Image"></p>
-
-<h3>Licence and that stuff</h3>
-
-<p>TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you modify the source please share alike and if you think you've improved upon what I have written I recomend sending me a pull request.</p>
-
-<p><strong>Please note:</strong> If you are using TDBadgedCell in your project please make sure you leave credit where credit is due. Chances are I won't notice if you haven't left credit but karma will…</p>
-        </section>
-
-        <footer>
-          TDBadgedCell is maintained by <a href="https://github.com/tmdvs">tmdvs</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-30626340-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-      </div>
-    </div>
-  </body>
+		<p><strong>Please note:</strong> If you are using TDBadgedCell in your project please make sure you leave credit where credit is due. Chances 
+			are I won't notice if you haven't left credit but karma will&hellip;</p>
+	</section>
+	
+	<section class="readme">
+		<h3><i class="icon-group"></i> Credits and contributors</h3>
+		<p>TDBadgedCell was originally written to be open source by <a href="http://tmdvs.me">Tim Davies</a>, and has been used in all kinds of of 
+			apps and rewritten in for other toolchains such as 
+			<a href="http://conceptdev.blogspot.co.uk/2010/07/monotouch-port-of-tdbadgedcell.html">monotouch</a>.</p>
+	
+		<p>TDBadgedCell would be far less usefull if it wasn't for the lovely contributors who have made little tweaks to the source or added 
+			entirely new properties. You can view a list of contributors over at the <a href="https://github.com/tmdvs/TDBadgedCell/graphs/contributors">Github Repo</a></p>
+	</section>
+	
+	<section class="readme">
+		<h3><i class="icon-question-sign"></i> Need some help?</h3>
+		<p>Having a problem using TDBadgedCell? Have an unanswered question? Have no fear! You can contact me using any of the methods below. 
+			If its a technical Issue I'd suggest using Github issues as other users may be able to help you with your problem.</p>
+		<ul>
+			<li><i class="icon-github"></i> <a href="https://github.com/tmdvs/TDBadgedCell/issues">Github Issues</a></li>
+			<li><i class="icon-envelope"></i> <a href="mailto:hi@tmdvs.com?subject=TDBadgedCell">hi@tmdvs.com</a></li>
+			<li><i class="icon-twitter"></i> <a href="http://twitter.com/tmdvs">@tmdvs</a></li>
+		</ul>
+		
+	</section>
+</body>
 </html>
