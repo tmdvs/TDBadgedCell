@@ -14,6 +14,12 @@
 
 #import "TDBadgedCell.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+    #define TDLineBreakModeClip NSLineBreakByClipping
+#else
+    #define TDLineBreakModeClip UILineBreakModeClip
+#endif
+
 @implementation TDBadgeView
 
 @synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
@@ -93,7 +99,7 @@
 	
 	CGContextSetBlendMode(context, kCGBlendModeClear);
 	
-	[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:UILineBreakModeClip];
+	[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
 	
 	CGContextSetBlendMode(context, kCGBlendModeNormal);
 	
