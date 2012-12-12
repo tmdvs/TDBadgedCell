@@ -14,6 +14,12 @@
 
 #import "TDBadgedCell.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+    #define TDLineBreakModeClip NSLineBreakByClipping
+#else
+    #define TDLineBreakModeClip UILineBreakModeClip
+#endif
+
 @implementation TDBadgeView
 
 @synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;

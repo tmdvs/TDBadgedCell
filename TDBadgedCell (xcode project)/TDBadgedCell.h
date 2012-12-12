@@ -15,7 +15,6 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-
 #ifndef TD_STRONG
 #if __has_feature(objc_arc)
     #define TD_STRONG strong
@@ -33,16 +32,6 @@
     #define TD_WEAK assign
 #endif
 #endif
-
-
-#ifndef TDLineBreakModeClip
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
-    #define TDLineBreakModeClip NSLineBreakByClipping
-#else
-    #define TDLineBreakModeClip UILineBreakModeClip
-#endif
-#endif
-
 
 @interface TDBadgeView : UIView
 {
