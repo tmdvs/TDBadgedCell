@@ -138,12 +138,12 @@
     
 #if !__has_feature(objc_arc)
     
-	[__badgeString release];
-	[__badgeColor release];
+    [__badgeString release];
+    [__badgeColor release];
     [__badgeTextColor release];
-	[__badgeColorHighlighted release];
+    [__badgeColorHighlighted release];
     
-	[super dealloc];
+    [super dealloc];
 #endif
 }
 
@@ -294,11 +294,11 @@
 #if !__has_feature(objc_arc)
 - (void)dealloc 
 {
-	[__badge release];
-	[badgeColor release];
+    [__badge release];
+    [badgeColor release];
     [badgeTextColor release];
-	[badgeString release];
-	[badgeColorHighlighted release];
+    [badgeString release];
+    [badgeColorHighlighted release];
 	
     [super dealloc];
 }
