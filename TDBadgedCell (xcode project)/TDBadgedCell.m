@@ -135,11 +135,16 @@
 - (void) dealloc
 {
 	__parent = nil;
+    
+#if !__has_feature(objc_arc)
+    
 	[__badgeString release];
 	[__badgeColor release];
-  [__badgeTextColor release];
+    [__badgeTextColor release];
 	[__badgeColorHighlighted release];
+    
 	[super dealloc];
+#endif
 }
 
 @end
@@ -288,13 +293,15 @@
 
 - (void)dealloc 
 {
+#if !__has_feature(objc_arc)
 	[__badge release];
 	[badgeColor release];
-  [badgeTextColor release];
+    [badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
 	
     [super dealloc];
+#endif
 }
 
 
