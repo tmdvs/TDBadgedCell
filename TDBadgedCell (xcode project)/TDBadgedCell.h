@@ -15,18 +15,41 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+
+#if __has_feature(objc_arc)
+    #define TD_STRONG strong
+#else
+    #define TD_STRONG retain
+#endif
+
+#if __has_feature(objc_arc_weak)
+    #define TD_WEAK weak
+#elif __has_feature(objc_arc)
+    #define TD_WEAK unsafe_unretained
+#else
+    #define TD_WEAK assign
+#endif
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+    #define TDLineBreakModeClip NSLineBreakByClipping
+#else
+    #define TDLineBreakModeClip UILineBreakModeClip
+#endif
+
+
 @interface TDBadgeView : UIView
 {
 }
 
-@property (nonatomic, readonly) NSUInteger width;
-@property (nonatomic, retain)   NSString *badgeString;
-@property (nonatomic, assign)   UITableViewCell *parent;
-@property (nonatomic, retain)   UIColor *badgeColor;
-@property (nonatomic, retain)   UIColor *badgeTextColor;
-@property (nonatomic, retain)   UIColor *badgeColorHighlighted;
-@property (nonatomic, assign)   BOOL showShadow;
-@property (nonatomic, assign)   CGFloat radius;
+@property (nonatomic, readonly)     NSUInteger width;
+@property (nonatomic, TD_STRONG)    NSString *badgeString;
+@property (nonatomic, TD_WEAK)      UITableViewCell *parent;
+@property (nonatomic, TD_STRONG)    UIColor *badgeColor;
+@property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
+@property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
+@property (nonatomic, assign)      BOOL showShadow;
+@property (nonatomic, assign)      CGFloat radius;
 
 @end
 
@@ -34,11 +57,11 @@
 
 }
 
-@property (nonatomic, retain)   NSString *badgeString;
-@property (readonly, retain)    TDBadgeView *badge;
-@property (nonatomic, retain)   UIColor *badgeColor;
-@property (nonatomic, retain)   UIColor *badgeTextColor;
-@property (nonatomic, retain)   UIColor *badgeColorHighlighted;
-@property (nonatomic, assign)   BOOL showShadow;
+@property (nonatomic, TD_STRONG)    NSString *badgeString;
+@property (readonly,  TD_STRONG)    TDBadgeView *badge;
+@property (nonatomic, TD_STRONG)    UIColor *badgeColor;
+@property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
+@property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
+@property (nonatomic, assign)      BOOL showShadow;
 
 @end
