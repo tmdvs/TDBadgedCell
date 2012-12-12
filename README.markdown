@@ -1,8 +1,8 @@
 # TDBadgedCell
 ## A class created by Tim Davies.
----------------------------------------
+
 ### Meet TDBadgedCell version 2
-TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the [article explaining this on TUAW](http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/). TDBadgedCell was written originally using CGPaths but as more people began to use TDBadgeCell the more customisation people wanted.
+TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the [article explaining this on TUAW](http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/). TDBadgedCell was written originally using CGPaths but as more people began to use TDBadgeCell the more customisation people wanted. The class works in both ARC and non-ARC projects automatically (thanks [coryallegory](http://github.com/coryallegory)).
 
 To set the content of your badge (NSString) simply do:
 
