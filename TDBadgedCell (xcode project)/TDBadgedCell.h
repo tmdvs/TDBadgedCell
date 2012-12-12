@@ -43,8 +43,8 @@
 @property (nonatomic, TD_STRONG)    UIColor *badgeColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
-@property (nonatomic, assign)      BOOL showShadow;
-@property (nonatomic, assign)      CGFloat radius;
+@property (nonatomic, assign)       BOOL showShadow;
+@property (nonatomic, assign)       CGFloat radius;
 
 @end
 
@@ -57,6 +57,6 @@
 @property (nonatomic, TD_STRONG)    UIColor *badgeColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
-@property (nonatomic, assign)      BOOL showShadow;
+@property (nonatomic, assign)       BOOL showShadow;
 
 @end
