@@ -16,12 +16,15 @@
 #import <QuartzCore/QuartzCore.h>
 
 
+#ifndef TD_STRONG
 #if __has_feature(objc_arc)
     #define TD_STRONG strong
 #else
     #define TD_STRONG retain
 #endif
+#endif
 
+#ifndef TD_WEAK
 #if __has_feature(objc_arc_weak)
     #define TD_WEAK weak
 #elif __has_feature(objc_arc)
@@ -29,12 +32,15 @@
 #else
     #define TD_WEAK assign
 #endif
+#endif
 
 
+#ifndef TDLineBreakModeClip
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
     #define TDLineBreakModeClip NSLineBreakByClipping
 #else
     #define TDLineBreakModeClip UILineBreakModeClip
+#endif
 #endif
 
 
