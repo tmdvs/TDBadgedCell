@@ -285,9 +285,9 @@
 	}
 }
 
+#if !__has_feature(objc_arc)
 - (void)dealloc 
 {
-#if !__has_feature(objc_arc)
 	[__badge release];
 	[badgeColor release];
     [badgeTextColor release];
@@ -295,8 +295,8 @@
 	[badgeColorHighlighted release];
 	
     [super dealloc];
-#endif
 }
+#endif
 
 
 @end
