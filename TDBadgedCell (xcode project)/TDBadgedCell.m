@@ -20,9 +20,11 @@
     #define TDLineBreakModeClip UILineBreakModeClip
 #endif
 
+#define kDefaultFontSize 11.0
+
 @implementation TDBadgeView
 
-@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
+@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius, badgeTextFontSize=__badgeTextFontSize;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -36,8 +38,10 @@
 
 - (void) drawRect:(CGRect)rect
 {		
-    CGFloat fontsize = 11;
-    
+  CGFloat fontsize = kDefaultFontSize;
+  if (__badgeTextFontSize)
+    fontsize = __badgeTextFontSize;
+  
 	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: fontsize]];
 		
 	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 12 , 18);
@@ -152,7 +156,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow;
+@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeTextFontSize=__badgeTextFontSize;
 
 #pragma mark - Init methods
 
@@ -198,12 +202,14 @@
 		else
 			[self.badge setHidden:NO];
 		
-		
-		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 11]];
+		CGFloat fontSize = kDefaultFontSize;
+    if (__badgeTextFontSize)
+      fontSize = __badgeTextFontSize;
+		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: fontSize]];
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
                                 (CGFloat)round((self.contentView.frame.size.height - 18) / 2),
                                 badgeSize.width + 13,
-                                18);
+                                badgeSize.height + 4);
 		
         if(self.showShadow)
             [self.badge setShowShadow:YES];
@@ -241,7 +247,9 @@
 
 		if(self.badgeTextColor)
 			self.badge.badgeTextColor = self.badgeTextColor;
-
+    
+    if (self.badgeTextFontSize)
+      self.badge.badgeTextFontSize = __badgeTextFontSize;
 	}
 	else
 	{
