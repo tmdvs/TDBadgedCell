@@ -29,18 +29,19 @@
 	if ((self = [super initWithFrame:frame]))
 	{		
 		self.backgroundColor = [UIColor clearColor];
+        self.fontSize = 11.f;
 	}
 	
 	return self;	
 }
 
 - (void) drawRect:(CGRect)rect
-{		
-    CGFloat fontsize = 11;
+{
+    CGFloat fontsize = self.fontSize;
     
-	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: fontsize]];
+	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
 		
-	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 12 , 18);
+	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 12 , self.fontSize + 7);
 	CGFloat radius = (__radius)?__radius:4.0;
     
 	UIColor *colour;
@@ -81,7 +82,7 @@
                                      __badge.frame.size.height*2)];
         fontsize = (fontsize * 2);
         bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f + 1;
-        bounds.origin.y += 3;
+        bounds.origin.y += 4;
         bounds.size.width = bounds.size.width * 2;
         radius = radius * 2;
     }
@@ -199,11 +200,10 @@
 			[self.badge setHidden:NO];
 		
 		
-		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 11]];
+		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
-                                (CGFloat)round((self.contentView.frame.size.height - 18) / 2),
-                                badgeSize.width + 13,
-                                18);
+                                (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + 7)) / 2),
+                                badgeSize.width + 13, badgeSize.height + 7);
 		
         if(self.showShadow)
             [self.badge setShowShadow:YES];
