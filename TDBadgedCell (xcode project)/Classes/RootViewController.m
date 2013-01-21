@@ -96,7 +96,10 @@
 	cell.badgeString = [[contents objectAtIndex:indexPath.row] objectForKey:@"badge"];
 	
 	if (indexPath.row == 1)
+    {
 		cell.badgeColor = [UIColor colorWithRed:0.792 green:0.197 blue:0.219 alpha:1.000];
+        cell.badge.fontSize = 16;
+    }
 	
 	if (indexPath.row == 2)
     {

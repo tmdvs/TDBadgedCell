@@ -30,7 +30,7 @@ cell.showShadow = YES;
 
 Below is an example of those different options enabled in the demo app.
 
-![Example Image](http://f.cl.ly/items/1e1n133e180c2L292s47/Untitled.png)
+![Example Image](http://up.tmdvs.me/image/1E1A33290a2V/iOS%20Simulator%20Screen%20shot%2021%20Jan%202013%2022.24.19.png)
 
 ## Licence and that stuff
 TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you modify the source please share alike and if you think you've improved upon what I have written I recomend sending me a pull request.
