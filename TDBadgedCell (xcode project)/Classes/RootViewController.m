@@ -101,7 +101,8 @@
 	if (indexPath.row == 2)
     {
 		cell.badgeColor = [UIColor colorWithRed:0.197 green:0.592 blue:0.219 alpha:1.000];
-        cell.badge.radius = 9;
+        cell.badge.radius = 12;
+        cell.badge.fontSize = 17;
     }
     
     if(indexPath.row == 3)

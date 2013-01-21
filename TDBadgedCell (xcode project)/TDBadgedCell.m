@@ -41,7 +41,7 @@
     
 	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
 		
-	CGRect bounds = CGRectMake(0 , 0, numberSize.width + 12 , self.fontSize + 7);
+	CGRect bounds = CGRectMake(0 , ((rect.size.height / 2) - (numberSize.height / 2)) + 2, numberSize.width + 12 , numberSize.height);
 	CGFloat radius = (__radius)?__radius:4.0;
     
 	UIColor *colour;
@@ -65,7 +65,6 @@
     
     // Bounds for thet text label
 	bounds.origin.x = (bounds.size.width - numberSize.width) / 2.0f + 0.5f;
-	bounds.origin.y += 2;
 	
     CALayer *__badge = [CALayer layer];
 	[__badge setFrame:rect];
@@ -82,7 +81,6 @@
                                      __badge.frame.size.height*2)];
         fontsize = (fontsize * 2);
         bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f + 1;
-        bounds.origin.y += 4;
         bounds.size.width = bounds.size.width * 2;
         radius = radius * 2;
     }
@@ -202,8 +200,8 @@
 		
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
-                                (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + 7)) / 2),
-                                badgeSize.width + 13, badgeSize.height + 7);
+                                (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
+                                badgeSize.width + 13, badgeSize.height + (50/badgeSize.height));
 		
         if(self.showShadow)
             [self.badge setShowShadow:YES];
