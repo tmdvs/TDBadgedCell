@@ -41,7 +41,7 @@
     
 	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
 		
-	CGRect bounds = CGRectMake(0 , ((rect.size.height / 2) - (numberSize.height / 2)) + 2, numberSize.width + 12 , numberSize.height);
+	CGRect bounds = CGRectMake(0 , ((rect.size.height / 2) - (numberSize.height / 2)), numberSize.width + 12 , numberSize.height);
 	CGFloat radius = (__radius)?__radius:4.0;
     
 	UIColor *colour;
