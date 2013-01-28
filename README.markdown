@@ -16,10 +16,11 @@ You can set _badgeColor_ and _badgeColorHighlighted_ to modify the colour of the
 cell.badgeColor = [UIColor colorWithRed:0.792 green:0.197 blue:0.219 alpha:1.000];
 ```
 
-You can also specify a border radius for your badges:
+You can also specify a border radius and font size for your badges:
 
 ```Objective-C
 cell.badge.radius = 9;
+cel.fontSize = 18;
 ```
 
 and you can also turn on shadows for the cells selected state:
