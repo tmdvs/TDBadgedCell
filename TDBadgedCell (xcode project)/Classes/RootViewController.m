@@ -99,6 +99,8 @@
     {
 		cell.badgeColor = [UIColor colorWithRed:0.792 green:0.197 blue:0.219 alpha:1.000];
         cell.badge.fontSize = 16;
+        cell.badgeLeftOffset = 8;
+        cell.badgeRightOffset = 40;
     }
 	
 	if (indexPath.row == 2)
