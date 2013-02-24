@@ -160,13 +160,16 @@
 	// Initialization code
 	__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
 	self.badge.parent = self;
-    self.badgeLeftOffset = 10.f;
     
+    self.badgeLeftOffset = 10.f;
     self.badgeRightOffset = 12.f;
+    
     // by default, resize textLabel & detailTextLabel
     self.resizeableLabels = [[NSMutableArray alloc] initWithCapacity:2];
-    [self.resizeableLabels addObject:self.textLabel];
-    [self.resizeableLabels addObject:self.detailTextLabel];
+    if (self.textLabel != nil)
+        [self.resizeableLabels addObject:self.textLabel];
+    if (self.detailTextLabel != nil)
+        [self.resizeableLabels addObject:self.detailTextLabel];
 	
 	[self.contentView addSubview:self.badge];
 	[self.badge setNeedsDisplay];
