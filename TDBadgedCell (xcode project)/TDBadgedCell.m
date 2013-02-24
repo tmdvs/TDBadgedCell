@@ -303,6 +303,7 @@
 	[badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
+    [resizeableLabels release];
 	
 	[super dealloc];
 }
