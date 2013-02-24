@@ -59,5 +59,8 @@
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
 @property (nonatomic, assign)       BOOL showShadow;
+@property (nonatomic, assign)       CGFloat badgeLeftOffset;
+@property (nonatomic, assign)       CGFloat badgeRightOffset;
+@property (nonatomic, TD_STRONG)    NSMutableArray *resizeableLabels;
 
 @end
