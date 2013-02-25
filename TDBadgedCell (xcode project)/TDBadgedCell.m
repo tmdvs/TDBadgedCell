@@ -151,7 +151,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow;
+@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeLeftOffset, badgeRightOffset, resizeableLabels;
 
 #pragma mark - Init methods
 
@@ -160,6 +160,16 @@
 	// Initialization code
 	__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
 	self.badge.parent = self;
+    
+    self.badgeLeftOffset = 10.f;
+    self.badgeRightOffset = 12.f;
+    
+    // by default, resize textLabel & detailTextLabel
+    self.resizeableLabels = [[NSMutableArray alloc] initWithCapacity:2];
+    if (self.textLabel != nil)
+        [self.resizeableLabels addObject:self.textLabel];
+    if (self.detailTextLabel != nil)
+        [self.resizeableLabels addObject:self.detailTextLabel];
 	
 	[self.contentView addSubview:self.badge];
 	[self.badge setNeedsDisplay];
@@ -199,7 +209,7 @@
 		
 		
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
-		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 25),
+		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 13 + self.badgeRightOffset),
 									   (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
 									   badgeSize.width + 13, badgeSize.height + (50/badgeSize.height));
 		
@@ -211,19 +221,15 @@
 		[self.badge setFrame:badgeframe];
 		[self.badge setBadgeString:self.badgeString];
 		
-		if ((self.textLabel.frame.origin.x + self.textLabel.frame.size.width) >= badgeframe.origin.x)
-		{
-			CGFloat badgeWidth = self.textLabel.frame.size.width - badgeframe.size.width - 10.0f;
-			
-			self.textLabel.frame = CGRectMake(self.textLabel.frame.origin.x, self.textLabel.frame.origin.y, badgeWidth, self.textLabel.frame.size.height);
-		}
-		
-		if ((self.detailTextLabel.frame.origin.x + self.detailTextLabel.frame.size.width) >= badgeframe.origin.x)
-		{
-			CGFloat badgeWidth = self.detailTextLabel.frame.size.width - badgeframe.size.width - 10.0f;
-			
-			self.detailTextLabel.frame = CGRectMake(self.detailTextLabel.frame.origin.x, self.detailTextLabel.frame.origin.y, badgeWidth, self.detailTextLabel.frame.size.height);
-		}
+        // resize all labels
+        for (UILabel *label in self.resizeableLabels)
+        {
+            if ((label.frame.origin.x + label.frame.size.width) >= badgeframe.origin.x)
+            {
+                CGFloat textLabelWidth = badgeframe.origin.x - label.frame.origin.x - self.badgeLeftOffset;
+                label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, textLabelWidth, label.frame.size.height);
+            }
+        }
 		
 		//set badge highlighted colours or use defaults
 		if(self.badgeColorHighlighted)
@@ -297,6 +303,7 @@
 	[badgeTextColor release];
 	[badgeString release];
 	[badgeColorHighlighted release];
+    [resizeableLabels release];
 	
 	[super dealloc];
 }
