@@ -20,7 +20,7 @@ You can also specify a border radius and font size for your badges:
 
 ```Objective-C
 cell.badge.radius = 9;
-cel.fontSize = 18;
+cell.fontSize = 18;
 ```
 
 and you can also turn on shadows for the cells selected state:
