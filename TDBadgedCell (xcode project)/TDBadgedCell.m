@@ -37,83 +37,63 @@
 
 - (void) drawRect:(CGRect)rect
 {
+    // Set up variable for drawing
+    CGFloat scale = [[UIScreen mainScreen] scale];
 	CGFloat fontsize = self.fontSize;
-	
 	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
-	
-	CGRect bounds = CGRectMake(0 , ((rect.size.height / 2) - (numberSize.height / 2)), numberSize.width + 12 , numberSize.height);
 	CGFloat radius = (__radius)?__radius:4.0;
 	
+    // Set the badge background colours
 	UIColor *colour;
-	
 	if((__parent.selectionStyle != UITableViewCellSelectionStyleNone) && (__parent.highlighted || __parent.selected))
-	{
 		if (__badgeColorHighlighted)
 			colour = __badgeColorHighlighted;
 		else
 			colour = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
-	}
 	else
-	{
 		if (__badgeColor)
 			colour = __badgeColor;
 		else
 			colour = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
-	}
 	
-	// Bounds for thet text label
-	bounds.origin.x = (bounds.size.width - numberSize.width) / 2.0f + 0.5f;
-	
+    
+    // Create the layer for drawing the badge
 	CALayer *__badge = [CALayer layer];
 	[__badge setFrame:rect];
-	
-	CGSize imageSize = __badge.frame.size;
-	
-	// Render the image @x2 for retina people
-	if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00)
-	{
-		imageSize = CGSizeMake(__badge.frame.size.width * 2, __badge.frame.size.height * 2);
-		[__badge setFrame:CGRectMake(__badge.frame.origin.x,
-									 __badge.frame.origin.y, // 2 x
-									 __badge.frame.size.width*2,
-									 __badge.frame.size.height*2)];
-		fontsize = (fontsize * 2);
-		bounds.origin.x = ((bounds.size.width * 2) - (numberSize.width * 2)) / 2.0f + 1;
-		bounds.size.width = bounds.size.width * 2;
-		radius = radius * 2;
-	}
-	
 	[__badge setBackgroundColor:[colour CGColor]];
 	[__badge setCornerRadius:radius];
 	
-	UIGraphicsBeginImageContext(imageSize);
-	
+    // Create a graphics context at scale to save the badge to
+    UIGraphicsBeginImageContextWithOptions(__badge.frame.size, NO, scale);
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	
 	CGContextSaveGState(context);
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
 	
+    // Set the correct badge text colour, otherwise use kCGBlendModeClear to mask it
 	if (__badgeTextColor)
 		CGContextSetFillColorWithColor(context, __badgeTextColor.CGColor);
 	else
 		CGContextSetBlendMode(context, kCGBlendModeClear);
 	
-	/* Draw and clip the badge text from the badge shape */
-	if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00)
-		[__badgeString drawInRect:CGRectMake(bounds.origin.x, bounds.origin.y + 2, bounds.size.width, bounds.size.height) withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
-	else
-		[__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
+    // Create a frame for the badge text
+	CGRect bounds = CGRectMake((rect.size.width / 2) - (numberSize.width / 2) ,
+                               ((rect.size.height / 2) - (numberSize.height / 2)),
+                               numberSize.width + 12 , numberSize.height);
+    
+	// Draw and clip the badge text from the badge shape
+    [__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
 	
-	if (!__badgeTextColor)
-		CGContextSetBlendMode(context, kCGBlendModeNormal);
-	
+    // Create an image from the new badge (Fast and easy to cache)
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
-	
 	UIGraphicsEndImageContext();
 	
+    // Draw the image into the badgeView
 	[outputImage drawInRect:rect];
-	
+    
+
+    // Set any additional styles for select states
 	if((__parent.selectionStyle != UITableViewCellSelectionStyleNone) && (__parent.highlighted || __parent.selected) && __showShadow)
 	{
 		[[self layer] setCornerRadius:radius];
@@ -151,29 +131,9 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeLeftOffset, badgeRightOffset, resizeableLabels;
+@synthesize badgeString=__badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeLeftOffset, badgeRightOffset, resizeableLabels;
 
 #pragma mark - Init methods
-
-- (void)configureSelf
-{
-	// Initialization code
-	__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
-	self.badge.parent = self;
-    
-    self.badgeLeftOffset = 10.f;
-    self.badgeRightOffset = 12.f;
-    
-    // by default, resize textLabel & detailTextLabel
-    self.resizeableLabels = [[NSMutableArray alloc] initWithCapacity:2];
-    if (self.textLabel != nil)
-        [self.resizeableLabels addObject:self.textLabel];
-    if (self.detailTextLabel != nil)
-        [self.resizeableLabels addObject:self.detailTextLabel];
-	
-	[self.contentView addSubview:self.badge];
-	[self.badge setNeedsDisplay];
-}
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -193,6 +153,33 @@
 	return self;
 }
 
+- (void)configureSelf
+{
+	// Initialization code
+	__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
+	self.badge.parent = self;
+    
+    self.badgeLeftOffset = 10.f;
+    self.badgeRightOffset = 12.f;
+    
+    // by default, resize textLabel & detailTextLabel
+    self.resizeableLabels = [[NSMutableArray alloc] initWithCapacity:2];
+    if (self.textLabel != nil)
+        [self.resizeableLabels addObject:self.textLabel];
+    if (self.detailTextLabel != nil)
+        [self.resizeableLabels addObject:self.detailTextLabel];
+	
+	[self.contentView addSubview:self.badge];
+}
+
+- (void) setBadgeString:(NSString *)badgeString
+{
+    __badgeString = badgeString;
+    __badge.badgeString = __badgeString;
+    [__badge setNeedsDisplay];
+    [self layoutSubviews];
+}
+
 #pragma mark - Drawing Methods
 
 - (void) layoutSubviews
@@ -201,27 +188,30 @@
 	
 	if(self.badgeString)
 	{
-		//force badges to hide on edit.
+		// Force badges to hide on edit.
 		if(self.editing)
 			[self.badge setHidden:YES];
 		else
 			[self.badge setHidden:NO];
 		
 		
+        // Calculate the size of the bage from the badge string
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 13 + self.badgeRightOffset),
 									   (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
 									   badgeSize.width + 13, badgeSize.height + (50/badgeSize.height));
 		
+        // Enable shadows if we want them
 		if(self.showShadow)
 			[self.badge setShowShadow:YES];
 		else
 			[self.badge setShowShadow:NO];
 		
+        // Set the badge string
 		[self.badge setFrame:badgeframe];
 		[self.badge setBadgeString:self.badgeString];
 		
-        // resize all labels
+        // Resize all labels
         for (UILabel *label in self.resizeableLabels)
         {
             if ((label.frame.origin.x + label.frame.size.width) >= badgeframe.origin.x)
@@ -301,7 +291,7 @@
 	[__badge release];
 	[badgeColor release];
 	[badgeTextColor release];
-	[badgeString release];
+	[__badgeString release];
 	[badgeColorHighlighted release];
     [resizeableLabels release];
 	
