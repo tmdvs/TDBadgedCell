@@ -50,11 +50,11 @@
 			colour = __badgeColorHighlighted;
 		else
 			colour = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.000f];
-	else
-		if (__badgeColor)
-			colour = __badgeColor;
-		else
-			colour = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
+        else
+            if (__badgeColor)
+                colour = __badgeColor;
+            else
+                colour = [UIColor colorWithRed:0.530f green:0.600f blue:0.738f alpha:1.000f];
 	
     
     // Create the layer for drawing the badge
@@ -92,7 +92,7 @@
     // Draw the image into the badgeView
 	[outputImage drawInRect:rect];
     
-
+    
     // Set any additional styles for select states
 	if((__parent.selectionStyle != UITableViewCellSelectionStyleNone) && (__parent.highlighted || __parent.selected) && __showShadow)
 	{
@@ -156,7 +156,9 @@
 - (void)configureSelf
 {
 	// Initialization code
-	__badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
+    if(!__badge)
+        __badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
+    
 	self.badge.parent = self;
     
     self.badgeLeftOffset = 10.f;
@@ -188,6 +190,8 @@
 	
 	if(self.badgeString)
 	{
+        [self configureSelf];
+        
 		// Force badges to hide on edit.
 		if(self.editing)
 			[self.badge setHidden:YES];
@@ -239,7 +243,7 @@
 	}
 	else
 	{
-		[self.badge setHidden:YES];
+		[self.badge removeFromSuperview];
 	}
 	
 }
