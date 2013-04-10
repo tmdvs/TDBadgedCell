@@ -111,6 +111,11 @@
 	
 }
 
+- (void) setBadgeString:(NSString *)badgeString
+{
+    __badgeString = [badgeString copy];
+}
+
 - (void) dealloc
 {
 	__parent = nil;

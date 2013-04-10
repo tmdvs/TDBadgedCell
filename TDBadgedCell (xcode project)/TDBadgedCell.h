@@ -38,7 +38,7 @@
 }
 
 @property (nonatomic, readonly)     NSUInteger width;
-@property (nonatomic, TD_STRONG)    NSString *badgeString;
+@property (nonatomic, copy)         NSString *badgeString;
 @property (nonatomic, TD_WEAK)      UITableViewCell *parent;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
