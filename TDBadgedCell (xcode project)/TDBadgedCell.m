@@ -190,8 +190,6 @@
 	
 	if(self.badgeString)
 	{
-        [self configureSelf];
-        
 		// Force badges to hide on edit.
 		if(self.editing)
 			[self.badge setHidden:YES];
