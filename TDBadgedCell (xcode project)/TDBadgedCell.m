@@ -190,7 +190,7 @@
 	
 	if(self.badgeString)
 	{
-        [self configureSelf];
+        [[self contentView] addSubview:[self badge]];
         
 		// Force badges to hide on edit.
 		if(self.editing)
