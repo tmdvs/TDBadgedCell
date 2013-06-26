@@ -165,7 +165,7 @@
     self.badgeRightOffset = 12.f;
     
     // by default, resize textLabel & detailTextLabel
-    self.resizeableLabels = [[NSMutableArray alloc] initWithCapacity:2];
+    self.resizeableLabels = [NSMutableArray arrayWithCapacity:2];
     if (self.textLabel != nil)
         [self.resizeableLabels addObject:self.textLabel];
     if (self.detailTextLabel != nil)
@@ -177,7 +177,11 @@
 - (void) setBadgeString:(NSString *)badgeString
 {
     __badgeString = badgeString;
+#if __has_feature(objc_arc)
     __badge.badgeString = [__badgeString copy];
+#else
+    __badge.badgeString = [[__badgeString copy] autorelease];
+#endif
     [__badge setNeedsDisplay];
     [self layoutSubviews];
 }
