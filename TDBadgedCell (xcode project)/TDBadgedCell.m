@@ -40,8 +40,12 @@
     // Set up variable for drawing
     CGFloat scale = [[UIScreen mainScreen] scale];
 	CGFloat fontsize = self.fontSize;
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+	CGSize numberSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:fontsize] }];
+#else
 	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
-	CGFloat radius = (__radius)?__radius:4.0;
+#endif
+    CGFloat radius = (__radius)?__radius:4.0;
 	
     // Set the badge background colours
 	UIColor *colour;
@@ -83,7 +87,14 @@
                                numberSize.width + 12 , numberSize.height);
     
 	// Draw and clip the badge text from the badge shape
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    [paragraph setLineBreakMode:NSLineBreakByClipping];
+    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:fontsize],
+                                                       NSParagraphStyleAttributeName:paragraph}];
+#else
     [__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
+#endif
 	
     // Create an image from the new badge (Fast and easy to cache)
 	UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -204,7 +215,11 @@
 		
 		
         // Calculate the size of the bage from the badge string
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+        CGSize badgeSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:self.badge.fontSize] }];
+#else
 		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
+#endif
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 13 + self.badgeRightOffset),
 									   (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
 									   badgeSize.width + 13, badgeSize.height + (50/badgeSize.height));
