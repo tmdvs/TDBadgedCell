@@ -22,7 +22,7 @@
 
 @implementation TDBadgeView
 
-@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, radius=__radius;
+@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, boldFont=__boldFont, radius=__radius;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -30,6 +30,11 @@
 	{
 		self.backgroundColor = [UIColor clearColor];
 		self.fontSize = 11.f;
+        
+        if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending)
+            self.boldFont = NO;
+        else
+            self.boldFont = YES;
 	}
 	
 	return self;
@@ -40,10 +45,11 @@
     // Set up variable for drawing
     CGFloat scale = [[UIScreen mainScreen] scale];
 	CGFloat fontsize = self.fontSize;
+    UIFont *font = self.boldFont ? [UIFont boldSystemFontOfSize:fontsize] : [UIFont systemFontOfSize:fontsize];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-	CGSize numberSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:fontsize] }];
+	CGSize numberSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:font }];
 #else
-	CGSize numberSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize:fontsize]];
+	CGSize numberSize = [self.badgeString sizeWithFont:font];
 #endif
     CGFloat radius = (__radius)?__radius:4.0;
 	
@@ -90,10 +96,10 @@
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     [paragraph setLineBreakMode:NSLineBreakByClipping];
-    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:fontsize],
+    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:font,
                                                        NSParagraphStyleAttributeName:paragraph}];
 #else
-    [__badgeString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize:fontsize] lineBreakMode:TDLineBreakModeClip];
+    [__badgeString drawInRect:bounds withFont:font lineBreakMode:TDLineBreakModeClip];
 #endif
 	
     // Create an image from the new badge (Fast and easy to cache)
@@ -215,10 +221,11 @@
 		
 		
         // Calculate the size of the bage from the badge string
+        UIFont *font = self.badge.boldFont ? [UIFont boldSystemFontOfSize:self.badge.fontSize] : [UIFont systemFontOfSize:self.badge.fontSize];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-        CGSize badgeSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:[UIFont boldSystemFontOfSize:self.badge.fontSize] }];
+        CGSize badgeSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:font }];
 #else
-		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: self.badge.fontSize]];
+		CGSize badgeSize = [self.badgeString sizeWithFont:font];
 #endif
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 13 + self.badgeRightOffset),
 									   (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
