@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Tim Davies' => 'hi@tmdvs.me' }
 
   s.source   = { :git => 'https://github.com/tmdvs/TDBadgedCell.git',
-                 :tag => 'v2.3.2' }
+                 :tag => 'v2.4' }
 
   s.description = 'TDBadgedCell grew out of the need for TableViewCell ' \
                   'badges and the lack of them in iOS. TDBadgedCell was ' \
