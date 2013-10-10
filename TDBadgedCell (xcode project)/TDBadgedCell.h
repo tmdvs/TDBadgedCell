@@ -35,6 +35,8 @@
 
 @interface TDBadgeView : UIView
 {
+    UIColor *__defaultColor;
+    UIColor *__defaultHighlightColor;
 }
 
 @property (nonatomic, readonly)     NSUInteger width;
