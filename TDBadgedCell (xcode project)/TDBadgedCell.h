@@ -45,6 +45,7 @@
 @property (nonatomic, TD_STRONG)    UIColor *badgeColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
+@property (nonatomic, TD_STRONG)    UIColor *badgeTextColorHighlighted;
 @property (nonatomic, assign)       BOOL showShadow;
 @property (nonatomic, assign)       BOOL boldFont;
 @property (nonatomic, assign)       CGFloat fontSize;
@@ -61,6 +62,7 @@
 @property (nonatomic, TD_STRONG)    UIColor *badgeColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeTextColor;
 @property (nonatomic, TD_STRONG)    UIColor *badgeColorHighlighted;
+@property (nonatomic, TD_STRONG)    UIColor *badgeTextColorHighlighted;
 @property (nonatomic, assign)       BOOL showShadow;
 @property (nonatomic, assign)       CGFloat badgeLeftOffset;
 @property (nonatomic, assign)       CGFloat badgeRightOffset;
