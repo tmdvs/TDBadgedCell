@@ -89,20 +89,7 @@
 	CGContextSaveGState(context);
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
-	
-//    // Set the correct badge text colour, otherwise use kCGBlendModeClear to mask it
-//	if (__badgeTextColor)
-//		CGContextSetFillColorWithColor(context, __badgeTextColor.CGColor);
-//	else
-//#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-//        if((__parent.highlighted || __parent.selected))
-//            CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
-//        else
-//            CGContextSetBlendMode(context, kCGBlendModeClear);
-//#else
-//       CGContextSetBlendMode(context, kCGBlendModeClear);
-//#endif
-    
+	    
     if((__parent.highlighted || __parent.selected)) {
         if (__badgeTextColorHighlighted) {
             CGContextSetFillColorWithColor(context, __badgeTextColorHighlighted.CGColor);
