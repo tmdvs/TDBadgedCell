@@ -22,7 +22,7 @@
 
 @implementation TDBadgeView
 
-@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, boldFont=__boldFont, radius=__radius;
+@synthesize width=__width, badgeString=__badgeString, parent=__parent, badgeColor=__badgeColor, badgeTextColor=__badgeTextColor, badgeColorHighlighted=__badgeColorHighlighted, showShadow=__showShadow, boldFont=__boldFont, radius=__radius, badgeTextColorHighlighted = __badgeTextColorHighlighted;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -89,19 +89,28 @@
 	CGContextSaveGState(context);
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
-	
-    // Set the correct badge text colour, otherwise use kCGBlendModeClear to mask it
-	if (__badgeTextColor)
-		CGContextSetFillColorWithColor(context, __badgeTextColor.CGColor);
-	else
+	    
+    if((__parent.highlighted || __parent.selected)) {
+        if (__badgeTextColorHighlighted) {
+            CGContextSetFillColorWithColor(context, __badgeTextColorHighlighted.CGColor);
+        }
+        else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-        if((__parent.highlighted || __parent.selected))
             CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
-        else
-            CGContextSetBlendMode(context, kCGBlendModeClear);
 #else
-       CGContextSetBlendMode(context, kCGBlendModeClear);
+            CGContextSetBlendMode(context, kCGBlendModeClear);
 #endif
+        }
+    }
+    else {
+        if (__badgeTextColor) {
+            CGContextSetFillColorWithColor(context, __badgeTextColor.CGColor);
+        }
+        else {
+            CGContextSetBlendMode(context, kCGBlendModeClear);
+        }
+    }
+    
     // Create a frame for the badge text
 	CGRect bounds = CGRectMake((rect.size.width / 2) - (numberSize.width / 2) ,
                                ((rect.size.height / 2) - (numberSize.height / 2)),
@@ -153,6 +162,7 @@
 	[__badgeColor release];
 	[__badgeTextColor release];
 	[__badgeColorHighlighted release];
+    [__badgeTextColorHighlighted release];
 	
 	[super dealloc];
 #endif
@@ -163,7 +173,7 @@
 
 @implementation TDBadgedCell
 
-@synthesize badgeString=__badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeLeftOffset, badgeRightOffset, resizeableLabels;
+@synthesize badgeString=__badgeString, badge=__badge, badgeColor, badgeTextColor, badgeColorHighlighted, showShadow, badgeLeftOffset, badgeRightOffset, resizeableLabels, badgeTextColorHighlighted;
 
 #pragma mark - Init methods
 
@@ -285,6 +295,9 @@
 		
 		if(self.badgeTextColor)
 			self.badge.badgeTextColor = self.badgeTextColor;
+        
+        if(self.badgeTextColorHighlighted)
+			self.badge.badgeTextColorHighlighted = self.badgeTextColorHighlighted;
 		
 	}
 	else
@@ -341,6 +354,7 @@
 	[__badge release];
 	[badgeColor release];
 	[badgeTextColor release];
+    [badgeTextColorHighlighted release];
 	[__badgeString release];
 	[badgeColorHighlighted release];
     [resizeableLabels release];
