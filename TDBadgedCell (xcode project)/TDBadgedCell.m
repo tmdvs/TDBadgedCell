@@ -100,7 +100,7 @@
         else
             CGContextSetBlendMode(context, kCGBlendModeClear);
 #else
-       CGContextSetBlendMode(context, kCGBlendModeClear);
+    CGContextSetBlendMode(context, kCGBlendModeClear);
 #endif
     // Create a frame for the badge text
 	CGRect bounds = CGRectMake((rect.size.width / 2) - (numberSize.width / 2) ,
@@ -111,8 +111,15 @@
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     [paragraph setLineBreakMode:NSLineBreakByClipping];
-    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:font,
-                                                       NSParagraphStyleAttributeName:paragraph}];
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{NSFontAttributeName:font,
+                                                                                      NSParagraphStyleAttributeName:paragraph}];
+    
+    if (__badgeTextColor) {
+        [attributes addEntriesFromDictionary:@{NSForegroundColorAttributeName:__badgeTextColor}];
+    }
+    
+    [__badgeString drawInRect:bounds withAttributes:attributes];
 #else
     [__badgeString drawInRect:bounds withFont:font lineBreakMode:TDLineBreakModeClip];
 #endif
