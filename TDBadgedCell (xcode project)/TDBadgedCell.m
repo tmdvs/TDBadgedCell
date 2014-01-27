@@ -46,6 +46,7 @@
     CGFloat scale = [[UIScreen mainScreen] scale];
 	CGFloat fontsize = self.fontSize;
     UIFont *font = self.boldFont ? [UIFont boldSystemFontOfSize:fontsize] : [UIFont systemFontOfSize:fontsize];
+        
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
 	CGSize numberSize = [self.badgeString sizeWithAttributes:@{ NSFontAttributeName:font }];
 #else
@@ -54,6 +55,8 @@
     CGFloat radius = (__radius)?__radius:8.5;
 	
     // Set the badge background colours
+    
+    NSLog(@"%d", __IPHONE_OS_VERSION_MIN_REQUIRED);
     
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     __defaultColor = [UIColor colorWithRed:0 green:0.478 blue:1 alpha:1.0];
@@ -111,15 +114,12 @@
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     [paragraph setLineBreakMode:NSLineBreakByClipping];
+    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:font,
+                                                       NSParagraphStyleAttributeName:paragraph}];
+#if !__has_feature(objc_arc)
+    [paragraph release];
+#endif
     
-    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:@{NSFontAttributeName:font,
-                                                                                      NSParagraphStyleAttributeName:paragraph}];
-    
-    if (__badgeTextColor) {
-        [attributes addEntriesFromDictionary:@{NSForegroundColorAttributeName:__badgeTextColor}];
-    }
-    
-    [__badgeString drawInRect:bounds withAttributes:attributes];
 #else
     [__badgeString drawInRect:bounds withFont:font lineBreakMode:TDLineBreakModeClip];
 #endif

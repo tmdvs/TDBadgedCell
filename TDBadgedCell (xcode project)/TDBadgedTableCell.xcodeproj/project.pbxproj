@@ -197,7 +197,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TDBadgedTableCell_Prefix.pch;
 				INFOPLIST_FILE = "TDBadgedTableCell-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = TDBadgedTableCell;
 			};
 			name = Debug;
@@ -210,7 +210,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TDBadgedTableCell_Prefix.pch;
 				INFOPLIST_FILE = "TDBadgedTableCell-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = TDBadgedTableCell;
 			};
 			name = Release;
