@@ -56,8 +56,6 @@
 	
     // Set the badge background colours
     
-    NSLog(@"%d", __IPHONE_OS_VERSION_MIN_REQUIRED);
-    
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
     __defaultColor = [UIColor colorWithRed:0 green:0.478 blue:1 alpha:1.0];
     __defaultHighlightColor = [UIColor whiteColor];
