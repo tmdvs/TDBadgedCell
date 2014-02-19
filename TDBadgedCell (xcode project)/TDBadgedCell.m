@@ -91,16 +91,40 @@
 	[__badge renderInContext:context];
 	CGContextRestoreGState(context);
 	    
+
+    // Create a frame for the badge text
+	CGRect bounds = CGRectMake((rect.size.width / 2) - (numberSize.width / 2) ,
+                               ((rect.size.height / 2) - (numberSize.height / 2)),
+                               numberSize.width + 12 , numberSize.height);
+    
+	// Draw and clip the badge text from the badge shape
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    UIColor *stringColor = nil;
+    if((__parent.highlighted || __parent.selected)) {
+
+            stringColor = __badgeTextColorHighlighted ? __badgeTextColorHighlighted : UIColor.lightGrayColor;
+    }
+    else {
+
+            stringColor = __badgeTextColor ? __badgeTextColor : UIColor.clearColor;
+    }
+
+    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+    [paragraph setLineBreakMode:NSLineBreakByClipping];
+    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:font,
+                                                       NSParagraphStyleAttributeName:paragraph,
+                                                       NSForegroundColorAttributeName:stringColor}];
+#if !__has_feature(objc_arc)
+    [paragraph release];
+#endif
+    
+#else
     if((__parent.highlighted || __parent.selected)) {
         if (__badgeTextColorHighlighted) {
             CGContextSetFillColorWithColor(context, __badgeTextColorHighlighted.CGColor);
         }
         else {
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-            CGContextSetFillColorWithColor(context, [UIColor lightGrayColor].CGColor);
-#else
             CGContextSetBlendMode(context, kCGBlendModeClear);
-#endif
         }
     }
     else {
@@ -111,23 +135,7 @@
             CGContextSetBlendMode(context, kCGBlendModeClear);
         }
     }
-    
-    // Create a frame for the badge text
-	CGRect bounds = CGRectMake((rect.size.width / 2) - (numberSize.width / 2) ,
-                               ((rect.size.height / 2) - (numberSize.height / 2)),
-                               numberSize.width + 12 , numberSize.height);
-    
-	// Draw and clip the badge text from the badge shape
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-    NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-    [paragraph setLineBreakMode:NSLineBreakByClipping];
-    [__badgeString drawInRect:bounds withAttributes:@{ NSFontAttributeName:font,
-                                                       NSParagraphStyleAttributeName:paragraph}];
-#if !__has_feature(objc_arc)
-    [paragraph release];
-#endif
-    
-#else
+
     [__badgeString drawInRect:bounds withFont:font lineBreakMode:TDLineBreakModeClip];
 #endif
 	
