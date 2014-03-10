@@ -217,14 +217,8 @@
 	self.badge.parent = self;
     
     
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-    self.badgeLeftOffset = 10.f;
-    self.badgeRightOffset = 0;
-#else
     self.badgeLeftOffset = 10.f;
     self.badgeRightOffset = 12.f;
-#endif
-    
     
     // by default, resize textLabel & detailTextLabel
     self.resizeableLabels = [NSMutableArray arrayWithCapacity:2];
@@ -266,7 +260,15 @@
 		else
 			[self.badge setHidden:NO];
 		
-		
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+        if (self.accessoryType != UITableViewCellAccessoryNone) {
+            
+            self.badgeRightOffset = 0.f;
+        } else {
+            
+            self.badgeRightOffset = 12.f;
+        }
+#endif
         // Calculate the size of the bage from the badge string
         UIFont *font = self.badge.boldFont ? [UIFont boldSystemFontOfSize:self.badge.fontSize] : [UIFont systemFontOfSize:self.badge.fontSize];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
