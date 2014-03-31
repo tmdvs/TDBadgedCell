@@ -106,7 +106,11 @@
     }
     else {
 
-            stringColor = __badgeTextColor ? __badgeTextColor : UIColor.clearColor;
+        if(__badgeTextColor)
+            stringColor = __badgeTextColor;
+        else
+            stringColor = [UIColor clearColor];
+            CGContextSetBlendMode(context, kCGBlendModeClear);
     }
 
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
