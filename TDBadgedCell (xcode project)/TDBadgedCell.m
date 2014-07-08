@@ -211,6 +211,18 @@
 {
 	if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]))
 	{
+        self.badgeLeftOffset = 10.f;
+        
+        if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
+            if (self.accessoryType != UITableViewCellAccessoryNone) {
+                
+                self.badgeRightOffset = 0.f;
+            } else {
+                
+                self.badgeRightOffset = 12.f;
+            }
+        }
+        
 		[self configureSelf];
 	}
 	return self;
@@ -223,10 +235,6 @@
         __badge = [[TDBadgeView alloc] initWithFrame:CGRectZero];
     
 	self.badge.parent = self;
-    
-    
-    self.badgeLeftOffset = 10.f;
-    self.badgeRightOffset = 12.f;
     
     // by default, resize textLabel & detailTextLabel
     self.resizeableLabels = [NSMutableArray arrayWithCapacity:2];
@@ -268,15 +276,6 @@
 		else
 			[self.badge setHidden:NO];
 		
-        if ([[[UIDevice currentDevice] systemVersion] compare:@"7.0" options:NSNumericSearch] != NSOrderedAscending) {
-            if (self.accessoryType != UITableViewCellAccessoryNone) {
-                
-                self.badgeRightOffset = 0.f;
-            } else {
-                
-                self.badgeRightOffset = 12.f;
-            }
-        }
         // Calculate the size of the bage from the badge string
         UIFont *font = self.badge.boldFont ? [UIFont boldSystemFontOfSize:self.badge.fontSize] : [UIFont systemFontOfSize:self.badge.fontSize];
         
@@ -286,6 +285,7 @@
         } else {
             badgeSize = [self.badgeString sizeWithFont:font];
         }
+        
 		CGRect badgeframe = CGRectMake(self.contentView.frame.size.width - (badgeSize.width + 13 + self.badgeRightOffset),
 									   (CGFloat)round((self.contentView.frame.size.height - (badgeSize.height + (50/badgeSize.height))) / 2),
 									   badgeSize.width + 13, badgeSize.height + (50/badgeSize.height));
