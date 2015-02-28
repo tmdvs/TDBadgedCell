@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'TDBadgedCell'
-  s.version  = '2.6'
+  s.version  = '3.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'UITableViewCell subclass that adds a "badgeString" property ' \
                'to table view cells.'
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Tim Davies' => 'hi@tmdvs.me' }
 
   s.source   = { :git => 'https://github.com/tmdvs/TDBadgedCell.git',
-                 :tag => 'v2.6' }
+                 :tag => 'v3.0' }
 
   s.description = 'TDBadgedCell grew out of the need for TableViewCell ' \
                   'badges and the lack of them in iOS. TDBadgedCell was ' \

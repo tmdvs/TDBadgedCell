@@ -28,9 +28,6 @@
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Smoking Apples", @"title", 
 												@"Blog about Apple Software…", @"detail",  
                                          @"145", @"badge", nil], 
-                                        [NSDictionary  dictionaryWithObjectsAndKeys:@"tmdvs.me", @"title", 
-                                         @"Tim's blog", @"detail",  
-                                         @"Highlight + shadow", @"badge", nil],
 										[NSDictionary  dictionaryWithObjectsAndKeys:@"Daring Fireball", @"title", 
 												@"The musings of John Gruber", @"detail",  
 												nil, @"badge", nil],nil];
@@ -114,11 +111,6 @@
 		cell.badgeColor = [UIColor colorWithRed:0.197 green:0.592 blue:0.219 alpha:1.000];
         cell.badge.radius = 1;
         cell.badge.fontSize = 17;
-    }
-    
-    if(indexPath.row == 3)
-    {
-        cell.showShadow = YES;
     }
     
     return cell;
