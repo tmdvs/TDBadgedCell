@@ -20,12 +20,6 @@ cell.badge.radius = 9;
 cell.badge.fontSize = 18;
 ```
 
-and you can also turn on shadows for the cells selected state:
-
-```Objective-C
-cell.showShadow = YES;
-```
-
 Below is an example of those different options enabled in the demo app.
 
 ![Example Image](http://up.tmdvs.me/image/401P1Q2i3T00/d)
