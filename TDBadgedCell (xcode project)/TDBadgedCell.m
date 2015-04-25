@@ -79,15 +79,16 @@
     
 	// Draw and clip the badge text from the badge shape
     UIColor *stringColor = nil;
-    if((__parent.highlighted || __parent.selected))
+    if((__parent.highlighted || __parent.selected)) {
         stringColor = __badgeTextColorHighlighted ? __badgeTextColorHighlighted : UIColor.lightGrayColor;
-    else
-        if(__badgeTextColor)
+    } else {
+        if(__badgeTextColor) {
             stringColor = __badgeTextColor;
-        else
+        } else {
             stringColor = [UIColor clearColor];
             CGContextSetBlendMode(context, kCGBlendModeClear);
-    
+        }
+    }
     
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     [paragraph setLineBreakMode:NSLineBreakByClipping];
