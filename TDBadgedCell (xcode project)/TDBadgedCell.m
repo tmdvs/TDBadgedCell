@@ -150,6 +150,16 @@
 	if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]))
 	{
         self.badgeLeftOffset = 10.f;
+        
+        if (self.accessoryType != UITableViewCellAccessoryNone)
+        {
+            self.badgeRightOffset = 0.f;
+        }
+        else
+        {
+            self.badgeRightOffset = 12.f;
+        }
+
 		[self configureSelf];
 	}
 	return self;
