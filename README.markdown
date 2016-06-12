@@ -25,6 +25,6 @@ Below is an example of those different options enabled in the demo app.
 ![Example Image](http://up.tmdvs.me/image/401P1Q2i3T00/d)
 
 ## Licence and that stuff
-TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you modify the source please share alike and if you think you've improved upon what I have written I recomend sending me a pull request.
+TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you modify the source please share alike and if you think you've improved upon what I have written I recommend sending me a pull request.
 
 **Please note:** If you are using TDBadgedCell in your project please make sure you leave credit where credit is due. Chances are I won't notice if you haven't left credit but karma will…
