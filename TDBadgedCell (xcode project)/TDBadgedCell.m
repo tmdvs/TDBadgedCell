@@ -232,14 +232,14 @@
 		[self.badge setBadgeString:self.badgeString];
 		
         // Resize all labels
-        /*for (UILabel *label in self.resizeableLabels)
+        for (UILabel *label in self.resizeableLabels)
         {
             if ((label.frame.origin.x + label.frame.size.width) >= badgeframe.origin.x)
             {
                 CGFloat textLabelWidth = badgeframe.origin.x - label.frame.origin.x - self.badgeLeftOffset;
                 label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, textLabelWidth, label.frame.size.height);
             }
-        }*/
+        }
 		
 		//set badge colours
 		if(self.badgeColorHighlighted)
