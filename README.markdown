@@ -3,7 +3,7 @@ TDBadgedCell grew out of the need for TableViewCell badges and the lack of them 
 
 ***Note:*** *You can find the old Objective-C version on the [deprecetated-objective-c branch](https://github.com/tmdvs/TDBadgedCell/tree/deprecated-objective-c)*.
 
-![Example Image](http://up.tmdvs.me/hOMo/d)
+![Example Image](http://up.tmdvs.me/hOlw/d)
 
 To set the content of your badge (String) simply do:
 

@@ -12,9 +12,9 @@ class ViewController: UITableViewController {
     
     let demoItems : [[String:String]] = [
         ["title" : "This is an example badge", "badge": "1"],
+        ["title" : "This is a second example badge", "badge": "123"],
         ["title" : "A text badge", "badge": "Warning!"],
         ["title" : "Another text badge", "badge": "Danger!"],
-        ["title" : "This is a second example badge", "badge": "25"],
     ]
 
     override func viewDidLoad() {
