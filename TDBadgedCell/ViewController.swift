@@ -23,23 +23,23 @@ class ViewController: UITableViewController {
         self.tableView.dataSource = self
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demoItems.count
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> TDBadgedCell {
-        var cell : TDBadgedCell? = tableView.dequeueReusableCellWithIdentifier("BadgedCell") as! TDBadgedCell?;
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> TDBadgedCell {
+        var cell : TDBadgedCell? = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as! TDBadgedCell?;
         if((cell == nil)) {
-            cell = TDBadgedCell(style: .Default, reuseIdentifier: "BadgedCell");
+            cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell");
         }
         
         // Set accessory views for two badges
         if(indexPath.row < 2) {
-            cell?.accessoryType = .DisclosureIndicator
+            cell?.accessoryType = .disclosureIndicator
         }
         
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
@@ -47,9 +47,9 @@ class ViewController: UITableViewController {
         
         // Set background colours for two badges
         if(indexPath.row == 2) {
-            cell?.badgeColour = UIColor.orangeColor()
+            cell?.badgeColor = .orange
         } else if(indexPath.row == 3) {
-            cell?.badgeColour = UIColor.redColor()
+            cell?.badgeColor = .red
         }
         
         return cell!

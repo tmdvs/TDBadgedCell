@@ -25,13 +25,13 @@ class TDBadgedCell: UITableViewCell {
     }
     
     // Badge background colours
-    var badgeColour = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
-    var badgeColorHighlighted = UIColor.whiteColor()
+    var badgeColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
+    var badgeColorHighlighted = UIColor.white
     
     // Font and style
     var badgeFontSize = 11.0;
     var badgeRadius = 20;
-    var badgeOffset = CGPointMake(10, 0);
+    var badgeOffset = CGPoint(x:10, y:0);
     let badgeView = UIImageView()
     
     override func layoutSubviews() {
@@ -46,12 +46,12 @@ class TDBadgedCell: UITableViewCell {
     }
     
     // When the badge
-    override func setHighlighted(highlighted: Bool, animated: Bool) {
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
         drawBadge()
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         drawBadge()
     }
@@ -59,36 +59,45 @@ class TDBadgedCell: UITableViewCell {
     // Draw the bagde image
     private func drawBadge() {
         // Calculate the size of our string
-        let textSize : CGSize = NSString(string: badgeString).sizeWithAttributes([NSFontAttributeName:UIFont.boldSystemFontOfSize(CGFloat(badgeFontSize))])
+        let textSize : CGSize = NSString(string: badgeString).size(attributes:[NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize))])
         
         // Create a frame with padding for our badge
         let height = textSize.height + 10
-        let width = textSize.width + 16
-        let badgeFrame : CGRect = CGRectMake(0, 0, (width > height) ? width : height, height)
+        var width = textSize.width + 16
+        if(width < height) {
+            width = height
+        }
+        let badgeFrame : CGRect = CGRect(x:0, y:0, width:width, height:height)
         
         let badge = CALayer()
         badge.frame = badgeFrame
-        badge.backgroundColor = ((self.highlighted || self.selected) ? badgeColorHighlighted : badgeColour).CGColor
+        
+        if(self.isHighlighted || self.isSelected) {
+            badge.backgroundColor = badgeColorHighlighted.cgColor
+        } else {
+            badge.backgroundColor = badgeColor.cgColor
+        }
+
         badge.cornerRadius = (CGFloat(badgeRadius) < (badge.frame.size.height / 2)) ? CGFloat(badgeRadius) : CGFloat(badge.frame.size.height / 2)
         
         // Draw badge into graphics context
-        UIGraphicsBeginImageContextWithOptions(badge.frame.size, false, UIScreen.mainScreen().scale)
-        let ctx = UIGraphicsGetCurrentContext()
-        CGContextSaveGState(ctx)
-        badge.renderInContext(ctx!)
-        CGContextSaveGState(ctx)
+        UIGraphicsBeginImageContextWithOptions(badge.frame.size, false, UIScreen.main.scale)
+        let ctx = UIGraphicsGetCurrentContext()!
+        ctx.saveGState()
+        badge.render(in:ctx)
+        ctx.saveGState()
         
         // Draw string into graphics context
-        CGContextSetBlendMode(ctx, CGBlendMode.Clear)
-        NSString(string: badgeString).drawInRect(CGRectMake(8, 5, textSize.width, textSize.height), withAttributes: [
-            NSFontAttributeName:UIFont.boldSystemFontOfSize(CGFloat(badgeFontSize)),
-            NSForegroundColorAttributeName: UIColor.clearColor()
+        ctx.setBlendMode(CGBlendMode.clear)
+        NSString(string: badgeString).draw(in:CGRect(x:8, y:5, width:textSize.width, height:textSize.height), withAttributes: [
+            NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize)),
+            NSForegroundColorAttributeName: UIColor.clear
             ])
         
-        let badgeImage = UIGraphicsGetImageFromCurrentImageContext()
+        let badgeImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
 
-        badgeView.frame = CGRectMake(0, 0, badgeImage.size.width, badgeImage.size.height)
+        badgeView.frame = CGRect(x:0, y:0, width:badgeImage.size.width, height:badgeImage.size.height)
         badgeView.image = badgeImage
     }
 }
