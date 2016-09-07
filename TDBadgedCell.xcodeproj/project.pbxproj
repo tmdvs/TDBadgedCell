@@ -12,27 +12,8 @@
 		22F678821D80288B007D2FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F678801D80288B007D2FAE /* Main.storyboard */; };
 		22F678841D80288B007D2FAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F678831D80288B007D2FAE /* Assets.xcassets */; };
 		22F678871D80288C007D2FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F678851D80288C007D2FAE /* LaunchScreen.storyboard */; };
-		22F678921D80288C007D2FAE /* TDBadgedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678911D80288C007D2FAE /* TDBadgedCellTests.swift */; };
-		22F6789D1D80288C007D2FAE /* TDBadgedCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6789C1D80288C007D2FAE /* TDBadgedCellUITests.swift */; };
 		22F678AB1D802BEB007D2FAE /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		22F6788E1D80288C007D2FAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22F678711D80288B007D2FAE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22F678781D80288B007D2FAE;
-			remoteInfo = TDBadgedCell;
-		};
-		22F678991D80288C007D2FAE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22F678711D80288B007D2FAE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 22F678781D80288B007D2FAE;
-			remoteInfo = TDBadgedCell;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22F678791D80288B007D2FAE /* TDBadgedCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDBadgedCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,31 +23,11 @@
 		22F678831D80288B007D2FAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F678861D80288C007D2FAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F678881D80288C007D2FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22F6788D1D80288C007D2FAE /* TDBadgedCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDBadgedCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F678911D80288C007D2FAE /* TDBadgedCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellTests.swift; sourceTree = "<group>"; };
-		22F678931D80288C007D2FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22F678981D80288C007D2FAE /* TDBadgedCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDBadgedCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		22F6789C1D80288C007D2FAE /* TDBadgedCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellUITests.swift; sourceTree = "<group>"; };
-		22F6789E1D80288C007D2FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDBadgedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		22F678761D80288B007D2FAE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F6788A1D80288C007D2FAE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F678951D80288C007D2FAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,8 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				22F6787B1D80288B007D2FAE /* TDBadgedCell */,
-				22F678901D80288C007D2FAE /* TDBadgedCellTests */,
-				22F6789B1D80288C007D2FAE /* TDBadgedCellUITests */,
 				22F6787A1D80288B007D2FAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				22F678791D80288B007D2FAE /* TDBadgedCell.app */,
-				22F6788D1D80288C007D2FAE /* TDBadgedCellTests.xctest */,
-				22F678981D80288C007D2FAE /* TDBadgedCellUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,24 +65,6 @@
 				22F678881D80288C007D2FAE /* Info.plist */,
 			);
 			path = TDBadgedCell;
-			sourceTree = "<group>";
-		};
-		22F678901D80288C007D2FAE /* TDBadgedCellTests */ = {
-			isa = PBXGroup;
-			children = (
-				22F678911D80288C007D2FAE /* TDBadgedCellTests.swift */,
-				22F678931D80288C007D2FAE /* Info.plist */,
-			);
-			path = TDBadgedCellTests;
-			sourceTree = "<group>";
-		};
-		22F6789B1D80288C007D2FAE /* TDBadgedCellUITests */ = {
-			isa = PBXGroup;
-			children = (
-				22F6789C1D80288C007D2FAE /* TDBadgedCellUITests.swift */,
-				22F6789E1D80288C007D2FAE /* Info.plist */,
-			);
-			path = TDBadgedCellUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,42 +87,6 @@
 			productReference = 22F678791D80288B007D2FAE /* TDBadgedCell.app */;
 			productType = "com.apple.product-type.application";
 		};
-		22F6788C1D80288C007D2FAE /* TDBadgedCellTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22F678A41D80288C007D2FAE /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */;
-			buildPhases = (
-				22F678891D80288C007D2FAE /* Sources */,
-				22F6788A1D80288C007D2FAE /* Frameworks */,
-				22F6788B1D80288C007D2FAE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22F6788F1D80288C007D2FAE /* PBXTargetDependency */,
-			);
-			name = TDBadgedCellTests;
-			productName = TDBadgedCellTests;
-			productReference = 22F6788D1D80288C007D2FAE /* TDBadgedCellTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		22F678971D80288C007D2FAE /* TDBadgedCellUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22F678A71D80288C007D2FAE /* Build configuration list for PBXNativeTarget "TDBadgedCellUITests" */;
-			buildPhases = (
-				22F678941D80288C007D2FAE /* Sources */,
-				22F678951D80288C007D2FAE /* Frameworks */,
-				22F678961D80288C007D2FAE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22F6789A1D80288C007D2FAE /* PBXTargetDependency */,
-			);
-			name = TDBadgedCellUITests;
-			productName = TDBadgedCellUITests;
-			productReference = 22F678981D80288C007D2FAE /* TDBadgedCellUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,14 +99,6 @@
 				TargetAttributes = {
 					22F678781D80288B007D2FAE = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					22F6788C1D80288C007D2FAE = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 22F678781D80288B007D2FAE;
-					};
-					22F678971D80288C007D2FAE = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 22F678781D80288B007D2FAE;
 					};
 				};
 			};
@@ -221,8 +116,6 @@
 			projectRoot = "";
 			targets = (
 				22F678781D80288B007D2FAE /* TDBadgedCell */,
-				22F6788C1D80288C007D2FAE /* TDBadgedCellTests */,
-				22F678971D80288C007D2FAE /* TDBadgedCellUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,20 +128,6 @@
 				22F678871D80288C007D2FAE /* LaunchScreen.storyboard in Resources */,
 				22F678841D80288B007D2FAE /* Assets.xcassets in Resources */,
 				22F678821D80288B007D2FAE /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F6788B1D80288C007D2FAE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F678961D80288C007D2FAE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,36 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22F678891D80288C007D2FAE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22F678921D80288C007D2FAE /* TDBadgedCellTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F678941D80288C007D2FAE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22F6789D1D80288C007D2FAE /* TDBadgedCellUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		22F6788F1D80288C007D2FAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22F678781D80288B007D2FAE /* TDBadgedCell */;
-			targetProxy = 22F6788E1D80288C007D2FAE /* PBXContainerItemProxy */;
-		};
-		22F6789A1D80288C007D2FAE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 22F678781D80288B007D2FAE /* TDBadgedCell */;
-			targetProxy = 22F678991D80288C007D2FAE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22F678801D80288B007D2FAE /* Main.storyboard */ = {
@@ -421,54 +271,6 @@
 			};
 			name = Release;
 		};
-		22F678A51D80288C007D2FAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TDBadgedCellTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
-			};
-			name = Debug;
-		};
-		22F678A61D80288C007D2FAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TDBadgedCellTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
-			};
-			name = Release;
-		};
-		22F678A81D80288C007D2FAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = TDBadgedCellUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TDBadgedCell;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		22F678A91D80288C007D2FAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = TDBadgedCellUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TDBadgedCell;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -488,22 +290,7 @@
 				22F678A31D80288C007D2FAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		22F678A41D80288C007D2FAE /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22F678A51D80288C007D2FAE /* Debug */,
-				22F678A61D80288C007D2FAE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		22F678A71D80288C007D2FAE /* Build configuration list for PBXNativeTarget "TDBadgedCellUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22F678A81D80288C007D2FAE /* Debug */,
-				22F678A91D80288C007D2FAE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
