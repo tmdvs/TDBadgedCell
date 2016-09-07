@@ -1,7 +1,7 @@
 # TDBadgedCell
 TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the [article explaining this on TUAW](http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/). Recently the project has been re-written in Swift and much simplified.
 
-![Example Image](http://up.tmdvs.me/hOA1/d)
+![Example Image](http://up.tmdvs.me/hO59/d)
 
 To set the content of your badge (String) simply do:
 
