@@ -8,27 +8,44 @@
 
 import UIKit
 
-
 class TDBadgedCell: UITableViewCell {
 
+    // Badge value
     var badgeString : String = "" {
         didSet {
-            self.drawBadge()
-            self.layoutSubviews()
+            if(badgeString == "") {
+                badgeView.removeFromSuperview()
+                self.layoutSubviews()
+            } else {
+                self.contentView.addSubview(badgeView)
+                self.drawBadge()
+                self.layoutSubviews()
+            }
         }
     }
     
+    // Badge background colours
     var badgeColour = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
     var badgeColorHighlighted = UIColor.whiteColor()
+    
+    // Font and style
     var badgeFontSize = 11.0;
     var badgeRadius = 20;
+    var badgeOffset = CGPointMake(10, 0);
+    let badgeView = UIImageView()
     
-    override func drawRect(rect: CGRect) {
-        // Our accessory view
-        super.drawRect(rect)
-        drawBadge()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Layout our badge's position
+        if(self.contentView.frame.width != self.frame.width) {
+            badgeOffset.x = 0 // Accessory types are a pain to get sizing for?
+        }
+        badgeView.frame.origin.x = floor(self.contentView.frame.width - badgeView.frame.width - badgeOffset.x)
+        badgeView.frame.origin.y = floor((self.frame.height / 2) - (badgeView.frame.height / 2))
     }
     
+    // When the badge
     override func setHighlighted(highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
         drawBadge()
@@ -39,6 +56,7 @@ class TDBadgedCell: UITableViewCell {
         drawBadge()
     }
     
+    // Draw the bagde image
     private func drawBadge() {
         // Calculate the size of our string
         let textSize : CGSize = NSString(string: badgeString).sizeWithAttributes([NSFontAttributeName:UIFont.boldSystemFontOfSize(CGFloat(badgeFontSize))])
@@ -70,8 +88,7 @@ class TDBadgedCell: UITableViewCell {
         let badgeImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        let imageView = UIImageView(frame: CGRectMake(0, 0, badgeImage.size.width, badgeImage.size.height))
-        imageView.image = badgeImage
-        self.accessoryView = imageView
+        badgeView.frame = CGRectMake(0, 0, badgeImage.size.width, badgeImage.size.height)
+        badgeView.image = badgeImage
     }
 }

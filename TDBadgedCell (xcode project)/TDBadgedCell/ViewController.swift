@@ -37,9 +37,15 @@ class ViewController: UITableViewController {
             cell = TDBadgedCell(style: .Default, reuseIdentifier: "BadgedCell");
         }
         
+        // Set accessory views for two badges
+        if(indexPath.row < 2) {
+            cell?.accessoryType = .DisclosureIndicator
+        }
+        
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
         cell?.badgeString = demoItems[indexPath.row]["badge"]!
         
+        // Set background colours for two badges
         if(indexPath.row == 2) {
             cell?.badgeColour = UIColor.orangeColor()
         } else if(indexPath.row == 3) {
