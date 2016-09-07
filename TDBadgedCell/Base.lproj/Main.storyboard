@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TDBaged Cell Examples-->
+        <!--TDBagedCell Examples-->
         <scene sceneID="gCx-I2-Qzz">
             <objects>
                 <tableViewController id="pad-GC-tEL" customClass="ViewController" customModule="TDBadgedCell" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ezo-TG-RHv" id="CnV-Wn-3rI">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="pad-GC-tEL" id="Von-zJ-z1v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TDBaged Cell Examples" id="Yo5-di-q4y"/>
+                    <navigationItem key="navigationItem" title="TDBagedCell Examples" id="Yo5-di-q4y"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2Y-pF-Fgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

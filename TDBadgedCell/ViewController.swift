@@ -12,9 +12,9 @@ class ViewController: UITableViewController {
     
     let demoItems : [[String:String]] = [
         ["title" : "This is an example badge", "badge": "1"],
-        ["title" : "This is a second example badge", "badge": "25"],
         ["title" : "A text badge", "badge": "Warning!"],
         ["title" : "Another text badge", "badge": "Danger!"],
+        ["title" : "This is a second example badge", "badge": "25"],
     ]
 
     override func viewDidLoad() {
@@ -37,13 +37,18 @@ class ViewController: UITableViewController {
             cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell");
         }
         
-        // Set accessory views for two badges
-        if(indexPath.row < 2) {
-            cell?.accessoryType = .disclosureIndicator
-        }
         
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
         cell?.badgeString = demoItems[indexPath.row]["badge"]!
+        
+        // Set accessory views for two badges
+        if(indexPath.row == 0) {
+            cell?.accessoryType = .disclosureIndicator
+        }
+        
+        if(indexPath.row == 1) {
+            cell?.accessoryType = .checkmark
+        }
         
         // Set background colours for two badges
         if(indexPath.row == 2) {
@@ -53,6 +58,12 @@ class ViewController: UITableViewController {
         }
         
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
 }
 
