@@ -14,6 +14,7 @@
 		22F678871D80288C007D2FAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F678851D80288C007D2FAE /* LaunchScreen.storyboard */; };
 		22F678921D80288C007D2FAE /* TDBadgedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678911D80288C007D2FAE /* TDBadgedCellTests.swift */; };
 		22F6789D1D80288C007D2FAE /* TDBadgedCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6789C1D80288C007D2FAE /* TDBadgedCellUITests.swift */; };
+		22F678AB1D802BEB007D2FAE /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		22F678981D80288C007D2FAE /* TDBadgedCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDBadgedCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F6789C1D80288C007D2FAE /* TDBadgedCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellUITests.swift; sourceTree = "<group>"; };
 		22F6789E1D80288C007D2FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDBadgedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				22F6787C1D80288B007D2FAE /* AppDelegate.swift */,
 				22F6787E1D80288B007D2FAE /* ViewController.swift */,
+				22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */,
 				22F678801D80288B007D2FAE /* Main.storyboard */,
 				22F678831D80288B007D2FAE /* Assets.xcassets */,
 				22F678851D80288C007D2FAE /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				22F6787F1D80288B007D2FAE /* ViewController.swift in Sources */,
 				22F6787D1D80288B007D2FAE /* AppDelegate.swift in Sources */,
+				22F678AB1D802BEB007D2FAE /* TDBadgedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
