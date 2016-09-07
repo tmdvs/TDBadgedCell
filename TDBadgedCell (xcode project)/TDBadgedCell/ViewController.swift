@@ -12,7 +12,9 @@ class ViewController: UITableViewController {
     
     let demoItems : [[String:String]] = [
         ["title" : "This is an example badge", "badge": "1"],
-        ["title" : "A second example", "badge": "Warning!"],
+        ["title" : "This is a second example badge", "badge": "25"],
+        ["title" : "A text badge", "badge": "Warning!"],
+        ["title" : "Another text badge", "badge": "Danger!"],
     ]
 
     override func viewDidLoad() {
@@ -38,8 +40,10 @@ class ViewController: UITableViewController {
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
         cell?.badgeString = demoItems[indexPath.row]["badge"]!
         
-        if(indexPath.row == 1) {
+        if(indexPath.row == 2) {
             cell?.badgeColour = UIColor.orangeColor()
+        } else if(indexPath.row == 3) {
+            cell?.badgeColour = UIColor.redColor()
         }
         
         return cell!
