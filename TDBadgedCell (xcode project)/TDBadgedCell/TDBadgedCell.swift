@@ -29,6 +29,16 @@ class TDBadgedCell: UITableViewCell {
         drawBadge()
     }
     
+    override func setHighlighted(highlighted: Bool, animated: Bool) {
+        super.setHighlighted(highlighted, animated: animated)
+        drawBadge()
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        drawBadge()
+    }
+    
     private func drawBadge() {
         // Calculate the size of our string
         let textSize : CGSize = NSString(string: badgeString).sizeWithAttributes([NSFontAttributeName:UIFont.boldSystemFontOfSize(CGFloat(badgeFontSize))])
@@ -40,7 +50,7 @@ class TDBadgedCell: UITableViewCell {
         
         let badge = CALayer()
         badge.frame = badgeFrame
-        badge.backgroundColor = ((self.highlighted) ? badgeColorHighlighted : badgeColour).CGColor
+        badge.backgroundColor = ((self.highlighted || self.selected) ? badgeColorHighlighted : badgeColour).CGColor
         badge.cornerRadius = (CGFloat(badgeRadius) < (badge.frame.size.height / 2)) ? CGFloat(badgeRadius) : CGFloat(badge.frame.size.height / 2)
         
         // Draw badge into graphics context
