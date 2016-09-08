@@ -14,21 +14,12 @@ class ViewController: UITableViewController {
         ["title" : "This is an example badge", "badge": "1"],
         ["title" : "This is a second example badge", "badge": "123"],
         ["title" : "A text badge", "badge": "Warning!"],
-        ["title" : "Another text badge", "badge": "Danger!"],
+        ["title" : "Another text badge with a really long title!", "badge": "Danger!"],
     ]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demoItems.count
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> TDBadgedCell {

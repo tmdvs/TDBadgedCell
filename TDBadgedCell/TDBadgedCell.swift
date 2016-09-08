@@ -43,6 +43,12 @@ class TDBadgedCell: UITableViewCell {
         
         badgeView.frame.origin.x = floor(self.contentView.frame.width - badgeView.frame.width - badgeOffset.x)
         badgeView.frame.origin.y = floor((self.frame.height / 2) - (badgeView.frame.height / 2))
+        
+        // Now lets update the width of the cells text labels to take the badge into account
+        self.textLabel?.frame.size.width -= badgeView.frame.width + (badgeOffset.x * 2)
+        if((self.detailTextLabel) != nil) {
+            self.detailTextLabel?.frame.size.width -= badgeView.frame.width + (badgeOffset.x * 2)
+        }
     }
     
     // When the badge
@@ -92,7 +98,7 @@ class TDBadgedCell: UITableViewCell {
         NSString(string: badgeString).draw(in:CGRect(x:8, y:5, width:textSize.width, height:textSize.height), withAttributes: [
             NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize)),
             NSForegroundColorAttributeName: UIColor.clear
-            ])
+        ])
         
         let badgeImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
