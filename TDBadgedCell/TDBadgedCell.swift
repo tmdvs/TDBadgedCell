@@ -37,8 +37,10 @@ class TDBadgedCell: UITableViewCell {
         super.layoutSubviews()
         
         // Layout our badge's position
-        if(self.contentView.frame.width != self.frame.width) {
+        if(self.isEditing == false && self.accessoryType != .none || (self.accessoryView) != nil) {
             badgeOffset.x = 0 // Accessory types are a pain to get sizing for?
+        } else {
+            badgeOffset.x = 10
         }
         
         badgeView.frame.origin.x = floor(self.contentView.frame.width - badgeView.frame.width - badgeOffset.x)

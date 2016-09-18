@@ -16,6 +16,11 @@ class ViewController: UITableViewController {
         ["title" : "A text badge", "badge": "Warning!"],
         ["title" : "Another text badge with a really long title!", "badge": "Danger!"],
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
