@@ -15,10 +15,10 @@ class TDBadgedCell: UITableViewCell {
         didSet {
             if(badgeString == "") {
                 badgeView.removeFromSuperview()
-                self.layoutSubviews()
+                layoutSubviews()
             } else {
-                self.contentView.addSubview(badgeView)
-                self.drawBadge()
+                contentView.addSubview(badgeView)
+                drawBadge()
             }
         }
     }
@@ -38,17 +38,17 @@ class TDBadgedCell: UITableViewCell {
         
         // Layout our badge's position
         var offsetX = badgeOffset.x
-        if(self.isEditing == false && self.accessoryType != .none || (self.accessoryView) != nil) {
+        if(isEditing == false && accessoryType != .none || (accessoryView) != nil) {
             offsetX = 0 // Accessory types are a pain to get sizing for?
         }
         
-        badgeView.frame.origin.x = floor(self.contentView.frame.width - badgeView.frame.width - offsetX)
-        badgeView.frame.origin.y = floor((self.frame.height / 2) - (badgeView.frame.height / 2))
+        badgeView.frame.origin.x = floor(contentView.frame.width - badgeView.frame.width - offsetX)
+        badgeView.frame.origin.y = floor((frame.height / 2) - (badgeView.frame.height / 2))
         
         // Now lets update the width of the cells text labels to take the badge into account
-        self.textLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
-        if((self.detailTextLabel) != nil) {
-            self.detailTextLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
+        textLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
+        if((detailTextLabel) != nil) {
+            detailTextLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
         }
     }
     
@@ -79,7 +79,7 @@ class TDBadgedCell: UITableViewCell {
         let badge = CALayer()
         badge.frame = badgeFrame
         
-        if(self.isHighlighted || self.isSelected) {
+        if(isHighlighted || isSelected) {
             badge.backgroundColor = badgeColorHighlighted.cgColor
         } else {
             badge.backgroundColor = badgeColor.cgColor
@@ -107,6 +107,6 @@ class TDBadgedCell: UITableViewCell {
         badgeView.frame = CGRect(x:0, y:0, width:badgeImage.size.width, height:badgeImage.size.height)
         badgeView.image = badgeImage
         
-        self.layoutSubviews()
+        layoutSubviews()
     }
 }
