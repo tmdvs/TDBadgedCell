@@ -1,5 +1,5 @@
 # TDBadgedCell
-![Version](https://img.shields.io/cocoapods/v/TDBadgedCell.svg) 
+[![Version](https://img.shields.io/cocoapods/v/TDBadgedCell.svg) ](http://cocoapods.org/pods/TDBadgedCell/)
 ![Platform](https://img.shields.io/cocoapods/p/TDBadgedCell.svg)
 ![License](https://img.shields.io/cocoapods/l/AFNetworking.svg)
 ![Downloads](https://img.shields.io/cocoapods/dt/TDBadgedCell.svg)
