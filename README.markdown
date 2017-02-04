@@ -12,24 +12,55 @@ TDBadgedCell grew out of the need for TableViewCell badges and the lack of them 
 <img src="http://up.tmdvs.me/j2a9/d" width="432">&nbsp;
 <img src="http://up.tmdvs.me/j23l/d" width="432">
 
-To set the content of your badge (String) simply do:
+## Usage and examples
+TDBadgedCell is designed to be a drop in replacement to UITableViewCell with the added benifit of a simple badge on the right hand side of the cell, similar to those you'll find in Mail.app and Settings.app. All you need to do to implement TDBadgedCell is supply a TDBadgedCell instance in your `cellForRowAt indexPath:` method:
 
-```Swift
-cell.badgeString = "Hello, World!"
+```swift
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  var cell = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as? TDBadgedCell;
+  if(cell == nil) {
+    cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell");
+  }
+
+  // ...
+  
+  return cell!
+}
 ```
 
-You can set _badgeColor_ and _badgeColorHighlighted_ to modify the colour of the badges:
+You can modify the badges appearance in a number of different ways.
 
-```Swift
-cell.badgeColor = UIColor.orangeColor()
-```
+- ### Setting badge value
+  To set the content of your badge (String) simply do:
 
-You can also specify a border radius and font size for your badges:
+  ```Swift
+  cell.badgeString = "Hello, World!"
+  ```
 
-```Swift
-cell.badgeRadius = 9;
-cell.badgeFontSize = 18;
-```
+- ### Changing the badge color
+  You can set _badgeColor_ and _badgeColorHighlighted_ to modify the colour of the badges:
+
+  ```Swift
+  cell.badgeColor = .orange
+  cell.badgeColorHighlighted = .green
+  ```
+
+- ### Setting the font size and text color
+  By default the badge text will be clipped out of the badge background allowing you to see through to the background colour beneath. However you can specify a text color manually along with the badges font size:
+
+  ```Swift
+  cell.badgeTextColor = .black;
+  cell.badgeFontSize = 18;
+  ```
+  
+- ### Corner radius
+  You can modify the badges corner radius allowing you to change the badges shape from the default "pill" shape to a square or rounded rectangle:
+  
+  ```Swift
+  cell.badgeRadius = 0;
+  ```
+  
+If you have any feedback or feature requests, simply [open an issue](https://github.com/tmdvs/TDBadgedCell/issues) on the TDBadgedCell github repo.
 
 ## Licence and that stuff
 TDBadgedCell is a free to use class for everyone. I wrote it so people could have the badges Apple never provided us with. If you modify the source please share alike and if you think you've improved upon what I have written I recommend sending me a pull request.
