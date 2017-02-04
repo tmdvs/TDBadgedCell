@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A9C1431E460E1B0001F026 /* TDBadgedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9C1421E460E1B0001F026 /* TDBadgedCellTests.swift */; };
+		22A9C14A1E460E3E0001F026 /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
 		22F6787D1D80288B007D2FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6787C1D80288B007D2FAE /* AppDelegate.swift */; };
 		22F6787F1D80288B007D2FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6787E1D80288B007D2FAE /* ViewController.swift */; };
 		22F678821D80288B007D2FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F678801D80288B007D2FAE /* Main.storyboard */; };
@@ -15,7 +17,20 @@
 		22F678AB1D802BEB007D2FAE /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		22A9C1451E460E1B0001F026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22F678711D80288B007D2FAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F678781D80288B007D2FAE;
+			remoteInfo = TDBadgedCell;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		22A9C1401E460E1A0001F026 /* TDBadgedCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDBadgedCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A9C1421E460E1B0001F026 /* TDBadgedCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellTests.swift; sourceTree = "<group>"; };
+		22A9C1441E460E1B0001F026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F678791D80288B007D2FAE /* TDBadgedCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDBadgedCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F6787C1D80288B007D2FAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F6787E1D80288B007D2FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		22A9C13D1E460E1A0001F026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F678761D80288B007D2FAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A9C1411E460E1B0001F026 /* TDBadgedCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				22A9C1421E460E1B0001F026 /* TDBadgedCellTests.swift */,
+				22A9C1441E460E1B0001F026 /* Info.plist */,
+			);
+			path = TDBadgedCellTests;
+			sourceTree = "<group>";
+		};
 		22F678701D80288B007D2FAE = {
 			isa = PBXGroup;
 			children = (
 				22F6787B1D80288B007D2FAE /* TDBadgedCell */,
+				22A9C1411E460E1B0001F026 /* TDBadgedCellTests */,
 				22F6787A1D80288B007D2FAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				22F678791D80288B007D2FAE /* TDBadgedCell.app */,
+				22A9C1401E460E1A0001F026 /* TDBadgedCellTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +103,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		22A9C13F1E460E1A0001F026 /* TDBadgedCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A9C1491E460E1B0001F026 /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */;
+			buildPhases = (
+				22A9C13C1E460E1A0001F026 /* Sources */,
+				22A9C13D1E460E1A0001F026 /* Frameworks */,
+				22A9C13E1E460E1A0001F026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A9C1461E460E1B0001F026 /* PBXTargetDependency */,
+			);
+			name = TDBadgedCellTests;
+			productName = TDBadgedCellTests;
+			productReference = 22A9C1401E460E1A0001F026 /* TDBadgedCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		22F678781D80288B007D2FAE /* TDBadgedCell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22F678A11D80288C007D2FAE /* Build configuration list for PBXNativeTarget "TDBadgedCell" */;
@@ -93,10 +144,15 @@
 		22F678711D80288B007D2FAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tim Davies";
 				TargetAttributes = {
+					22A9C13F1E460E1A0001F026 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22F678781D80288B007D2FAE;
+					};
 					22F678781D80288B007D2FAE = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = W376QLUK5J;
@@ -118,11 +174,19 @@
 			projectRoot = "";
 			targets = (
 				22F678781D80288B007D2FAE /* TDBadgedCell */,
+				22A9C13F1E460E1A0001F026 /* TDBadgedCellTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		22A9C13E1E460E1A0001F026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F678771D80288B007D2FAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +200,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		22A9C13C1E460E1A0001F026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A9C14A1E460E3E0001F026 /* TDBadgedCell.swift in Sources */,
+				22A9C1431E460E1B0001F026 /* TDBadgedCellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F678751D80288B007D2FAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +220,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22A9C1461E460E1B0001F026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F678781D80288B007D2FAE /* TDBadgedCell */;
+			targetProxy = 22A9C1451E460E1B0001F026 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22F678801D80288B007D2FAE /* Main.storyboard */ = {
@@ -168,6 +249,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		22A9C1471E460E1B0001F026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = TDBadgedCellTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
+			};
+			name = Debug;
+		};
+		22A9C1481E460E1B0001F026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = TDBadgedCellTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
+			};
+			name = Release;
+		};
 		22F6789F1D80288C007D2FAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -287,6 +403,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		22A9C1491E460E1B0001F026 /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A9C1471E460E1B0001F026 /* Debug */,
+				22A9C1481E460E1B0001F026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		22F678741D80288B007D2FAE /* Build configuration list for PBXProject "TDBadgedCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

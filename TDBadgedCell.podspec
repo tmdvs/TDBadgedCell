@@ -9,6 +9,7 @@ DESC
   s.homepage         = 'https://github.com/tmdvs/TDBadgedCell'
   s.screenshots      = 'https://camo.githubusercontent.com/54d4b4ddb11bf82b2d4e8ad88016b38cfad86644/687474703a2f2f75702e746d6476732e6d652f684f6c772f64'
   s.author           = { 'Tim Davies' => 'hi@tmdvs.me' }
+  s.social_media_url = 'https://twitter.com/tmdvs'
   s.source           = { :git => 'https://github.com/tmdvs/TDBadgedCell.git', :tag => 'v' + s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'TDBadgedCell/TDBadgedCell.swift'

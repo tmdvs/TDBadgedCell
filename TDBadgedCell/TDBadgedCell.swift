@@ -41,7 +41,7 @@ class TDBadgedCell: UITableViewCell {
     public var badgeOffset = CGPoint(x:10, y:0)
     
     /// The Image view that the badge will be rendered into
-    private let badgeView = UIImageView()
+    internal let badgeView = UIImageView()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -74,7 +74,7 @@ class TDBadgedCell: UITableViewCell {
     }
     
     /// Generate the badge image
-    private func drawBadge() {
+    internal func drawBadge() {
         // Calculate the size of our string
         let textSize : CGSize = NSString(string: badgeString).size(attributes:[NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize))])
         
