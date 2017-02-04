@@ -28,9 +28,11 @@ class TDBadgedCell: UITableViewCell {
     var badgeColorHighlighted : UIColor = .darkGray
     
     // Font and style
-    var badgeFontSize : Float = 11.0;
-    var badgeRadius : Float = 20;
-    var badgeOffset = CGPoint(x:10, y:0);
+    var badgeFontSize : Float = 11.0
+    var badgeTextColor: UIColor?
+    var badgeRadius : Float = 20
+    var badgeOffset = CGPoint(x:10, y:0)
+    
     private let badgeView = UIImageView()
     
     override func layoutSubviews() {
@@ -95,10 +97,13 @@ class TDBadgedCell: UITableViewCell {
         ctx.saveGState()
         
         // Draw string into graphics context
-        ctx.setBlendMode(CGBlendMode.clear)
+        if(badgeTextColor == nil) {
+            ctx.setBlendMode(CGBlendMode.clear)
+        }
+        
         NSString(string: badgeString).draw(in:CGRect(x:8, y:5, width:textSize.width, height:textSize.height), withAttributes: [
             NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize)),
-            NSForegroundColorAttributeName: UIColor.clear
+            NSForegroundColorAttributeName: badgeTextColor ?? UIColor.clear
         ])
         
         let badgeImage = UIGraphicsGetImageFromCurrentImageContext()!

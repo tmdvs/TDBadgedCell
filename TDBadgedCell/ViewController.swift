@@ -43,6 +43,8 @@ class ViewController: UITableViewController {
         }
         
         if(indexPath.row == 1) {
+            cell?.badgeColor = .lightGray
+            cell?.badgeTextColor = .black
             cell?.accessoryType = .checkmark
         }
         
