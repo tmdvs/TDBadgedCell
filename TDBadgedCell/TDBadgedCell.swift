@@ -14,7 +14,7 @@ import UIKit
 class TDBadgedCell: UITableViewCell {
 
     /// Badge value
-    var badgeString : String = "" {
+    public var badgeString : String = "" {
         didSet {
             if(badgeString == "") {
                 badgeView.removeFromSuperview()
@@ -27,18 +27,18 @@ class TDBadgedCell: UITableViewCell {
     }
     
     /// Badge background color for normal states
-    var badgeColor : UIColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
+    public var badgeColor : UIColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
     /// Badge background color for highlighted states
-    var badgeColorHighlighted : UIColor = .darkGray
+    public var badgeColorHighlighted : UIColor = .darkGray
     
     /// Badge font size
-    var badgeFontSize : Float = 11.0
+    public var badgeFontSize : Float = 11.0
     /// Badge text color
-    var badgeTextColor: UIColor?
+    public var badgeTextColor: UIColor?
     /// Corner radius of the badge. Set to 0 for square corners.
-    var badgeRadius : Float = 20
+    public var badgeRadius : Float = 20
     /// The Badges offset from the right hand side of the Table View Cell
-    var badgeOffset = CGPoint(x:10, y:0)
+    public var badgeOffset = CGPoint(x:10, y:0)
     
     /// The Image view that the badge will be rendered into
     private let badgeView = UIImageView()
