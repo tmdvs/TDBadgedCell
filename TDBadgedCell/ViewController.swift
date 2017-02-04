@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     
+    /// List of example table view cells
     let demoItems : [[String:String]] = [
         ["title" : "This is an example badge", "badge": "1"],
         ["title" : "This is a second example badge", "badge": "123"],

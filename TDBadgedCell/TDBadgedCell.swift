@@ -8,9 +8,10 @@
 
 import UIKit
 
+/// TDBadgedCell is a table view cell class that adds a badge, similar to the badges in Apple's own apps
 class TDBadgedCell: UITableViewCell {
 
-    // Badge value
+    /// Badge value
     var badgeString : String = "" {
         didSet {
             if(badgeString == "") {
@@ -23,16 +24,21 @@ class TDBadgedCell: UITableViewCell {
         }
     }
     
-    // Badge background colours
+    /// Badge background color for normal states
     var badgeColor : UIColor = UIColor(red: 0, green: 0.478, blue: 1, alpha: 1.0)
+    /// Badge background color for highlighted states
     var badgeColorHighlighted : UIColor = .darkGray
     
-    // Font and style
+    /// Badge font size
     var badgeFontSize : Float = 11.0
+    /// Badge text color
     var badgeTextColor: UIColor?
+    /// Corner radius of the badge. Set to 0 for square corners.
     var badgeRadius : Float = 20
+    /// The Badges offset from the right hand side of the Table View Cell
     var badgeOffset = CGPoint(x:10, y:0)
     
+    /// The Image view that the badge will be rendered into
     private let badgeView = UIImageView()
     
     override func layoutSubviews() {
@@ -65,7 +71,7 @@ class TDBadgedCell: UITableViewCell {
         drawBadge()
     }
     
-    // Draw the bagde image
+    /// Generate the badge image
     private func drawBadge() {
         // Calculate the size of our string
         let textSize : CGSize = NSString(string: badgeString).size(attributes:[NSFontAttributeName:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize))])
