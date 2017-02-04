@@ -9,6 +9,8 @@
 import UIKit
 
 /// TDBadgedCell is a table view cell class that adds a badge, similar to the badges in Apple's own apps
+/// The badge is generated as image data and drawn as a sub view to the table view sell. This is hopefully
+/// most resource effective that a manual draw(rect:) call would be
 class TDBadgedCell: UITableViewCell {
 
     /// Badge value
