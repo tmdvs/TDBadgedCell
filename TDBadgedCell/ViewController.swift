@@ -28,9 +28,9 @@ class ViewController: UITableViewController {
         return demoItems.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> TDBadgedCell {
-        var cell : TDBadgedCell? = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as! TDBadgedCell?;
-        if((cell == nil)) {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as? TDBadgedCell;
+        if(cell == nil) {
             cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell");
         }
         
