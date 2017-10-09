@@ -56,9 +56,13 @@ open class TDBadgedCell: UITableViewCell {
         badgeView.frame.origin.y = floor((frame.height / 2) - (badgeView.frame.height / 2))
         
         // Now lets update the width of the cells text labels to take the badge into account
-        textLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
+        let labelWidth = self.contentView.frame.width - (badgeView.frame.width + (offsetX * 2)) - 20;
+        
+        debugPrint(labelWidth)
+
+        textLabel?.frame.size.width = labelWidth
         if((detailTextLabel) != nil) {
-            detailTextLabel?.frame.size.width -= badgeView.frame.width + (offsetX * 2)
+            detailTextLabel?.frame.size.width = labelWidth
         }
     }
     

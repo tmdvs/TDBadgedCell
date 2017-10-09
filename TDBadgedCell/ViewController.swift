@@ -36,6 +36,7 @@ class ViewController: UITableViewController {
         
         
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
+        cell?.detailTextLabel?.text = demoItems[indexPath.row]["title"]
         cell?.badgeString = demoItems[indexPath.row]["badge"]!
         
         // Set accessory views for two badges
