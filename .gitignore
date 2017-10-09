@@ -5,6 +5,7 @@ build
 *.perspective*
 *~.nib
 *.so
+.swift-version
 
 # Vim
 *.swp
