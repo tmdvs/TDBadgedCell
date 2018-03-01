@@ -88,6 +88,7 @@ open class TDBadgedCell: UITableViewCell {
 		{
 			badgeFont = UIFont.preferredFont(forTextStyle: textStyle)
 		}
+        
         // Calculate the size of our string
         let textSize : CGSize = NSString(string: badgeString).size(withAttributes:[NSAttributedStringKey.font:badgeFont])
         
