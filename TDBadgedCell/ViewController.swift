@@ -56,7 +56,10 @@ class ViewController: UITableViewController {
         } else if(indexPath.row == 3) {
             cell?.badgeColor = .red
         }
-        
+
+		// Uncomment this to test with dynamic type.
+//		cell?.badgeTextStyle = .caption1
+
         return cell!
     }
     

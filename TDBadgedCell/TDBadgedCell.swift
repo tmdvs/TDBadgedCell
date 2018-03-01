@@ -33,6 +33,8 @@ open class TDBadgedCell: UITableViewCell {
     
     /// Badge font size
     public var badgeFontSize : Float = 11.0
+	/// Badge text style if dyanmic type desired
+	public var badgeTextStyle: UIFontTextStyle?
     /// Badge text color
     public var badgeTextColor: UIColor?
     /// Corner radius of the badge. Set to 0 for square corners.
@@ -80,8 +82,14 @@ open class TDBadgedCell: UITableViewCell {
     
     /// Generate the badge image
     internal func drawBadge() {
+
+		var badgeFont = UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize))
+		if let textStyle = self.badgeTextStyle
+		{
+			badgeFont = UIFont.preferredFont(forTextStyle: textStyle)
+		}
         // Calculate the size of our string
-        let textSize : CGSize = NSString(string: badgeString).size(withAttributes:[NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize))])
+        let textSize : CGSize = NSString(string: badgeString).size(withAttributes:[NSAttributedStringKey.font:badgeFont])
         
         // Create a frame with padding for our badge
         let height = textSize.height + 10
@@ -115,7 +123,7 @@ open class TDBadgedCell: UITableViewCell {
         }
         
         NSString(string: badgeString).draw(in:CGRect(x:8, y:5, width:textSize.width, height:textSize.height), withAttributes: [
-            NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize:CGFloat(badgeFontSize)),
+            NSAttributedStringKey.font:badgeFont,
             NSAttributedStringKey.foregroundColor: badgeTextColor ?? UIColor.clear
         ])
         
