@@ -58,7 +58,7 @@ class ViewController: UITableViewController {
         }
 
 		// Uncomment this to test with dynamic type.
-		cell?.badgeTextStyle = .caption1
+//		cell?.badgeTextStyle = .caption1
 
         return cell!
     }
