@@ -4,7 +4,6 @@
 ![Platform](https://img.shields.io/cocoapods/p/TDBadgedCell.svg?style=flat-square)
 ![License](https://img.shields.io/cocoapods/l/TDBadgedCell.svg?style=flat-square)
 ![Downloads](https://img.shields.io/cocoapods/dt/TDBadgedCell.svg?style=flat-square)
-![Downloads](https://img.shields.io/cocoapods/dm/TDBadgedCell.svg?style=flat-square)
 
 
 TDBadgedCell grew out of the need for TableViewCell badges and the lack of them in iOS (see the [article explaining this on TUAW](http://www.tuaw.com/2010/01/07/iphone-devsugar-simple-table-badges/). Recently the project has been re-written in Swift and much simplified.
