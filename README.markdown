@@ -4,7 +4,7 @@ TDBadgedCell grew out of the need for TableViewCell badges and the lack of them 
 ***Note:*** *You can find the old Objective-C version on the [deprecated-objective-c branch](https://github.com/tmdvs/TDBadgedCell/tree/deprecated-objective-c)*.
 
 [![Version](https://img.shields.io/cocoapods/v/TDBadgedCell.svg?style=flat-square)](http://cocoapods.org/pods/TDBadgedCell/)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthag$
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
 ![Platform](https://img.shields.io/cocoapods/p/TDBadgedCell.svg?style=flat-square)
 ![License](https://img.shields.io/cocoapods/l/TDBadgedCell.svg?style=flat-square)
 ![Downloads](https://img.shields.io/cocoapods/dt/TDBadgedCell.svg?style=flat-square)
