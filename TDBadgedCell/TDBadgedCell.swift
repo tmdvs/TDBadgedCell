@@ -37,6 +37,8 @@ open class TDBadgedCell: UITableViewCell {
     public var badgeTextStyle: UIFont.TextStyle?
     /// Badge text color
     public var badgeTextColor: UIColor?
+    /// Badge text offset from the left hand side of the Badge
+    public var badgeTextOffset: Float = 0
     /// Corner radius of the badge. Set to 0 for square corners.
     public var badgeRadius : Float = 20
     /// The Badges offset from the right hand side of the Table View Cell
@@ -123,7 +125,7 @@ open class TDBadgedCell: UITableViewCell {
             ctx.setBlendMode(CGBlendMode.clear)
         }
         
-        NSString(string: badgeString).draw(in:CGRect(x:8, y:5, width:textSize.width, height:textSize.height), withAttributes: [
+        NSString(string: badgeString).draw(in:CGRect(x: CGFloat(8 + badgeTextOffset), y: 5, width: textSize.width, height: textSize.height), withAttributes: [
             NSAttributedString.Key.font:badgeFont,
             NSAttributedString.Key.foregroundColor: badgeTextColor ?? UIColor.clear
         ])

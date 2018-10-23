@@ -16,6 +16,7 @@ class ViewController: UITableViewController {
         ["title" : "This is a second example badge", "badge": "123"],
         ["title" : "A text badge", "badge": "Warning!"],
         ["title" : "Another text badge with a really long title!", "badge": "Danger!"],
+        ["title" : "Another text badge with offset from the left", "badge": "1!"]
     ]
     
     override func viewDidLoad() {
@@ -38,23 +39,27 @@ class ViewController: UITableViewController {
         cell?.textLabel!.text = demoItems[indexPath.row]["title"]
         cell?.detailTextLabel?.text = demoItems[indexPath.row]["title"]
         cell?.badgeString = demoItems[indexPath.row]["badge"]!
-        
-        // Set accessory views for two badges
-        if(indexPath.row == 0) {
+
+        switch indexPath.row {
+        case 0:
+            // Set accessory view
             cell?.accessoryType = .disclosureIndicator
-        }
-        
-        if(indexPath.row == 1) {
+        case 1:
+            // Set accessory view
             cell?.badgeColor = .lightGray
             cell?.badgeTextColor = .black
             cell?.accessoryType = .checkmark
-        }
-        
-        // Set background colours for two badges
-        if(indexPath.row == 2) {
-            cell?.badgeColor = .orange
-        } else if(indexPath.row == 3) {
-            cell?.badgeColor = .red
+        case 2:
+            //Set background colours for badge
+             cell?.badgeColor = .orange
+        case 3:
+            //Set background colours for badge
+             cell?.badgeColor = .red
+        case 4:
+            //Set badge title offset from left
+            cell?.badgeTextOffset = Float(5)
+        default:
+            break
         }
 
 		// Uncomment this to test with dynamic type.
