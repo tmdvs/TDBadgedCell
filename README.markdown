@@ -59,6 +59,18 @@ You can modify the badges appearance in a number of different ways.
   ```Swift
   cell.badgeRadius = 0;
   ```
+
+- ### Badge Offset
+  You can set the badge's offset from the right hand side of the Table View Cell
+  ```Swift
+  cell.badgeOffset = CGPoint(x:10.0, y:0)
+  ```
+
+- ### Badge Text Offset
+  You can add an offset to the text within the badge
+  ```Swift
+  cell.badgeTextOffset = 5.0
+  ```
   
 If you have any feedback or feature requests, simply [open an issue](https://github.com/tmdvs/TDBadgedCell/issues) on the TDBadgedCell github repo.
 

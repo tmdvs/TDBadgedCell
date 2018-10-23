@@ -57,7 +57,7 @@ class ViewController: UITableViewController {
              cell?.badgeColor = .red
         case 4:
             //Set badge title offset from left
-            cell?.badgeTextOffset = Float(5)
+            cell?.badgeTextOffset = 5.0
         default:
             break
         }
