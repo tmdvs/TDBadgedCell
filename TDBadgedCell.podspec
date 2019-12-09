@@ -14,5 +14,5 @@ DESC
   s.ios.deployment_target = '9.0'
   s.source_files = 'TDBadgedCell/TDBadgedCell.swift'
   s.frameworks       = ['QuartzCore']
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.0'
 end
