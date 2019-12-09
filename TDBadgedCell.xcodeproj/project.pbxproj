@@ -150,14 +150,14 @@
 				TargetAttributes = {
 					22A9C13F1E460E1A0001F026 = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 22F678781D80288B007D2FAE;
 					};
 					22F678781D80288B007D2FAE = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 49S3EBR2KP;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -166,6 +166,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -264,7 +265,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
 			};
 			name = Debug;
@@ -282,7 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDBadgedCell.app/TDBadgedCell";
 			};
 			name = Release;
@@ -406,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -421,7 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
