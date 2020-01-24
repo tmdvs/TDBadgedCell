@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    
+
     /// List of example table view cells
     let demoItems : [[String:String]] = [
         ["title" : "This is an example badge", "badge": "1"],
@@ -18,27 +18,29 @@ class ViewController: UITableViewController {
         ["title" : "Another text badge with a really long title!", "badge": "Danger!"],
         ["title" : "Another text badge with offset from the left", "badge": "1!"]
     ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem
+        tableView.tableFooterView = UIView()
     }
 
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demoItems.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as? TDBadgedCell;
-        if(cell == nil) {
-            cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell");
+        var cell = tableView.dequeueReusableCell(withIdentifier:"BadgedCell") as? TDBadgedCell
+
+        if cell == nil {
+            cell = TDBadgedCell(style: .default, reuseIdentifier: "BadgedCell")
         }
-        
-        
-        cell?.textLabel!.text = demoItems[indexPath.row]["title"]
-        cell?.detailTextLabel?.text = demoItems[indexPath.row]["title"]
-        cell?.badgeString = demoItems[indexPath.row]["badge"]!
+
+        let item = demoItems[indexPath.row]
+
+        cell?.textLabel!.text = item["title"]
+        cell?.detailTextLabel?.text = item["title"]
+        cell?.badgeString = item["badge"] ?? ""
 
         switch indexPath.row {
         case 0:
@@ -62,16 +64,15 @@ class ViewController: UITableViewController {
             break
         }
 
-		// Uncomment this to test with dynamic type.
-//		cell?.badgeTextStyle = .caption1
+    // Uncomment this to test with dynamic type.
+//    cell?.badgeTextStyle = .caption1
 
         return cell!
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }
-
