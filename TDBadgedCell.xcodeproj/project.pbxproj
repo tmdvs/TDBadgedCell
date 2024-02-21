@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221FFFC02B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FFFBF2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.swift */; };
+		221FFFC42B8660BF0007381F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221FFFC32B8660BF0007381F /* Assets.xcassets */; };
+		221FFFC72B8660BF0007381F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221FFFC62B8660BF0007381F /* Preview Assets.xcassets */; };
+		221FFFCB2B8660D30007381F /* TDBadgedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FFFB72B85F8700007381F /* TDBadgedCellView.swift */; };
+		221FFFCD2B8660EC0007381F /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
+		221FFFCE2B8665040007381F /* TDBadgedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FFFB72B85F8700007381F /* TDBadgedCellView.swift */; };
 		22A9C1431E460E1B0001F026 /* TDBadgedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A9C1421E460E1B0001F026 /* TDBadgedCellTests.swift */; };
-		22A9C14A1E460E3E0001F026 /* TDBadgedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */; };
 		22F6787D1D80288B007D2FAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6787C1D80288B007D2FAE /* AppDelegate.swift */; };
 		22F6787F1D80288B007D2FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6787E1D80288B007D2FAE /* ViewController.swift */; };
 		22F678821D80288B007D2FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F678801D80288B007D2FAE /* Main.storyboard */; };
@@ -28,6 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221FFFB72B85F8700007381F /* TDBadgedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellView.swift; sourceTree = "<group>"; };
+		221FFFBD2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDBadgedCellSwiftUIDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		221FFFBF2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellSwiftUIDemoApp.swift; sourceTree = "<group>"; };
+		221FFFC32B8660BF0007381F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		221FFFC62B8660BF0007381F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22A9C1401E460E1A0001F026 /* TDBadgedCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDBadgedCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A9C1421E460E1B0001F026 /* TDBadgedCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDBadgedCellTests.swift; sourceTree = "<group>"; };
 		22A9C1441E460E1B0001F026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		221FFFBA2B8660BD0007381F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22A9C13D1E460E1A0001F026 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +76,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221FFFBE2B8660BD0007381F /* TDBadgedCellSwiftUIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				221FFFBF2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.swift */,
+				221FFFC32B8660BF0007381F /* Assets.xcassets */,
+				221FFFC52B8660BF0007381F /* Preview Content */,
+			);
+			path = TDBadgedCellSwiftUIDemo;
+			sourceTree = "<group>";
+		};
+		221FFFC52B8660BF0007381F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				221FFFC62B8660BF0007381F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		22A9C1411E460E1B0001F026 /* TDBadgedCellTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +108,7 @@
 			children = (
 				22F6787B1D80288B007D2FAE /* TDBadgedCell */,
 				22A9C1411E460E1B0001F026 /* TDBadgedCellTests */,
+				221FFFBE2B8660BD0007381F /* TDBadgedCellSwiftUIDemo */,
 				22F6787A1D80288B007D2FAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +118,7 @@
 			children = (
 				22F678791D80288B007D2FAE /* TDBadgedCell.app */,
 				22A9C1401E460E1A0001F026 /* TDBadgedCellTests.xctest */,
+				221FFFBD2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +126,10 @@
 		22F6787B1D80288B007D2FAE /* TDBadgedCell */ = {
 			isa = PBXGroup;
 			children = (
+				22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */,
+				221FFFB72B85F8700007381F /* TDBadgedCellView.swift */,
 				22F6787C1D80288B007D2FAE /* AppDelegate.swift */,
 				22F6787E1D80288B007D2FAE /* ViewController.swift */,
-				22F678AA1D802BEB007D2FAE /* TDBadgedCell.swift */,
 				22F678801D80288B007D2FAE /* Main.storyboard */,
 				22F678831D80288B007D2FAE /* Assets.xcassets */,
 				22F678851D80288C007D2FAE /* LaunchScreen.storyboard */,
@@ -103,6 +141,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		221FFFBC2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221FFFC82B8660BF0007381F /* Build configuration list for PBXNativeTarget "TDBadgedCellSwiftUIDemoApp" */;
+			buildPhases = (
+				221FFFB92B8660BD0007381F /* Sources */,
+				221FFFBA2B8660BD0007381F /* Frameworks */,
+				221FFFBB2B8660BD0007381F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDBadgedCellSwiftUIDemoApp;
+			productName = TDBadgedCellSwiftUI;
+			productReference = 221FFFBD2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		22A9C13F1E460E1A0001F026 /* TDBadgedCellTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A9C1491E460E1B0001F026 /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */;
@@ -145,10 +200,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Tim Davies";
 				TargetAttributes = {
+					221FFFBC2B8660BD0007381F = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					22A9C13F1E460E1A0001F026 = {
 						CreatedOnToolsVersion = 8.3;
 						LastSwiftMigration = 1120;
@@ -176,11 +234,21 @@
 			targets = (
 				22F678781D80288B007D2FAE /* TDBadgedCell */,
 				22A9C13F1E460E1A0001F026 /* TDBadgedCellTests */,
+				221FFFBC2B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		221FFFBB2B8660BD0007381F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221FFFC72B8660BF0007381F /* Preview Assets.xcassets in Resources */,
+				221FFFC42B8660BF0007381F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22A9C13E1E460E1A0001F026 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,11 +269,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		221FFFB92B8660BD0007381F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221FFFCD2B8660EC0007381F /* TDBadgedCell.swift in Sources */,
+				221FFFCB2B8660D30007381F /* TDBadgedCellView.swift in Sources */,
+				221FFFC02B8660BD0007381F /* TDBadgedCellSwiftUIDemoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22A9C13C1E460E1A0001F026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A9C14A1E460E3E0001F026 /* TDBadgedCell.swift in Sources */,
 				22A9C1431E460E1B0001F026 /* TDBadgedCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +294,7 @@
 				22F6787F1D80288B007D2FAE /* ViewController.swift in Sources */,
 				22F6787D1D80288B007D2FAE /* AppDelegate.swift in Sources */,
 				22F678AB1D802BEB007D2FAE /* TDBadgedCell.swift in Sources */,
+				221FFFCE2B8665040007381F /* TDBadgedCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +328,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		221FFFC92B8660BF0007381F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TDBadgedCellSwiftUIDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PQZ9B98AZ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		221FFFCA2B8660BF0007381F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TDBadgedCellSwiftUIDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 7PQZ9B98AZ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmdvs.TDBadgedCellSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		22A9C1471E460E1B0001F026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,6 +609,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		221FFFC82B8660BF0007381F /* Build configuration list for PBXNativeTarget "TDBadgedCellSwiftUIDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221FFFC92B8660BF0007381F /* Debug */,
+				221FFFCA2B8660BF0007381F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22A9C1491E460E1B0001F026 /* Build configuration list for PBXNativeTarget "TDBadgedCellTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

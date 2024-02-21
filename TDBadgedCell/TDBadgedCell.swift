@@ -34,7 +34,7 @@ open class TDBadgedCell: UITableViewCell {
 
     public var badgeFontSize: Float = 11.0
 
-  /// Badge text style if dyanmic type desired
+    /// Badge text style if dyanmic type desired
     public var badgeTextStyle: UIFont.TextStyle?
 
     public var badgeTextColor: UIColor?
